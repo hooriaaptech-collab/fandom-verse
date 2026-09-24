@@ -1,0 +1,72 @@
+[
+  {
+    "id": "anime",
+    "name": "Anime",
+    "slug": "Anime",
+    "description": "Epic series, films, and legendary heroes from Japanese animation.",
+    "itemCount": 48,
+    "image": "assets/images/cat-anime.jpg",
+    "accentColor": "#38bdf8",
+    "featuredTitle": "Crimson Blade Chronicles"
+  },
+  {
+    "id": "gaming",
+    "name": "Gaming",
+    "slug": "Gaming",
+    "description": "Blockbuster games, cybernetic worlds, esports, and interactive adventures.",
+    "itemCount": 62,
+    "image": "assets/images/cat-gaming.jpg",
+    "accentColor": "#818cf8",
+    "featuredTitle": "Ashen Kingdoms"
+  },
+  {
+    "id": "movies",
+    "name": "Movies",
+    "slug": "Movies",
+    "description": "Cinematic blockbusters, sci-fi sagas, thrilling trailers, and behind-the-scenes stories.",
+    "itemCount": 39,
+    "image": "assets/images/cat-movies.jpg",
+    "accentColor": "#f59e0b",
+    "featuredTitle": "The Lighthouse Protocol"
+  },
+  {
+    "id": "tv-shows",
+    "name": "TV Shows",
+    "slug": "TV Shows",
+    "description": "Binge-worthy drama series, slow-burn mysteries, season premieres, and fan discussions.",
+    "itemCount": 44,
+    "image": "assets/images/cat-tv.jpg",
+    "accentColor": "#10b981",
+    "featuredTitle": "Harrow Point: Season One"
+  },
+  {
+    "id": "k-pop",
+    "name": "K-Pop",
+    "slug": "K-Pop",
+    "description": "Chart-topping idol groups, world stadium tours, synchronized choreography, and official lightsticks.",
+    "itemCount": 51,
+    "image": "assets/images/cat-kpop.jpg",
+    "accentColor": "#ec4899",
+    "featuredTitle": "Lunar Bloom - Moonrise"
+  },
+  {
+    "id": "comics",
+    "name": "Comics",
+    "slug": "Comics",
+    "description": "Iconic superhero sagas, vigilante mysteries, vintage issues, and legendary artists.",
+    "itemCount": 35,
+    "image": "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&auto=format&fit=crop&q=80",
+    "accentColor": "#ef4444",
+    "featuredTitle": "Ghostlight: The Origin Story"
+  },
+  {
+    "id": "manga",
+    "name": "Manga",
+    "slug": "Manga",
+    "description": "Masterpiece ink art, weekly chapters, epic story arcs, and mangaka studio sketches.",
+    "itemCount": 42,
+    "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80",
+    "accentColor": "#a855f7",
+    "featuredTitle": "Tidewalker Volume 12"
+  }
+]

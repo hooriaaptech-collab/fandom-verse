@@ -1,134 +1,475 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FandomVerse — a clean fandom discovery portal for anime, gaming, movies, TV, K-Pop, comics and manga.">
-  <title>FandomVerse | Explore Your Universe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FandomVerse | Explore Your Fandom</title>
+  <meta name="description" content="Discover stories, characters, trailers, events and merchandise across anime, gaming, movies, TV, K-pop, comics and manga.">
+
+  <!-- Bootstrap 5 CSS & Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <div id="app">
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#home"><span class="brand-mark">F</span> Fandom<span>Verse</span></a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><i class="bi bi-list"></i></button>
-        <div class="collapse navbar-collapse" id="nav">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-            <li><a class="nav-link active" href="#home">Home</a></li>
-            <li><a class="nav-link" href="#anime">Anime</a></li>
-            <li><a class="nav-link" href="#gaming">Gaming</a></li>
-            <li><a class="nav-link" href="#movies">Movies</a></li>
-            <li><a class="nav-link" href="#tv">TV</a></li>
-            <li><a class="nav-link" href="#kpop">K-Pop</a></li>
-            <li><a class="nav-link" href="#comics">Comics</a></li>
-            <li><a class="nav-link" href="#manga">Manga</a></li>
-            <li><button class="btn btn-sm btn-light rounded-pill px-3" id="bookmarkNav"><i class="bi bi-bookmark"></i> Saved <span id="savedCount">0</span></button></li>
-          </ul>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-xl fv-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span>FandomVerse</span>
+        <span class="brand-badge">HUB</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+
+          <!-- Categories Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="catDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv" aria-labelledby="catDropdown">
+              <li><a class="dropdown-item" href="category.html?cat=Anime">Anime</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Gaming">Gaming</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Movies">Movies</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=TV Shows">TV Shows</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=K-Pop">K-Pop</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Comics">Comics</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Manga">Manga</a></li>
+              <li><hr class="dropdown-divider border-secondary opacity-25"></li>
+              <li><a class="dropdown-item fw-bold text-info" href="categories.html">All Categories &rarr;</a></li>
+            </ul>
+          </li>
+
+          <!-- Explore Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Explore
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv" aria-labelledby="exploreDropdown">
+              <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+              <li><a class="dropdown-item" href="characters.html">Characters</a></li>
+              <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+              <li><a class="dropdown-item" href="events.html">Events</a></li>
+              <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+              <li><a class="dropdown-item" href="videos.html">Videos & Audio</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="merchandise.html">Merchandise</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bookmarks.html">Bookmarks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search.html">Search</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <a class="btn btn-outline-fv btn-sm" href="login.html">Login</a>
+          <a class="btn btn-primary-fv btn-sm" href="signup.html">Signup</a>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <main>
-      <section id="home" class="hero-section">
-        <div class="hero-glow"></div>
-        <div class="container hero-content">
-          <div class="eyebrow"><span></span> THE FAN UNIVERSE, IN ONE PLACE</div>
-          <h1>Find the stories<br><em>you never stop loving.</em></h1>
-          <p>Explore characters, releases, trailers, articles and fandom moments across the worlds of anime, games, movies, TV, K-Pop, comics and manga.</p>
-          <div class="search-box">
-            <i class="bi bi-search"></i>
-            <input id="globalSearch" type="search" placeholder="Search a title, character, artist or fandom...">
-            <button id="searchBtn">Explore</button>
-          </div>
-          <div class="hero-tags">
-            <span>Trending now</span><button data-search="One Piece">One Piece</button><button data-search="BTS">BTS</button><button data-search="Spider-Man">Spider-Man</button><button data-search="Elden Ring">Elden Ring</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-space" id="explore">
-        <div class="container">
-          <div class="section-heading">
-            <div><p class="eyebrow">DISCOVER</p><h2>Choose your universe</h2></div>
-            <p>One clean space for every fandom.</p>
-          </div>
-          <div class="category-grid" id="categoryGrid"></div>
-        </div>
-      </section>
-
-      <section class="section-space soft" id="featured">
-        <div class="container">
-          <div class="section-heading">
-            <div><p class="eyebrow">CURATED FOR YOU</p><h2>Featured this week</h2></div>
-            <button class="text-btn" onclick="renderAll()">View all <i class="bi bi-arrow-right"></i></button>
-          </div>
-          <div class="row g-4" id="featuredGrid"></div>
-        </div>
-      </section>
-
-      <section class="section-space" id="catalog">
-        <div class="container">
-          <div class="section-heading">
-            <div><p class="eyebrow">FANDOM CATALOG</p><h2 id="catalogTitle">Explore everything</h2></div>
-            <div class="filter-wrap">
-              <select id="categoryFilter" class="form-select"><option value="all">All categories</option></select>
-              <select id="typeFilter" class="form-select"><option value="all">All types</option><option>movie</option><option>anime</option><option>game</option><option>tv</option><option>kpop</option><option>comic</option><option>manga</option></select>
+  <main>
+    <!-- ================= HERO BANNER ================= -->
+    <header class="hero">
+      <div class="hero-image-wrap">
+        <img src="assets/images/banner.jpg" alt="FandomVerse Original Fictional Characters" class="hero-image">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="row align-items-center">
+          <div class="col-lg-7 col-xl-6">
+            <div class="hero-brand-pill">
+              <span class="sparkle-icon">&#10022;</span> The Ultimate Fan Destination
+            </div>
+            <h1 class="hero-title">
+              Explore Your <span class="highlight">Fandom</span>
+            </h1>
+            <p class="hero-text">
+              Discover stories, original characters, trailers, events and unforgettable fan moments from the worlds you love most.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="categories.html" class="btn btn-gold btn-lg">Explore Now</a>
+              <a href="search.html" class="btn btn-outline-fv btn-lg">Search Content</a>
             </div>
           </div>
-          <div class="row g-4" id="catalogGrid"></div>
         </div>
-      </section>
-
-      <section class="section-space soft" id="events">
-        <div class="container">
-          <div class="section-heading"><div><p class="eyebrow">WHAT'S HAPPENING</p><h2>Upcoming events</h2></div></div>
-          <div class="events-list" id="eventsList"></div>
-        </div>
-      </section>
-
-      <section class="section-space" id="about">
-        <div class="container about-card">
-          <div><p class="eyebrow">ABOUT FANDOMVERSE</p><h2>A home for every kind of fan.</h2></div>
-          <p>FandomVerse brings scattered fandom experiences into one approachable portal. Browse content, save favorites, discover releases, and move naturally between different fandom worlds.</p>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container footer-inner">
-        <div><a class="navbar-brand" href="#home"><span class="brand-mark">F</span> Fandom<span>Verse</span></a><p>Built for curious fans and endless rabbit holes.</p></div>
-        <div class="footer-links"><a href="#about">About</a><a href="#events">Events</a><a href="#home">Home</a></div>
       </div>
-      <div class="container copyright">© 2026 FandomVerse · Front-end demo using JSON data</div>
-    </footer>
-  </div>
+    </header>
 
-  <div class="modal fade" id="detailModal" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content detail-modal">
-        <button class="modal-close" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
-        <div id="detailContent"></div>
+    <!-- ================= CATEGORY CARDS ================= -->
+    <section class="section" id="categories-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Fandom Categories</h2>
+          <p>Choose your universe and dive into characters, media, and lore.</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="home-categories-grid">
+          <!-- Populated dynamically by home script -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED CONTENT ================= -->
+    <section class="section section-alt" id="featured-section">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+          <div class="section-heading mb-0">
+            <h2>Featured Highlights</h2>
+            <p>Hand-picked stories, trailers, and breakthroughs across fandoms.</p>
+          </div>
+          <a href="search.html" class="btn btn-outline-fv btn-sm">View All in Search &rarr;</a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="home-featured-grid">
+          <!-- Filled by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CHARACTERS PREVIEW ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+          <div class="section-heading mb-0">
+            <h2>Meet The Characters</h2>
+            <p>Discover original fictional heroes, warriors, idols, and vigilantes.</p>
+          </div>
+          <a href="characters.html" class="btn btn-outline-fv btn-sm">Browse 35 Characters &rarr;</a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" id="home-characters-grid">
+          <!-- 4 preview characters loaded via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= UPCOMING EVENTS PREVIEW ================= -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+          <div class="section-heading mb-0">
+            <h2>Upcoming Fan Events</h2>
+            <p>Conventions, stadium concerts, tournaments, and premieres.</p>
+          </div>
+          <a href="events.html" class="btn btn-outline-fv btn-sm">Explore All Events &rarr;</a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="home-events-grid">
+          <!-- 3 preview events loaded via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MERCHANDISE PREVIEW ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+          <div class="section-heading mb-0">
+            <h2>Fan Merchandise & Gear</h2>
+            <p>Collectible posters, apparel, action figures, and lightsticks.</p>
+          </div>
+          <a href="merchandise.html" class="btn btn-outline-fv btn-sm">Shop All Gear &rarr;</a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" id="home-merch-grid">
+          <!-- 4 merchandise items -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="fv-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h3 class="footer-brand">FandomVerse</h3>
+          <p class="footer-text">
+            A home for fans of anime, gaming, cinema, television, music, comics, and manga. Built with clean HTML, CSS, JavaScript, and Bootstrap.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="social-circle" aria-label="Facebook">f</a>
+            <a href="#" class="social-circle" aria-label="Instagram">in</a>
+            <a href="#" class="social-circle" aria-label="Twitter / X">x</a>
+            <a href="#" class="social-circle" aria-label="YouTube">yt</a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="category.html?cat=Anime">Anime</a></li>
+            <li><a href="category.html?cat=Gaming">Gaming</a></li>
+            <li><a href="category.html?cat=Movies">Movies</a></li>
+            <li><a href="category.html?cat=TV Shows">TV Shows</a></li>
+            <li><a href="category.html?cat=K-Pop">K-Pop</a></li>
+            <li><a href="category.html?cat=Comics">Comics</a></li>
+            <li><a href="category.html?cat=Manga">Manga</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="trailers.html">Trailers</a></li>
+            <li><a href="videos.html">Videos & Audio</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <h4 class="footer-heading">Live Community</h4>
+          <p class="text-muted small">Stay up to date with live fandom updates and active visitors.</p>
+          <div class="stats-bar mb-3">
+            <div class="stat-item">
+              <span>&#128337;</span>
+              <span>Clock:</span>
+              <span class="stat-val" id="liveClock">Loading...</span>
+            </div>
+            <div class="stat-item">
+              <span>&#128101;</span>
+              <span>Visitors:</span>
+              <span class="stat-val" id="visitorCounter">1,042</span>
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="about.html" class="btn btn-outline-fv btn-sm">About Us</a>
+            <a href="contact.html" class="btn btn-outline-fv btn-sm">Contact Support</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center text-muted small">
+        <p class="mb-0">&copy; 2026 FandomVerse. All rights reserved. Student Project.</p>
+        <div class="d-flex gap-3 mt-2 mt-sm-0">
+          <a href="about.html" class="text-muted">About</a>
+          <a href="contact.html" class="text-muted">Contact</a>
+          <a href="search.html" class="text-muted">Search</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= DETAILS MODAL ================= -->
+  <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content fv-modal">
+        <div class="modal-header">
+          <h3 class="modal-title h5 mb-0" id="modalTitle">Item Details</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" class="modal-image" src="assets/images/banner.jpg" alt="Item preview">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge badge-category" id="modalCategory">Category</span>
+            <span class="badge badge-type" id="modalType">Type</span>
+          </div>
+          <p id="modalDescription" class="mb-3"></p>
+          <ul class="tag-list" id="modalTags"></ul>
+          <p class="text-muted small mb-0" id="modalMeta"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-fv btn-sm" id="modalBookmarkBtn">☆ Add Bookmark</button>
+          <button type="button" class="btn btn-primary-fv btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
 
-  <button class="chat-launcher" id="chatLauncher"><i class="bi bi-chat-heart-fill"></i></button>
-  <div class="chat-box" id="chatBox">
-    <div class="chat-head"><div><strong>Verse Assistant</strong><small>Usually responds instantly</small></div><button id="chatClose"><i class="bi bi-x"></i></button></div>
-    <div class="chat-messages" id="chatMessages"><div class="bot-msg">Hi! I can help you discover categories, titles, events and saved content. Try “anime” or “what can I explore?”</div></div>
-    <div class="quick-replies"><button data-q="What can I explore?">Explore</button><button data-q="Show anime">Anime</button><button data-q="Show movies">Movies</button></div>
-    <div class="chat-input"><input id="chatInput" placeholder="Ask something..."><button id="chatSend"><i class="bi bi-send"></i></button></div>
+  <!-- ================= CHATBOT FLOATING WIDGET ================= -->
+  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle" aria-label="Open Chatbot">
+    <span>&#128172;</span> Chat & FAQ
+  </button>
+
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
+      <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose" aria-label="Close Chatbot"></button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chat-bubble bot">
+        Hello! Welcome to FandomVerse! How can I help you today? Pick a quick question below or type your inquiry.
+      </div>
+    </div>
+    <div class="chat-chips-area" id="chatChips">
+      <span class="chat-chip">What is FandomVerse?</span>
+      <span class="chat-chip">What categories are available?</span>
+      <span class="chat-chip">How do bookmarks work?</span>
+      <span class="chat-chip">How can I search?</span>
+    </div>
+    <div class="chatbot-input-bar">
+      <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
+      <button type="button" id="chatbotSend" class="btn btn-primary-fv btn-sm">&#10148;</button>
+    </div>
   </div>
 
-  <div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="liveToast" class="toast"><div class="toast-body" id="toastText"></div></div></div>
-
+  <!-- Bootstrap 5 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core App JS -->
   <script src="js/app.js"></script>
+
+  <!-- Page Specific Script: Load Categories, Featured & Previews -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Load Categories
+      fetch("data/categories.json")
+        .then(function(res) { return res.json(); })
+        .then(function(categories) {
+          var container = document.getElementById("home-categories-grid");
+          if (!container) return;
+          var html = "";
+          categories.forEach(function(cat) {
+            html += '<div class="col">' +
+              '<article class="card fv-card h-100">' +
+                '<div class="card-img-wrap">' +
+                  '<img src="' + cat.image + '" alt="' + cat.name + '">' +
+                '</div>' +
+                '<div class="card-body">' +
+                  '<h3 class="card-title">' + cat.name + '</h3>' +
+                  '<p class="card-text">' + cat.description + '</p>' +
+                  '<a href="category.html?cat=' + encodeURIComponent(cat.slug) + '" class="btn btn-outline-fv btn-sm mt-auto align-self-start">Explore ' + cat.name + ' &rarr;</a>' +
+                '</div>' +
+              '</article>' +
+            '</div>';
+          });
+          container.innerHTML = html;
+        });
+
+      // 2. Load Featured Content
+      fetch("data/content.json")
+        .then(function(res) { return res.json(); })
+        .then(function(content) {
+          allContent = content;
+          var featured = content.filter(function(i) { return i.featured === true; });
+          var container = document.getElementById("home-featured-grid");
+          if (!container) return;
+          var html = "";
+          featured.slice(0, 6).forEach(function(item) {
+            var tagsHtml = item.tags ? item.tags.slice(0, 2).map(function(t) { return '<span class="tag">' + t + '</span>'; }).join("") : "";
+            html += '<div class="col">' +
+              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allContent.find(function(c){return c.id===' + item.id + '}))">' +
+                '<div class="card-img-wrap">' +
+                  '<img src="' + item.image + '" alt="' + item.title + '">' +
+                '</div>' +
+                '<div class="card-body">' +
+                  '<div class="d-flex flex-wrap gap-2 mb-2">' +
+                    '<span class="badge badge-category">' + item.category + '</span>' +
+                    '<span class="badge badge-type">' + item.type + '</span>' +
+                  '</div>' +
+                  '<h3 class="card-title">' + item.title + '</h3>' +
+                  '<p class="card-text">' + item.description + '</p>' +
+                  '<div class="tag-list mt-auto">' + tagsHtml + '</div>' +
+                  '<button type="button" class="btn btn-outline-fv btn-sm align-self-start mt-2">View Details</button>' +
+                '</div>' +
+              '</article>' +
+            '</div>';
+          });
+          container.innerHTML = html;
+        });
+
+      // 3. Load Characters Preview
+      fetch("data/characters.json")
+        .then(function(res) { return res.json(); })
+        .then(function(characters) {
+          allCharacters = characters;
+          var container = document.getElementById("home-characters-grid");
+          if (!container) return;
+          var html = "";
+          // pick 4 characters across different categories
+          var picks = [characters[0], characters[5], characters[10], characters[20]];
+          picks.forEach(function(char) {
+            html += '<div class="col">' +
+              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allCharacters.find(function(c){return c.id===' + char.id + '}))">' +
+                '<div class="card-img-wrap">' +
+                  '<img src="' + char.image + '" alt="' + char.name + '">' +
+                '</div>' +
+                '<div class="card-body">' +
+                  '<span class="card-meta">' + char.category + ' &middot; ' + char.role + '</span>' +
+                  '<h3 class="card-title">' + char.name + '</h3>' +
+                  '<p class="card-text">' + char.description + '</p>' +
+                  '<button type="button" class="btn btn-outline-fv btn-sm mt-auto align-self-start">Character Profile</button>' +
+                '</div>' +
+              '</article>' +
+            '</div>';
+          });
+          container.innerHTML = html;
+        });
+
+      // 4. Load Events Preview
+      fetch("data/events.json")
+        .then(function(res) { return res.json(); })
+        .then(function(events) {
+          allEvents = events;
+          var container = document.getElementById("home-events-grid");
+          if (!container) return;
+          var html = "";
+          events.slice(0, 3).forEach(function(ev) {
+            html += '<div class="col">' +
+              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allEvents.find(function(e){return e.id===' + ev.id + '}))">' +
+                '<div class="card-img-wrap">' +
+                  '<img src="' + ev.image + '" alt="' + ev.title + '">' +
+                '</div>' +
+                '<div class="card-body">' +
+                  '<span class="card-meta">' + ev.category + ' &middot; ' + ev.date + '</span>' +
+                  '<h3 class="card-title">' + ev.title + '</h3>' +
+                  '<p class="card-text">' + ev.description + '</p>' +
+                  '<p class="text-muted small mb-3">📍 ' + ev.location + '</p>' +
+                  '<button type="button" class="btn btn-outline-fv btn-sm mt-auto align-self-start">Event Details</button>' +
+                '</div>' +
+              '</article>' +
+            '</div>';
+          });
+          container.innerHTML = html;
+        });
+
+      // 5. Load Merchandise Preview
+      fetch("data/merchandise.json")
+        .then(function(res) { return res.json(); })
+        .then(function(merch) {
+          allMerchandise = merch;
+          var container = document.getElementById("home-merch-grid");
+          if (!container) return;
+          var html = "";
+          merch.slice(0, 4).forEach(function(item) {
+            html += '<div class="col">' +
+              '<article class="card fv-card h-100">' +
+                '<div class="card-img-wrap">' +
+                  '<img src="' + item.image + '" alt="' + item.title + '">' +
+                '</div>' +
+                '<div class="card-body">' +
+                  '<span class="card-meta">' + item.category + '</span>' +
+                  '<h3 class="card-title">' + item.title + '</h3>' +
+                  '<div class="d-flex justify-content-between align-items-center mt-auto pt-2">' +
+                    '<span class="fw-bold text-warning fs-5">$' + item.price.toFixed(2) + '</span>' +
+                    '<button type="button" class="btn btn-gold btn-sm" onclick="addToCart(allMerchandise.find(function(m){return m.id===' + item.id + '}))">Add to Cart</button>' +
+                  '</div>' +
+                '</div>' +
+              '</article>' +
+            '</div>';
+          });
+          container.innerHTML = html;
+        });
+    });
+  </script>
 </body>
 </html>

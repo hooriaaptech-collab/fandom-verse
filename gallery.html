@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fandom Gallery | FandomVerse</title>
+  <meta name="description" content="Visual showcase of artwork, screenshots, key visuals, and concept illustrations across all 7 fandom categories.">
+
+  <!-- Bootstrap 5 CSS & Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-xl fv-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span>FandomVerse</span>
+        <span class="brand-badge">HUB</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="catDropdown" role="button" data-bs-toggle="dropdown">Categories</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item" href="category.html?cat=Anime">Anime</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Gaming">Gaming</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Movies">Movies</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=TV Shows">TV Shows</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=K-Pop">K-Pop</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Comics">Comics</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Manga">Manga</a></li>
+              <li><hr class="dropdown-divider border-secondary opacity-25"></li>
+              <li><a class="dropdown-item fw-bold text-info" href="categories.html">All Categories &rarr;</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">Explore</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item active" href="gallery.html">Gallery</a></li>
+              <li><a class="dropdown-item" href="characters.html">Characters</a></li>
+              <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+              <li><a class="dropdown-item" href="events.html">Events</a></li>
+              <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+              <li><a class="dropdown-item" href="videos.html">Videos & Audio</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li>
+          <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
+          <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <a class="btn btn-outline-fv btn-sm" href="login.html">Login</a>
+          <a class="btn btn-primary-fv btn-sm" href="signup.html">Signup</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ================= PAGE HEADER ================= -->
+    <header class="page-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-9">
+            <div class="hero-brand-pill mb-2">Visual Showcase</div>
+            <h1>Fandom Art & Visual Gallery</h1>
+            <p>
+              High-definition key visuals, concept art, character designs, and cinematic scenes from Anime, Gaming, Movies, TV, K-Pop, Comics, and Manga.
+            </p>
+          </div>
+          <div class="col-md-3 text-md-end mt-3 mt-md-0">
+            <img src="assets/images/cat-gaming.jpg" alt="Gallery header artwork" class="page-header-art">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= GALLERY SECTION ================= -->
+    <section class="section">
+      <div class="container">
+        <!-- Filter Buttons -->
+        <div class="fv-toolbar mb-4">
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <div>
+              <span class="text-muted small d-block mb-1">Filter by Fandom Category:</span>
+              <div class="filter-btn-group" id="galleryFilterButtons">
+                <button type="button" class="filter-chip active" data-category="all">All (14+)</button>
+                <button type="button" class="filter-chip" data-category="Anime">Anime</button>
+                <button type="button" class="filter-chip" data-category="Gaming">Gaming</button>
+                <button type="button" class="filter-chip" data-category="Movies">Movies</button>
+                <button type="button" class="filter-chip" data-category="TV Shows">TV Shows</button>
+                <button type="button" class="filter-chip" data-category="K-Pop">K-Pop</button>
+                <button type="button" class="filter-chip" data-category="Comics">Comics</button>
+                <button type="button" class="filter-chip" data-category="Manga">Manga</button>
+              </div>
+            </div>
+            <span class="text-muted small" id="galleryCount">Showing all items</span>
+          </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="galleryGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="fv-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h3 class="footer-brand">FandomVerse</h3>
+          <p class="footer-text">A home for fans of anime, gaming, cinema, television, music, comics, and manga.</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="category.html?cat=Anime">Anime</a></li>
+            <li><a href="category.html?cat=Gaming">Gaming</a></li>
+            <li><a href="category.html?cat=Movies">Movies</a></li>
+            <li><a href="category.html?cat=TV Shows">TV Shows</a></li>
+            <li><a href="category.html?cat=K-Pop">K-Pop</a></li>
+            <li><a href="category.html?cat=Comics">Comics</a></li>
+            <li><a href="category.html?cat=Manga">Manga</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="trailers.html">Trailers</a></li>
+            <li><a href="videos.html">Videos & Audio</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h4 class="footer-heading">Live Community</h4>
+          <div class="stats-bar mb-3">
+            <div class="stat-item"><span>&#128337;</span> <span>Clock:</span> <span class="stat-val" id="liveClock">--:--:--</span></div>
+            <div class="stat-item"><span>&#128101;</span> <span>Visitors:</span> <span class="stat-val" id="visitorCounter">--</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-muted small text-center">
+        &copy; 2026 FandomVerse. All rights reserved. Student Project.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= DETAILS MODAL ================= -->
+  <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content fv-modal">
+        <div class="modal-header">
+          <h3 class="modal-title h5 mb-0" id="modalTitle">Artwork Details</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" class="modal-image" src="" alt="Artwork">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge badge-category" id="modalCategory">Category</span>
+            <span class="badge badge-type" id="modalType">Gallery Item</span>
+          </div>
+          <p id="modalDescription" class="mb-3"></p>
+          <ul class="tag-list" id="modalTags"></ul>
+          <p class="text-muted small mb-0" id="modalMeta"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-fv btn-sm" id="modalBookmarkBtn">☆ Add Bookmark</button>
+          <button type="button" class="btn btn-primary-fv btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CHATBOT WIDGET ================= -->
+  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle"><span>&#128172;</span> Chat & FAQ</button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
+      <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose"></button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chat-bubble bot">Hello! Click any artwork in the gallery to open its high-res view and backstory!</div>
+    </div>
+    <div class="chat-chips-area" id="chatChips">
+      <span class="chat-chip">What categories are available?</span>
+      <span class="chat-chip">How do bookmarks work?</span>
+      <span class="chat-chip">How can I search?</span>
+    </div>
+    <div class="chatbot-input-bar">
+      <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
+      <button type="button" id="chatbotSend" class="btn btn-primary-fv btn-sm">&#10148;</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    var galleryData = [
+      { id: 501, title: "Ren Kazama: Mist Blossom Katana", category: "Anime", image: "assets/images/cat-anime.jpg", description: "Official key visual featuring Ren Kazama with his glowing azure katana at sunrise.", tags: ["Anime", "Key Visual", "Katana"] },
+      { id: 502, title: "Skybound Flight Cadets", category: "Anime", image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80", description: "Concept art of high-altitude gliding exams in the floating sky islands.", tags: ["Anime", "Concept Art", "Scenery"] },
+      { id: 503, title: "Vex-09: Overclocked Shield", category: "Gaming", image: "assets/images/cat-gaming.jpg", description: "In-game rendering of Vex-09 standing on a high skyscraper above Neon Harbor.", tags: ["Gaming", "Cyberpunk", "3D Art"] },
+      { id: 504, title: "Neon Harbor Speedrun Rooftops", category: "Gaming", image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80", description: "Atmospheric environment render of neon-lit alleys and high-tech billboards.", tags: ["Gaming", "Environment", "Cyberpunk"] },
+      { id: 505, title: "Captain Ines Vale: Orbital Spaceport", category: "Movies", image: "assets/images/movies/ines-vale.jpg", description: "Cinematic movie frame of Captain Vale preparing for deep space launch.", tags: ["Movies", "Sci-Fi", "Cinematography"] },
+      { id: 506, title: "The Deep Space Anomaly", category: "Movies", image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&auto=format&fit=crop&q=80", description: "Wide widescreen shot of the ringed planet and orbital observation platform.", tags: ["Movies", "Space", "VFX"] },
+      { id: 507, title: "Detective Holt: Midnight Cobblestones", category: "TV Shows", image: "assets/images/tv-shows/maren-holt.jpg", description: "Moody production still of Detective Holt beneath Victorian gaslamps in Harrow Point.", tags: ["TV Shows", "Noir", "Costume"] },
+      { id: 508, title: "Kingsbridge Iron Cathedral", category: "TV Shows", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80", description: "Production photography capturing period elegance and industrial architecture.", tags: ["TV Shows", "Drama", "Historic"] },
+      { id: 509, title: "Lunar Bloom: Moonrise Stadium Live", category: "K-Pop", image: "assets/images/cat-kpop.jpg", description: "Explosive stage visual showing synchronized performance and illuminated heart holograms.", tags: ["K-Pop", "Stage", "Live Concert"] },
+      { id: 510, title: "Lunar Bloom: Choreography Formation", category: "K-Pop", image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&auto=format&fit=crop&q=80", description: "Dance studio practice still showing razor-sharp synchronization.", tags: ["K-Pop", "Dance", "Performance"] },
+      { id: 511, title: "Ghostlight: Gargoyle Sentinel", category: "Comics", image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&auto=format&fit=crop&q=80", description: "Modern dynamic comic cover of Ghostlight perched over Crescent City.", tags: ["Comics", "Superhero", "Cover Art"] },
+      { id: 512, title: "Iron Meridian: Magnetic Aura", category: "Comics", image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop&q=80", description: "Pencil and ink splash page showcasing magnetic energy repulsors.", tags: ["Comics", "Inking", "Action"] },
+      { id: 513, title: "Yuki Aizawa: Ocean's Voice", category: "Manga", image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80", description: "Color illustration of Yuki communing with deep-water tide spirits.", tags: ["Manga", "Illustration", "Fantasy"] },
+      { id: 514, title: "Mangaka Studio Sketchbook", category: "Manga", image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80", description: "Authentic G-pen rough character sketches and panel margin thumbnails.", tags: ["Manga", "Sketch", "Drawing"] }
+    ];
+
+    var currentCategory = "all";
+
+    function renderGallery() {
+      var filtered = galleryData.filter(function(item) {
+        return currentCategory === "all" || item.category === currentCategory;
+      });
+
+      var container = document.getElementById("galleryGrid");
+      var countEl = document.getElementById("galleryCount");
+      if (!container) return;
+
+      countEl.textContent = "Showing " + filtered.length + " of " + galleryData.length + " items";
+
+      var html = "";
+      filtered.forEach(function(item) {
+        html += '<div class="col">' +
+          '<div class="gallery-grid-item" onclick="openDetailsModal(galleryData.find(function(g){return g.id===' + item.id + '}))">' +
+            '<img src="' + item.image + '" alt="' + item.title + '" loading="lazy">' +
+            '<div class="gallery-caption-overlay">' +
+              '<span class="badge badge-category align-self-start mb-1">' + item.category + '</span>' +
+              '<h5 class="text-white">' + item.title + '</h5>' +
+              '<p class="text-light small mb-0 text-truncate">' + item.description + '</p>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+      });
+
+      container.innerHTML = html;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      renderGallery();
+
+      var chips = document.querySelectorAll("#galleryFilterButtons .filter-chip");
+      chips.forEach(function(chip) {
+        chip.addEventListener("click", function() {
+          chips.forEach(function(c) { c.classList.remove("active"); });
+          chip.classList.add("active");
+          currentCategory = chip.dataset.category;
+          renderGallery();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

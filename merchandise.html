@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fan Merchandise & Shop | FandomVerse</title>
+  <meta name="description" content="Browse fan collectibles, action figures, hoodies, art posters, and concert lightsticks.">
+
+  <!-- Bootstrap 5 CSS & Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-xl fv-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span>FandomVerse</span>
+        <span class="brand-badge">HUB</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="catDropdown" role="button" data-bs-toggle="dropdown">Categories</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item" href="category.html?cat=Anime">Anime</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Gaming">Gaming</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Movies">Movies</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=TV Shows">TV Shows</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=K-Pop">K-Pop</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Comics">Comics</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Manga">Manga</a></li>
+              <li><hr class="dropdown-divider border-secondary opacity-25"></li>
+              <li><a class="dropdown-item fw-bold text-info" href="categories.html">All Categories &rarr;</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">Explore</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+              <li><a class="dropdown-item" href="characters.html">Characters</a></li>
+              <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+              <li><a class="dropdown-item" href="events.html">Events</a></li>
+              <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+              <li><a class="dropdown-item" href="videos.html">Videos & Audio</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="merchandise.html">Merchandise</a></li>
+          <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
+          <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <a class="btn btn-outline-fv btn-sm" href="login.html">Login</a>
+          <a class="btn btn-primary-fv btn-sm" href="signup.html">Signup</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ================= PAGE HEADER ================= -->
+    <header class="page-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-9">
+            <div class="hero-brand-pill mb-2">Fan Gear & Collectibles</div>
+            <h1>Fandom Merchandise</h1>
+            <p>
+              Explore official art posters, apparel, scale figurines, enamel pins, and concert accessories with an instant browser cart.
+            </p>
+          </div>
+          <div class="col-md-3 text-md-end mt-3 mt-md-0">
+            <img src="assets/images/merch-3.jpg" alt="Merchandise header art" class="page-header-art">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= MERCHANDISE SECTION ================= -->
+    <section class="section">
+      <div class="container">
+        <!-- Toolbar & Category Filter & Cart Button -->
+        <div class="fv-toolbar mb-4">
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <div>
+              <span class="text-muted small d-block mb-1">Filter by Universe:</span>
+              <div class="filter-btn-group" id="merchCategoryFilters">
+                <button type="button" class="filter-chip active" data-category="all">All Products</button>
+                <button type="button" class="filter-chip" data-category="Anime">Anime</button>
+                <button type="button" class="filter-chip" data-category="Gaming">Gaming</button>
+                <button type="button" class="filter-chip" data-category="Movies">Movies</button>
+                <button type="button" class="filter-chip" data-category="TV Shows">TV Shows</button>
+                <button type="button" class="filter-chip" data-category="K-Pop">K-Pop</button>
+                <button type="button" class="filter-chip" data-category="Comics">Comics</button>
+                <button type="button" class="filter-chip" data-category="Manga">Manga</button>
+              </div>
+            </div>
+
+            <!-- Cart Trigger Button -->
+            <button type="button" class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#cartModal" onclick="renderCartModal()">
+              🛒 View Cart (<span id="cartCountBadge">0</span>)
+            </button>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="merchandiseGrid">
+          <!-- Loaded via merchandise.json -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SHOPPING CART MODAL ================= -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content fv-modal">
+        <div class="modal-header">
+          <h3 class="modal-title h5 mb-0" id="cartModalLabel">🛒 Your Shopping Cart</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="cartItemsContainer">
+            <!-- Rendered by app.js renderCartModal() -->
+          </div>
+          <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25">
+            <span class="fs-5 fw-bold">Grand Total:</span>
+            <span class="fs-4 fw-bold text-warning" id="cartGrandTotal">$0.00</span>
+          </div>
+          <div class="alert alert-secondary mt-3 mb-0 small">
+            ℹ️ Note: This is a student demonstration project. No real payment or real checkout processing is performed.
+          </div>
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-outline-danger btn-sm" onclick="clearCart()">Clear Cart</button>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-outline-fv btn-sm" data-bs-dismiss="modal">Continue Browsing</button>
+            <button type="button" class="btn btn-gold btn-sm" onclick="alert('Demo order placed successfully! Your items are saved in your simulation.')">Checkout (Demo)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="fv-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h3 class="footer-brand">FandomVerse</h3>
+          <p class="footer-text">A home for fans of anime, gaming, cinema, television, music, comics, and manga.</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="category.html?cat=Anime">Anime</a></li>
+            <li><a href="category.html?cat=Gaming">Gaming</a></li>
+            <li><a href="category.html?cat=Movies">Movies</a></li>
+            <li><a href="category.html?cat=TV Shows">TV Shows</a></li>
+            <li><a href="category.html?cat=K-Pop">K-Pop</a></li>
+            <li><a href="category.html?cat=Comics">Comics</a></li>
+            <li><a href="category.html?cat=Manga">Manga</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="trailers.html">Trailers</a></li>
+            <li><a href="videos.html">Videos & Audio</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h4 class="footer-heading">Live Community</h4>
+          <div class="stats-bar mb-3">
+            <div class="stat-item"><span>&#128337;</span> <span>Clock:</span> <span class="stat-val" id="liveClock">--:--:--</span></div>
+            <div class="stat-item"><span>&#128101;</span> <span>Visitors:</span> <span class="stat-val" id="visitorCounter">--</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-muted small text-center">
+        &copy; 2026 FandomVerse. All rights reserved. Student Project.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= CHATBOT WIDGET ================= -->
+  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle"><span>&#128172;</span> Chat & FAQ</button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
+      <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose"></button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chat-bubble bot">Hello! Click 'Add to Cart' on any product and view your cart at any time!</div>
+    </div>
+    <div class="chat-chips-area" id="chatChips">
+      <span class="chat-chip">How does merchandise work?</span>
+      <span class="chat-chip">What categories are available?</span>
+      <span class="chat-chip">How can I search?</span>
+    </div>
+    <div class="chatbot-input-bar">
+      <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
+      <button type="button" id="chatbotSend" class="btn btn-primary-fv btn-sm">&#10148;</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    var currentCat = "all";
+
+    function renderMerchandise() {
+      var filtered = allMerchandise.filter(function(item) {
+        return currentCat === "all" || item.category === currentCat;
+      });
+
+      var container = document.getElementById("merchandiseGrid");
+      if (!container) return;
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div class="col-12 text-center py-5 text-muted"><p>No merchandise matches this category.</p></div>';
+        return;
+      }
+
+      var html = "";
+      filtered.forEach(function(item) {
+        html += '<div class="col">' +
+          '<article class="card fv-card h-100">' +
+            '<div class="card-img-wrap">' +
+              '<img src="' + item.image + '" alt="' + item.title + '" loading="lazy">' +
+            '</div>' +
+            '<div class="card-body">' +
+              '<div class="d-flex justify-content-between align-items-center mb-2">' +
+                '<span class="badge badge-category">' + item.category + '</span>' +
+                '<span class="text-warning small">★ ' + item.rating.toFixed(1) + '</span>' +
+              '</div>' +
+              '<h3 class="card-title h5">' + item.title + '</h3>' +
+              '<p class="card-text small">' + item.description + '</p>' +
+              '<div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-25">' +
+                '<span class="fs-5 fw-bold text-warning">$' + item.price.toFixed(2) + '</span>' +
+                '<button type="button" class="btn btn-gold btn-sm" onclick="addToCart(allMerchandise.find(function(m){return m.id===' + item.id + '}))">+ Add to Cart</button>' +
+              '</div>' +
+            '</div>' +
+          '</article>' +
+        '</div>';
+      });
+
+      container.innerHTML = html;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("data/merchandise.json")
+        .then(function(res) { return res.json(); })
+        .then(function(merch) {
+          allMerchandise = merch;
+          renderMerchandise();
+        });
+
+      var chips = document.querySelectorAll("#merchCategoryFilters .filter-chip");
+      chips.forEach(function(chip) {
+        chip.addEventListener("click", function() {
+          chips.forEach(function(c) { c.classList.remove("active"); });
+          chip.classList.add("active");
+          currentCat = chip.dataset.category;
+          renderMerchandise();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

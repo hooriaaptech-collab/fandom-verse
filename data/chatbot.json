@@ -1,0 +1,42 @@
+[
+  {
+    "keywords": ["what is fandomverse", "fandomverse", "about", "who are you", "what is this"],
+    "question": "What is FandomVerse?",
+    "answer": "FandomVerse is your ultimate community hub celebrating stories, characters, trailers, events, and merchandise across anime, gaming, movies, TV shows, K-pop, comics, and manga!"
+  },
+  {
+    "keywords": ["categories", "category", "what categories", "fandoms", "genres"],
+    "question": "What categories are available?",
+    "answer": "We feature 7 vibrant categories: Anime, Gaming, Movies, TV Shows, K-Pop, Comics, and Manga. You can explore each one using the navbar dropdown or visit the Categories page!"
+  },
+  {
+    "keywords": ["bookmarks", "bookmark", "save", "favorites", "saved"],
+    "question": "How do bookmarks work?",
+    "answer": "When you open any card modal (characters, articles, trailers, or events), simply click the 'Bookmark' button! Your saved items are stored securely in your browser's localStorage and can be viewed anytime on the Bookmarks page."
+  },
+  {
+    "keywords": ["merchandise", "merch", "cart", "shop", "buy", "store", "price"],
+    "question": "How does merchandise and the cart work?",
+    "answer": "Visit our Merchandise page to browse fan gear. Click 'Add to Cart' to add items to your temporary browser cart. You can review quantities, calculate totals, and manage items in the cart modal without any real payment required!"
+  },
+  {
+    "keywords": ["search", "find", "filter", "how to search", "lookup"],
+    "question": "How can I search for content?",
+    "answer": "Click 'Search' in the top navbar or visit search.html! You can search by title, category, type, or tags, and filter by content type (articles, trailers, characters, etc.) and sort results by A-Z, Newest, or Popularity."
+  },
+  {
+    "keywords": ["events", "conventions", "meetups", "gatherings"],
+    "question": "Where can I find fan events?",
+    "answer": "Head over to the Events page (under Explore in the menu) to find conventions, live orchestra concerts, esports tournaments, film screenings, and fan meetups for all 7 fandom categories!"
+  },
+  {
+    "keywords": ["characters", "character", "heroes", "cast"],
+    "question": "Can I learn more about characters?",
+    "answer": "Yes! Go to the Characters page to view profiles for heroes, vigilantes, idols, and warriors across every category. Clicking any card opens a detailed modal with backstories, roles, and special abilities."
+  },
+  {
+    "keywords": ["account", "login", "signup", "register"],
+    "question": "Do I need an account to browse?",
+    "answer": "Browsing, searching, and bookmarking work freely without an account. You can also try our student-friendly dummy Login and Signup pages in the navbar."
+  }
+]

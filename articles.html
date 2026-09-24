@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Featured Articles & Essays | FandomVerse</title>
+  <meta name="description" content="In-depth retrospectives, creator interviews, lore breakdowns, and reviews across all 7 fandom categories.">
+
+  <!-- Bootstrap 5 CSS & Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-xl fv-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span>FandomVerse</span>
+        <span class="brand-badge">HUB</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="catDropdown" role="button" data-bs-toggle="dropdown">Categories</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item" href="category.html?cat=Anime">Anime</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Gaming">Gaming</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Movies">Movies</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=TV Shows">TV Shows</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=K-Pop">K-Pop</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Comics">Comics</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Manga">Manga</a></li>
+              <li><hr class="dropdown-divider border-secondary opacity-25"></li>
+              <li><a class="dropdown-item fw-bold text-info" href="categories.html">All Categories &rarr;</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">Explore</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+              <li><a class="dropdown-item" href="characters.html">Characters</a></li>
+              <li><a class="dropdown-item active" href="articles.html">Articles</a></li>
+              <li><a class="dropdown-item" href="events.html">Events</a></li>
+              <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+              <li><a class="dropdown-item" href="videos.html">Videos & Audio</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li>
+          <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
+          <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <a class="btn btn-outline-fv btn-sm" href="login.html">Login</a>
+          <a class="btn btn-primary-fv btn-sm" href="signup.html">Signup</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ================= PAGE HEADER ================= -->
+    <header class="page-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-9">
+            <div class="hero-brand-pill mb-2">Editorial & Features</div>
+            <h1>Articles & Lore Breakdowns</h1>
+            <p>
+              Deep-dive essays, behind-the-scenes set reports, interviews, and historical retrospectives covering all 7 universes.
+            </p>
+          </div>
+          <div class="col-md-3 text-md-end mt-3 mt-md-0">
+            <img src="assets/images/movies/behind-the-frame.jpg" alt="Articles header artwork" class="page-header-art">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= ARTICLES SECTION ================= -->
+    <section class="section">
+      <div class="container">
+        <!-- Toolbar & Category Filter -->
+        <div class="fv-toolbar mb-4">
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <div class="filter-btn-group" id="articleCategoryFilters">
+              <button type="button" class="filter-chip active" data-category="all">All Articles</button>
+              <button type="button" class="filter-chip" data-category="Anime">Anime</button>
+              <button type="button" class="filter-chip" data-category="Gaming">Gaming</button>
+              <button type="button" class="filter-chip" data-category="Movies">Movies</button>
+              <button type="button" class="filter-chip" data-category="TV Shows">TV Shows</button>
+              <button type="button" class="filter-chip" data-category="K-Pop">K-Pop</button>
+              <button type="button" class="filter-chip" data-category="Comics">Comics</button>
+              <button type="button" class="filter-chip" data-category="Manga">Manga</button>
+            </div>
+            <span class="text-muted small" id="articleCount">Showing articles</span>
+          </div>
+        </div>
+
+        <!-- Article Cards Grid -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articlesGrid">
+          <!-- Loaded via JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="fv-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h3 class="footer-brand">FandomVerse</h3>
+          <p class="footer-text">A home for fans of anime, gaming, cinema, television, music, comics, and manga.</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="category.html?cat=Anime">Anime</a></li>
+            <li><a href="category.html?cat=Gaming">Gaming</a></li>
+            <li><a href="category.html?cat=Movies">Movies</a></li>
+            <li><a href="category.html?cat=TV Shows">TV Shows</a></li>
+            <li><a href="category.html?cat=K-Pop">K-Pop</a></li>
+            <li><a href="category.html?cat=Comics">Comics</a></li>
+            <li><a href="category.html?cat=Manga">Manga</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="trailers.html">Trailers</a></li>
+            <li><a href="videos.html">Videos & Audio</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h4 class="footer-heading">Live Community</h4>
+          <div class="stats-bar mb-3">
+            <div class="stat-item"><span>&#128337;</span> <span>Clock:</span> <span class="stat-val" id="liveClock">--:--:--</span></div>
+            <div class="stat-item"><span>&#128101;</span> <span>Visitors:</span> <span class="stat-val" id="visitorCounter">--</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-muted small text-center">
+        &copy; 2026 FandomVerse. All rights reserved. Student Project.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= DETAILS MODAL ================= -->
+  <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content fv-modal">
+        <div class="modal-header">
+          <h3 class="modal-title h5 mb-0" id="modalTitle">Article Title</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" class="modal-image" src="" alt="Article Banner">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge badge-category" id="modalCategory">Category</span>
+            <span class="badge badge-type" id="modalType">Article</span>
+          </div>
+          <div id="modalDescription" class="mb-4 text-light leading-relaxed" style="font-size: 1.05rem;"></div>
+          <ul class="tag-list" id="modalTags"></ul>
+          <p class="text-muted small mb-0" id="modalMeta"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-fv btn-sm" id="modalBookmarkBtn">☆ Add Bookmark</button>
+          <button type="button" class="btn btn-primary-fv btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CHATBOT WIDGET ================= -->
+  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle"><span>&#128172;</span> Chat & FAQ</button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
+      <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose"></button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chat-bubble bot">Hello! Click 'Read Article' on any card to read the full feature!</div>
+    </div>
+    <div class="chat-chips-area" id="chatChips">
+      <span class="chat-chip">What categories are available?</span>
+      <span class="chat-chip">How do bookmarks work?</span>
+      <span class="chat-chip">How can I search?</span>
+    </div>
+    <div class="chatbot-input-bar">
+      <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
+      <button type="button" id="chatbotSend" class="btn btn-primary-fv btn-sm">&#10148;</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    var articlesData = [
+      {
+        id: 601,
+        title: "Crimson Blade: Why The First Arc Still Endures",
+        category: "Anime",
+        date: "2026-09-01",
+        image: "assets/images/cat-anime.jpg",
+        description: "A look back at the choreography, character philosophy, and emotional depth that turned Ren Kazama's pilgrimage into a modern classic.",
+        fullBio: "When Crimson Blade Chronicles premiered, few anticipated the cultural phenomenon it would spark. By centering Ren Kazama's quest on peaceful coexistence rather than destructive conquest, the anime subverted traditional shonen tropes. The key to its staying power lies in its quiet moments: tea shared with elderly villagers, solemn meditations beneath cherry blossom groves, and blade choreography informed by authentic historical iaido discipline.",
+        tags: ["Anime", "Retrospective", "Choreography"],
+        popularity: "98%"
+      },
+      {
+        id: 602,
+        title: "Building Ashen Kingdoms: Open World Philosophy",
+        category: "Gaming",
+        date: "2026-09-15",
+        image: "assets/images/cat-gaming.jpg",
+        description: "How procedural weather systems and player-led factions reshape the dark fantasy RPG genre.",
+        fullBio: "The developers behind Ashen Kingdoms stripped away minimap clutter to return players to genuine exploration. By observing stars, river flows, and animal migrations, adventurers navigate treacherous mountain passes and forgotten catacombs. We spoke with game director Sarah Kim about how physics engines and emergent environmental reactivity make every player's campaign truly unique.",
+        tags: ["Gaming", "Game Design", "RPG"],
+        popularity: "96%"
+      },
+      {
+        id: 603,
+        title: "Behind The Frame: Practical VFX in Sci-Fi Cinema",
+        category: "Movies",
+        date: "2026-08-05",
+        image: "assets/images/movies/behind-the-frame.jpg",
+        description: "How director Elena Rostova built a full orbital landing deck on soundstages rather than green screens.",
+        fullBio: "In an era dominated by CGI volume stages, The Lighthouse Protocol made the radical choice to construct real steel platforms, pressurized hydraulic airlocks, and authentic analog switchboards. The result is palpable tactile realism on screen: actors interact with real physical weight, reflections behave naturally on glass helmets, and the sense of isolated deep-space claustrophobia is unmatched.",
+        tags: ["Movies", "Cinematography", "Special Effects"],
+        popularity: "94%"
+      },
+      {
+        id: 604,
+        title: "The Writers' Room: Anatomy of a Slow-Burn Mystery",
+        category: "TV Shows",
+        date: "2026-08-25",
+        image: "assets/images/tv-shows/writers-room.jpg",
+        description: "Showrunners reveal how they plotted Detective Maren Holt's coastal cold cases across two seasons.",
+        fullBio: "Plotting a gripping multi-season detective series requires balancing procedural momentum with psychological character intimacy. In this exclusive interview, the writers of Harrow Point walk us through their index card boards, how red herrings must remain emotionally truthful, and why setting the drama against a decaying foggy coastal town elevates the tension.",
+        tags: ["TV Shows", "Screenwriting", "Mystery"],
+        popularity: "92%"
+      },
+      {
+        id: 605,
+        title: "Lunar Bloom: The Evolution of 4th Gen Pop Idols",
+        category: "K-Pop",
+        date: "2026-09-20",
+        image: "assets/images/cat-kpop.jpg",
+        description: "How self-producing idols, synthwave nostalgia, and global fandom engagement drove 'Moonrise' to the top of charts.",
+        fullBio: "Lunar Bloom's Meteoric rise demonstrates how modern pop acts build worldwide communities. By handling their own rap lyrics, synth production, and concept planning, members Mina, Yuna, Chloe, and Sky communicate with authentic fan transparency. Their stadium concerts fuse futuristic neon stage production with acoustic live vocals.",
+        tags: ["K-Pop", "Music Industry", "Idol Culture"],
+        popularity: "99%"
+      },
+      {
+        id: 606,
+        title: "Ghostlight: The Origin of the Photon Vigilante",
+        category: "Comics",
+        date: "2026-08-12",
+        image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&auto=format&fit=crop&q=80",
+        description: "Tracing Nathan Croft's journey from a humble electrical engineer to Crescent City's hard-light guardian.",
+        fullBio: "Ever since Ghostlight first illuminated comic shop shelves, readers embraced the character's blend of grounded detective work and dazzling photon powers. Unlike invincible god-like figures, Croft feels every punch and must carefully recharge his suit's solar cells, creating constant high-stakes vulnerability in every rooftop duel.",
+        tags: ["Comics", "Superhero", "Lore"],
+        popularity: "95%"
+      },
+      {
+        id: 607,
+        title: "The Art of the Mangaka: Studio Tour & Daily Routine",
+        category: "Manga",
+        date: "2026-09-05",
+        image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80",
+        description: "An inside look at the wooden desk, ink wells, and weekly rhythm behind the pages of Tidewalker.",
+        fullBio: "Creating 19 pages of weekly serialized manga requires extraordinary discipline. We step inside the quiet Tokyo studio of Tidewalker's creator, documenting the progression from rough pencil 'name' storyboards to crisp G-pen ink lines, digital screentones, and emotional dialogue placement.",
+        tags: ["Manga", "Interview", "Artistry"],
+        popularity: "97%"
+      }
+    ];
+
+    var currentCategory = "all";
+
+    function renderArticles() {
+      var filtered = articlesData.filter(function(item) {
+        return currentCategory === "all" || item.category === currentCategory;
+      });
+
+      var container = document.getElementById("articlesGrid");
+      var countEl = document.getElementById("articleCount");
+      if (!container) return;
+
+      countEl.textContent = "Showing " + filtered.length + " of " + articlesData.length + " articles";
+
+      var html = "";
+      filtered.forEach(function(article) {
+        html += '<div class="col">' +
+          '<article class="card fv-card h-100">' +
+            '<div class="card-img-wrap">' +
+              '<img src="' + article.image + '" alt="' + article.title + '" loading="lazy">' +
+            '</div>' +
+            '<div class="card-body">' +
+              '<div class="d-flex justify-content-between align-items-center mb-2">' +
+                '<span class="badge badge-category">' + article.category + '</span>' +
+                '<span class="text-muted small">' + article.date + '</span>' +
+              '</div>' +
+              '<h3 class="card-title h5">' + article.title + '</h3>' +
+              '<p class="card-text">' + article.description + '</p>' +
+              '<button type="button" class="btn btn-outline-fv btn-sm mt-auto align-self-start" onclick="openDetailsModal(articlesData.find(function(a){return a.id===' + article.id + '}))">Read Full Article &rarr;</button>' +
+            '</div>' +
+          '</article>' +
+        '</div>';
+      });
+
+      container.innerHTML = html;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      renderArticles();
+
+      var chips = document.querySelectorAll("#articleCategoryFilters .filter-chip");
+      chips.forEach(function(chip) {
+        chip.addEventListener("click", function() {
+          chips.forEach(function(c) { c.classList.remove("active"); });
+          chip.classList.add("active");
+          currentCategory = chip.dataset.category;
+          renderArticles();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

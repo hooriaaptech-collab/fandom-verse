@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category Details | FandomVerse</title>
+  <meta name="description" content="Explore in-depth characters, stories, media and events for your chosen fandom universe.">
+
+  <!-- Bootstrap 5 CSS & Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-xl fv-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span>FandomVerse</span>
+        <span class="brand-badge">HUB</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="catDropdown" role="button" data-bs-toggle="dropdown">
+              Categories
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item" href="category.html?cat=Anime">Anime</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Gaming">Gaming</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Movies">Movies</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=TV Shows">TV Shows</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=K-Pop">K-Pop</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Comics">Comics</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Manga">Manga</a></li>
+              <li><hr class="dropdown-divider border-secondary opacity-25"></li>
+              <li><a class="dropdown-item fw-bold text-info" href="categories.html">All Categories &rarr;</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">
+              Explore
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+              <li><a class="dropdown-item" href="characters.html">Characters</a></li>
+              <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+              <li><a class="dropdown-item" href="events.html">Events</a></li>
+              <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+              <li><a class="dropdown-item" href="videos.html">Videos & Audio</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li>
+          <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
+          <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <a class="btn btn-outline-fv btn-sm" href="login.html">Login</a>
+          <a class="btn btn-primary-fv btn-sm" href="signup.html">Signup</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ================= PAGE HEADER ================= -->
+    <header class="page-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-9">
+            <div class="hero-brand-pill mb-2"><span id="headerCategoryPill">Fandom Realm</span></div>
+            <h1 id="categoryTitle">Anime Universe</h1>
+            <p id="categoryDescription">
+              Series, films, and legendary original heroes from animated worlds.
+            </p>
+          </div>
+          <div class="col-md-3 text-md-end mt-3 mt-md-0">
+            <img id="categoryArt" src="assets/images/cat-anime.jpg" alt="Category Art" class="page-header-art">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= CATEGORY CHARACTERS ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Iconic Characters</h2>
+          <p>Key protagonists, tacticians, and champions in this fandom.</p>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-4" id="cat-characters-grid">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CATEGORY CONTENT & MEDIA ================= -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Featured Media & Articles</h2>
+          <p>Trailers, sound tracks, reviews and releases.</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="cat-content-grid">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CATEGORY EVENTS ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Community Events</h2>
+          <p>Upcoming conventions, screenings, and meetups.</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="cat-events-grid">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="fv-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h3 class="footer-brand">FandomVerse</h3>
+          <p class="footer-text">A home for fans of anime, gaming, cinema, television, music, comics, and manga.</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="category.html?cat=Anime">Anime</a></li>
+            <li><a href="category.html?cat=Gaming">Gaming</a></li>
+            <li><a href="category.html?cat=Movies">Movies</a></li>
+            <li><a href="category.html?cat=TV Shows">TV Shows</a></li>
+            <li><a href="category.html?cat=K-Pop">K-Pop</a></li>
+            <li><a href="category.html?cat=Comics">Comics</a></li>
+            <li><a href="category.html?cat=Manga">Manga</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="trailers.html">Trailers</a></li>
+            <li><a href="videos.html">Videos & Audio</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h4 class="footer-heading">Live Community</h4>
+          <div class="stats-bar mb-3">
+            <div class="stat-item">
+              <span>&#128337;</span>
+              <span>Clock:</span>
+              <span class="stat-val" id="liveClock">--:--:--</span>
+            </div>
+            <div class="stat-item">
+              <span>&#128101;</span>
+              <span>Visitors:</span>
+              <span class="stat-val" id="visitorCounter">--</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-muted small text-center">
+        &copy; 2026 FandomVerse. All rights reserved. Student Project.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= DETAILS MODAL ================= -->
+  <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content fv-modal">
+        <div class="modal-header">
+          <h3 class="modal-title h5 mb-0" id="modalTitle">Item Details</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" class="modal-image" src="assets/images/banner.jpg" alt="Item preview">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge badge-category" id="modalCategory">Category</span>
+            <span class="badge badge-type" id="modalType">Type</span>
+          </div>
+          <p id="modalDescription" class="mb-3"></p>
+          <ul class="tag-list" id="modalTags"></ul>
+          <p class="text-muted small mb-0" id="modalMeta"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-fv btn-sm" id="modalBookmarkBtn">☆ Add Bookmark</button>
+          <button type="button" class="btn btn-primary-fv btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CHATBOT WIDGET ================= -->
+  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle">
+    <span>&#128172;</span> Chat & FAQ
+  </button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
+      <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose"></button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chat-bubble bot">Hello! Ask me any question about this category or FandomVerse!</div>
+    </div>
+    <div class="chat-chips-area" id="chatChips">
+      <span class="chat-chip">What categories are available?</span>
+      <span class="chat-chip">How do bookmarks work?</span>
+      <span class="chat-chip">How can I search?</span>
+    </div>
+    <div class="chatbot-input-bar">
+      <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
+      <button type="button" id="chatbotSend" class="btn btn-primary-fv btn-sm">&#10148;</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var urlParams = new URLSearchParams(window.location.search);
+      var selectedCat = urlParams.get("cat") || "Anime";
+
+      // 1. Fetch category meta
+      fetch("data/categories.json")
+        .then(function(res) { return res.json(); })
+        .then(function(categories) {
+          var current = categories.find(function(c) {
+            return c.name.toLowerCase() === selectedCat.toLowerCase();
+          }) || categories[0];
+
+          document.title = current.name + " | FandomVerse";
+          document.getElementById("categoryTitle").textContent = current.name + " Universe";
+          document.getElementById("headerCategoryPill").textContent = current.name + " Universe";
+          document.getElementById("categoryDescription").textContent = current.description;
+          document.getElementById("categoryArt").src = current.image;
+        });
+
+      // 2. Fetch characters for this category
+      fetch("data/characters.json")
+        .then(function(res) { return res.json(); })
+        .then(function(characters) {
+          allCharacters = characters;
+          var matchingChars = characters.filter(function(char) {
+            return char.category.toLowerCase() === selectedCat.toLowerCase();
+          });
+
+          var container = document.getElementById("cat-characters-grid");
+          if (!container) return;
+          var html = "";
+          matchingChars.forEach(function(char) {
+            html += '<div class="col">' +
+              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allCharacters.find(function(c){return c.id===' + char.id + '}))">' +
+                '<div class="card-img-wrap" style="aspect-ratio: 3/4;">' +
+                  '<img src="' + char.image + '" alt="' + char.name + '">' +
+                '</div>' +
+                '<div class="card-body">' +
+                  '<span class="card-meta">' + char.role + '</span>' +
+                  '<h3 class="card-title h5">' + char.name + '</h3>' +
+                  '<p class="card-text small">' + char.description + '</p>' +
+                  '<button type="button" class="btn btn-outline-fv btn-sm mt-auto align-self-start">Profile</button>' +
+                '</div>' +
+              '</article>' +
+            '</div>';
+          });
+          container.innerHTML = html;
+        });
+
+      // 3. Fetch content / media for this category
+      fetch("data/content.json")
+        .then(function(res) { return res.json(); })
+        .then(function(content) {
+          allContent = content;
+          var matchingContent = content.filter(function(item) {
+            return item.category.toLowerCase() === selectedCat.toLowerCase();
+          });
+
+          var container = document.getElementById("cat-content-grid");
+          if (!container) return;
+          var html = "";
+          matchingContent.forEach(function(item) {
+            html += '<div class="col">' +
+              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allContent.find(function(c){return c.id===' + item.id + '}))">' +
+                '<div class="card-img-wrap">' +
+                  '<img src="' + item.image + '" alt="' + item.title + '">' +
+                '</div>' +
+                '<div class="card-body">' +
+                  '<div class="d-flex gap-2 mb-2">' +
+                    '<span class="badge badge-category">' + item.category + '</span>' +
+                    '<span class="badge badge-type">' + item.type + '</span>' +
+                  '</div>' +
+                  '<h3 class="card-title h5">' + item.title + '</h3>' +
+                  '<p class="card-text">' + item.description + '</p>' +
+                  '<button type="button" class="btn btn-outline-fv btn-sm mt-auto align-self-start">Details</button>' +
+                '</div>' +
+              '</article>' +
+            '</div>';
+          });
+          container.innerHTML = html || '<p class="text-muted">No media entries found for this category.</p>';
+        });
+
+      // 4. Fetch events for this category
+      fetch("data/events.json")
+        .then(function(res) { return res.json(); })
+        .then(function(events) {
+          allEvents = events;
+          var matchingEvents = events.filter(function(ev) {
+            return ev.category.toLowerCase() === selectedCat.toLowerCase();
+          });
+
+          var container = document.getElementById("cat-events-grid");
+          if (!container) return;
+          var html = "";
+          matchingEvents.forEach(function(ev) {
+            html += '<div class="col">' +
+              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allEvents.find(function(e){return e.id===' + ev.id + '}))">' +
+                '<div class="card-img-wrap">' +
+                  '<img src="' + ev.image + '" alt="' + ev.title + '">' +
+                '</div>' +
+                '<div class="card-body">' +
+                  '<span class="card-meta">' + ev.date + ' &middot; ' + ev.location + '</span>' +
+                  '<h3 class="card-title h5">' + ev.title + '</h3>' +
+                  '<p class="card-text">' + ev.description + '</p>' +
+                  '<button type="button" class="btn btn-outline-fv btn-sm mt-auto align-self-start">View Event</button>' +
+                '</div>' +
+              '</article>' +
+            '</div>';
+          });
+          container.innerHTML = html || '<p class="text-muted">No upcoming events listed for this category.</p>';
+        });
+    });
+  </script>
+</body>
+</html>

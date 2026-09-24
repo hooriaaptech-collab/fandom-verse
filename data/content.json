@@ -1,244 +1,36 @@
-{
-  "categories": [
-    {
-      "id": "anime",
-      "name": "Anime",
-      "icon": "bi-stars",
-      "description": "Series, characters & releases"
-    },
-    {
-      "id": "gaming",
-      "name": "Gaming",
-      "icon": "bi-controller",
-      "description": "Games, worlds & updates"
-    },
-    {
-      "id": "movies",
-      "name": "Movies",
-      "icon": "bi-film",
-      "description": "Films, trailers & stories"
-    },
-    {
-      "id": "tv",
-      "name": "TV Shows",
-      "icon": "bi-tv",
-      "description": "Series & episodes"
-    },
-    {
-      "id": "kpop",
-      "name": "K-Pop",
-      "icon": "bi-music-note-beamed",
-      "description": "Artists, albums & comebacks"
-    },
-    {
-      "id": "comics",
-      "name": "Comics",
-      "icon": "bi-book-half",
-      "description": "Heroes, issues & universes"
-    },
-    {
-      "id": "manga",
-      "name": "Manga",
-      "icon": "bi-journal-richtext",
-      "description": "Manga & creators"
-    }
-  ],
-  "content": [
-    {
-      "id": 1,
-      "title": "One Piece",
-      "category": "anime",
-      "type": "anime",
-      "year": "1999",
-      "rating": "9.0",
-      "tags": [
-        "Adventure",
-        "Pirates"
-      ],
-      "description": "A long-running adventure following Luffy and his crew as they chase the legendary One Piece.",
-      "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=900&q=80",
-      "featured": true
-    },
-    {
-      "id": 2,
-      "title": "Demon Slayer",
-      "category": "anime",
-      "type": "anime",
-      "year": "2019",
-      "rating": "8.6",
-      "tags": [
-        "Action",
-        "Fantasy"
-      ],
-      "description": "Tanjiro begins a dangerous journey after tragedy changes his family forever.",
-      "image": "https://images.unsplash.com/photo-1560972550-aba3456b5564?auto=format&fit=crop&w=900&q=80",
-      "featured": true
-    },
-    {
-      "id": 3,
-      "title": "Elden Ring",
-      "category": "gaming",
-      "type": "game",
-      "year": "2022",
-      "rating": "9.5",
-      "tags": [
-        "RPG",
-        "Fantasy"
-      ],
-      "description": "Explore a vast dark-fantasy world filled with hidden paths, legends and formidable enemies.",
-      "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
-      "featured": true
-    },
-    {
-      "id": 4,
-      "title": "Spider-Man",
-      "category": "movies",
-      "type": "movie",
-      "year": "2026",
-      "rating": "8.8",
-      "tags": [
-        "Superhero",
-        "Action"
-      ],
-      "description": "A fan-favorite superhero balancing an extraordinary life with everyday responsibility.",
-      "image": "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?auto=format&fit=crop&w=900&q=80",
-      "featured": true
-    },
-    {
-      "id": 5,
-      "title": "BTS",
-      "category": "kpop",
-      "type": "kpop",
-      "year": "2013",
-      "rating": "10",
-      "tags": [
-        "K-Pop",
-        "Music"
-      ],
-      "description": "A global music group known for performance, storytelling and a worldwide fan community.",
-      "image": "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=900&q=80",
-      "featured": true
-    },
-    {
-      "id": 6,
-      "title": "Arcane",
-      "category": "tv",
-      "type": "tv",
-      "year": "2021",
-      "rating": "9.0",
-      "tags": [
-        "Animation",
-        "Drama"
-      ],
-      "description": "Two sisters find themselves on opposite sides of a conflict between two cities.",
-      "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80"
-    },
-    {
-      "id": 7,
-      "title": "Batman",
-      "category": "comics",
-      "type": "comic",
-      "year": "1939",
-      "rating": "9.1",
-      "tags": [
-        "DC",
-        "Hero"
-      ],
-      "description": "Gotham's iconic detective and vigilante, explored through decades of comic storytelling.",
-      "image": "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?auto=format&fit=crop&w=900&q=80"
-    },
-    {
-      "id": 8,
-      "title": "Jujutsu Kaisen",
-      "category": "manga",
-      "type": "manga",
-      "year": "2018",
-      "rating": "8.9",
-      "tags": [
-        "Manga",
-        "Action"
-      ],
-      "description": "Yuji enters the world of cursed spirits and jujutsu sorcery.",
-      "image": "https://images.unsplash.com/photo-1613376023733-0a73315d9b06?auto=format&fit=crop&w=900&q=80"
-    },
-    {
-      "id": 9,
-      "title": "The Last of Us",
-      "category": "gaming",
-      "type": "game",
-      "year": "2013",
-      "rating": "9.2",
-      "tags": [
-        "Story",
-        "Survival"
-      ],
-      "description": "A story-driven journey through a world transformed by a devastating outbreak.",
-      "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80"
-    },
-    {
-      "id": 10,
-      "title": "Interstellar",
-      "category": "movies",
-      "type": "movie",
-      "year": "2014",
-      "rating": "8.7",
-      "tags": [
-        "Sci-Fi",
-        "Drama"
-      ],
-      "description": "Explorers travel beyond our solar system in search of a future for humanity.",
-      "image": "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=900&q=80"
-    },
-    {
-      "id": 11,
-      "title": "Stranger Things",
-      "category": "tv",
-      "type": "tv",
-      "year": "2016",
-      "rating": "8.6",
-      "tags": [
-        "Mystery",
-        "Sci-Fi"
-      ],
-      "description": "A group of friends uncover strange events surrounding their small town.",
-      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
-    },
-    {
-      "id": 12,
-      "title": "BLACKPINK",
-      "category": "kpop",
-      "type": "kpop",
-      "year": "2016",
-      "rating": "9.3",
-      "tags": [
-        "K-Pop",
-        "Pop"
-      ],
-      "description": "A four-member group known for powerful performances and global pop hits.",
-      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80"
-    }
-  ],
-  "events": [
-    {
-      "date": "12 OCT",
-      "title": "Fandom Night",
-      "location": "Community Hall",
-      "category": "All Fandoms",
-      "description": "A fan meetup featuring themed activities, discussions and cosplay."
-    },
-    {
-      "date": "25 OCT",
-      "title": "Anime & Manga Meetup",
-      "location": "City Convention Center",
-      "category": "Anime",
-      "description": "Meet fellow fans and explore anime and manga culture."
-    },
-    {
-      "date": "08 NOV",
-      "title": "K-Pop Community Day",
-      "location": "Arts District",
-      "category": "K-Pop",
-      "description": "A community celebration with dance, music and fan activities."
-    }
-  ]
-}
+[
+  { "id": 1, "title": "Crimson Blade Chronicles", "category": "Anime", "type": "article", "image": "assets/images/cat-anime.jpg", "description": "A look back at the masterclass sword fight choreography and emotional arc that made Crimson Blade a modern classic.", "tags": ["Action", "Fantasy", "Swordsman"], "date": "2026-09-01", "featured": true, "popularity": "98%" },
+  { "id": 2, "title": "Skybound Academy Season 2", "category": "Anime", "type": "trailer", "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80", "description": "The new trailer follows the cadet flight class into the treacherous northern exams.", "tags": ["Adventure", "School", "Sci-Fi"], "date": "2026-08-20", "featured": false, "popularity": "94%" },
+  { "id": 3, "title": "Hana no Yoru Soundtrack", "category": "Anime", "type": "audio", "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80", "description": "Lyrical piano and weeping violins from the rain-soaked emotional finale.", "tags": ["Music", "Drama", "Soundtrack"], "date": "2026-07-14", "featured": false, "popularity": "90%" },
+  { "id": 4, "title": "Ren Kazama: The Lone Blade", "category": "Anime", "type": "character", "image": "assets/images/cat-anime.jpg", "description": "The reluctant swordsman at the heart of Crimson Blade Chronicles.", "tags": ["Hero", "Swordsman", "Protagonist"], "date": "2026-06-02", "featured": false, "popularity": "98%" },
+
+  { "id": 5, "title": "Ashen Kingdoms", "category": "Gaming", "type": "release", "image": "assets/images/cat-gaming.jpg", "description": "The open-world dark fantasy RPG launches with free story expansions in its first year.", "tags": ["RPG", "Open World", "Fantasy"], "date": "2026-10-15", "featured": true, "popularity": "97%" },
+  { "id": 6, "title": "Neon Harbor Speedrun Night", "category": "Gaming", "type": "event", "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80", "description": "Community speedrunners race through the cyber campaign live on stage.", "tags": ["Speedrun", "Community", "Esports"], "date": "2026-11-05", "featured": false, "popularity": "92%" },
+  { "id": 7, "title": "Fortress Tactics Walkthrough", "category": "Gaming", "type": "video", "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop&q=80", "description": "A comprehensive ten-minute master guide to strong early-game fortress openings.", "tags": ["Strategy", "Guide", "Walkthrough"], "date": "2026-08-30", "featured": false, "popularity": "89%" },
+  { "id": 8, "title": "Ashen Kingdoms Collector's Edition", "category": "Gaming", "type": "merchandise", "image": "assets/images/merch-3.jpg", "description": "Includes steelbook, hardcover concept art book, and a cast-metal realm map.", "tags": ["Collectible", "RPG", "Merch"], "date": "2026-09-10", "featured": false, "popularity": "95%" },
+
+  { "id": 9, "title": "The Lighthouse Protocol", "category": "Movies", "type": "trailer", "image": "assets/images/cat-movies.jpg", "description": "A lighthouse keeper receives a radio transmission from tomorrow in this tense sci-fi thriller.", "tags": ["Sci-Fi", "Thriller", "Mystery"], "date": "2026-09-18", "featured": true, "popularity": "96%" },
+  { "id": 10, "title": "Behind the Frame: Set Design", "category": "Movies", "type": "article", "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&auto=format&fit=crop&q=80", "description": "How the production crew constructed a full coastal fishing town on a soundstage.", "tags": ["Behind the Scenes", "Cinema", "Design"], "date": "2026-08-05", "featured": false, "popularity": "88%" },
+  { "id": 11, "title": "Midnight Reel Film Festival", "category": "Movies", "type": "event", "image": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=800&auto=format&fit=crop&q=80", "description": "A weekend of restored 70mm sci-fi classics and unreleased indie short films.", "tags": ["Festival", "Cinema", "Indie"], "date": "2026-12-04", "featured": false, "popularity": "91%" },
+  { "id": 12, "title": "Captain Ines Vale", "category": "Movies", "type": "character", "image": "assets/images/movies/ines-vale.jpg", "description": "The disgraced starship pilot at the centre of the epic Skyline sci-fi saga.", "tags": ["Action", "Hero", "Sci-Fi"], "date": "2026-05-22", "featured": false, "popularity": "96%" },
+
+  { "id": 13, "title": "Harrow Point: Season One Recap", "category": "TV Shows", "type": "video", "image": "assets/images/cat-tv.jpg", "description": "The biggest plot twists, false clues, and character motives of season one explained.", "tags": ["Mystery", "Recap", "Drama"], "date": "2026-09-12", "featured": true, "popularity": "95%" },
+  { "id": 14, "title": "Kingsbridge Season 3", "category": "TV Shows", "type": "release", "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80", "description": "The acclaimed Victorian industrial period drama returns with eight gripping episodes.", "tags": ["Drama", "Period", "Series"], "date": "2026-10-02", "featured": false, "popularity": "90%" },
+  { "id": 15, "title": "The Writers' Room Podcast", "category": "TV Shows", "type": "audio", "image": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&auto=format&fit=crop&q=80", "description": "Lead writers discuss pacing slow-burn mysteries and weaving multi-season subplots.", "tags": ["Podcast", "Interview", "Writing"], "date": "2026-08-25", "featured": false, "popularity": "87%" },
+  { "id": 16, "title": "Detective Maren Holt", "category": "TV Shows", "type": "character", "image": "assets/images/tv-shows/maren-holt.jpg", "description": "The sharp, determined inspector who anchors the foggy mysteries of Harrow Point.", "tags": ["Crime", "Lead", "Investigator"], "date": "2026-07-01", "featured": false, "popularity": "95%" },
+
+  { "id": 17, "title": "Lunar Bloom - Moonrise", "category": "K-Pop", "type": "release", "image": "assets/images/cat-kpop.jpg", "description": "A breakout debut mini album with six tracks and a bright, synth-pop title track.", "tags": ["Album", "Debut", "Dance"], "date": "2026-09-25", "featured": true, "popularity": "99%" },
+  { "id": 18, "title": "Starlight Nine World Stadium Tour", "category": "K-Pop", "type": "event", "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&auto=format&fit=crop&q=80", "description": "Global fan-club ticket presale opens for the first 12 international stadium dates.", "tags": ["Concert", "Tour", "K-Pop"], "date": "2026-11-20", "featured": false, "popularity": "97%" },
+  { "id": 19, "title": "Title Track Choreography Breakdown", "category": "K-Pop", "type": "video", "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&auto=format&fit=crop&q=80", "description": "A count-by-count masterclass breaking down the iconic chorus point choreography.", "tags": ["Dance", "Tutorial", "Choreography"], "date": "2026-09-03", "featured": false, "popularity": "94%" },
+  { "id": 20, "title": "Lunar Bloom Official Lightstick", "category": "K-Pop", "type": "merchandise", "image": "assets/images/cat-kpop.jpg", "description": "The official concert lightstick featuring Bluetooth sync and multi-color lighting modes.", "tags": ["Lightstick", "Fan Gear", "Merch"], "date": "2026-09-15", "featured": false, "popularity": "96%" },
+
+  { "id": 21, "title": "Iron Meridian #1 Special Edition", "category": "Comics", "type": "release", "image": "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&auto=format&fit=crop&q=80", "description": "The first issue of the highly anticipated magnetic superhero series arrives on shelves.", "tags": ["Superhero", "Comics", "Action"], "date": "2026-10-07", "featured": false, "popularity": "94%" },
+  { "id": 22, "title": "Ghostlight: The Origin Story", "category": "Comics", "type": "article", "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop&q=80", "description": "Tracing the hard-light vigilante from an early prototype panel to a worldwide symbol.", "tags": ["History", "Vigilante", "Superhero"], "date": "2026-08-12", "featured": true, "popularity": "97%" },
+  { "id": 23, "title": "Crescent Comic Fair", "category": "Comics", "type": "event", "image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80", "description": "Indie creators, signing tables, portfolio reviews, and exclusive variant covers.", "tags": ["Convention", "Indie", "Artists"], "date": "2026-11-14", "featured": false, "popularity": "90%" },
+  { "id": 24, "title": "Ghostlight Variant Covers Gallery", "category": "Comics", "type": "gallery", "image": "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&auto=format&fit=crop&q=80", "description": "A curated collection of celebratory variant comic covers from the past decade.", "tags": ["Art", "Covers", "Gallery"], "date": "2026-07-28", "featured": false, "popularity": "92%" },
+
+  { "id": 25, "title": "Tidewalker Volume 12", "category": "Manga", "type": "release", "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80", "description": "The latest volume brings the emotional, rain-drenched storm arc to a breathtaking climax.", "tags": ["Adventure", "Volume", "Manga"], "date": "2026-10-10", "featured": false, "popularity": "96%" },
+  { "id": 26, "title": "Inked Worlds Sketchbook", "category": "Manga", "type": "gallery", "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80", "description": "Original pencil sketches, rough panel layouts, and margin notes directly from the mangaka.", "tags": ["Art", "Sketches", "Behind the Scenes"], "date": "2026-08-18", "featured": false, "popularity": "93%" },
+  { "id": 27, "title": "Inside a Mangaka's Studio", "category": "Manga", "type": "video", "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80", "description": "A rare glimpse into the drawing desk, ink selection, and weekly rhythm of a serial artist.", "tags": ["Studio", "Artist", "Documentary"], "date": "2026-09-05", "featured": false, "popularity": "91%" },
+  { "id": 28, "title": "Yuki Aizawa: The Ocean's Voice", "category": "Manga", "type": "character", "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80", "description": "The quiet apprentice at the centre of Tidewalker's ocean mythology.", "tags": ["Protagonist", "Fantasy", "Character"], "date": "2026-05-30", "featured": false, "popularity": "96%" }
+]

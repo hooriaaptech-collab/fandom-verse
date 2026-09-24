@@ -1,0 +1,82 @@
+[
+  {
+    "id": 401,
+    "title": "Crimson Blade Art Poster Set",
+    "category": "Anime",
+    "price": 18.00,
+    "rating": 4.9,
+    "image": "assets/images/merch-1.jpg",
+    "description": "Premium metallic foil finish 3-poster collection featuring Ren Kazama and key vistas.",
+    "fullDetails": "Printed on 300gsm heavyweight archival art paper with embossed gold foil details. Set of three 18x24 inch prints ready for framing."
+  },
+  {
+    "id": 402,
+    "title": "FandomVerse Signature Hoodie",
+    "category": "Gaming",
+    "price": 45.00,
+    "rating": 4.8,
+    "image": "assets/images/merch-2.jpg",
+    "description": "Ultra-soft cotton blend hoodie with embroidered celestial badge on the chest.",
+    "fullDetails": "80% ring-spun organic cotton, 20% polyester fleece. Features deep front pouch pocket, metal-tipped drawstrings, and custom inner lining."
+  },
+  {
+    "id": 403,
+    "title": "Vex-09 Collector's Action Figure",
+    "category": "Gaming",
+    "price": 60.00,
+    "rating": 5.0,
+    "image": "assets/images/merch-3.jpg",
+    "description": "1/10 scale hand-painted figure featuring LED holo-shield and interchangeable weapons.",
+    "fullDetails": "Stands 8.5 inches tall with 28 points of articulation. Includes magnetic plasma rifle, deployable translucent blue shield, and display base."
+  },
+  {
+    "id": 404,
+    "title": "Fandom Factions Enamel Pin Pack",
+    "category": "Comics",
+    "price": 12.00,
+    "rating": 4.7,
+    "image": "assets/images/merch-4.jpg",
+    "description": "Set of four hard enamel pins with rubber clutches, celebrating hero and rogue symbols.",
+    "fullDetails": "High-polish nickel plating, smooth cloissoné hard enamel colors, and laser-engraved backing stamps. Perfect for backpacks and jackets."
+  },
+  {
+    "id": 405,
+    "title": "Lunar Bloom Official Heart Lightstick",
+    "category": "K-Pop",
+    "price": 55.00,
+    "rating": 4.9,
+    "image": "assets/images/cat-kpop.jpg",
+    "description": "Concert-ready Bluetooth synchronized lightstick with 6 radiant light modes.",
+    "fullDetails": "Syncs automatically with stadium concert frequencies or smartphone app. Features a glowing iridescent heart chamber, wrist strap, and battery pack."
+  },
+  {
+    "id": 406,
+    "title": "The Lighthouse Protocol Coffee Mug",
+    "category": "Movies",
+    "price": 15.00,
+    "rating": 4.6,
+    "image": "assets/images/cat-movies.jpg",
+    "description": "Matte black ceramic mug with heat-activated star chart and radio signal constellation.",
+    "fullDetails": "15oz ceramic mug. Pour hot coffee or tea to reveal the hidden starship trajectory and quantum timeline coordinates."
+  },
+  {
+    "id": 407,
+    "title": "Harrow Point Detective Field Notebook",
+    "category": "TV Shows",
+    "price": 14.00,
+    "rating": 4.8,
+    "image": "assets/images/tv-shows/maren-holt.jpg",
+    "description": "Distressed faux-leather bound journal with dotted grid paper and ribbon bookmark.",
+    "fullDetails": "Includes authentic replicas of case sketches, town maps, and notes from Detective Maren Holt's investigation file."
+  },
+  {
+    "id": 408,
+    "title": "Tidewalker Manga Ink Drawing Set",
+    "category": "Manga",
+    "price": 32.00,
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80",
+    "description": "Professional mangaka starter kit with 3 nib types, waterproof black sumi ink, and Bristol pads.",
+    "fullDetails": "Includes G-pen, Maru-pen, and Saji-pen nibs, wooden pen holder, 60ml non-bleeding ink, and a step-by-step panel drawing tutorial booklet."
+  }
+]

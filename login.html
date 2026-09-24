@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | FandomVerse</title>
+  <meta name="description" content="Sign in to your FandomVerse account to access bookmarks, discussion threads, and fan settings.">
+
+  <!-- Bootstrap 5 CSS & Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-xl fv-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span>FandomVerse</span>
+        <span class="brand-badge">HUB</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="catDropdown" role="button" data-bs-toggle="dropdown">Categories</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item" href="category.html?cat=Anime">Anime</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Gaming">Gaming</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Movies">Movies</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=TV Shows">TV Shows</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=K-Pop">K-Pop</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Comics">Comics</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Manga">Manga</a></li>
+              <li><hr class="dropdown-divider border-secondary opacity-25"></li>
+              <li><a class="dropdown-item fw-bold text-info" href="categories.html">All Categories &rarr;</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">Explore</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+              <li><a class="dropdown-item" href="characters.html">Characters</a></li>
+              <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+              <li><a class="dropdown-item" href="events.html">Events</a></li>
+              <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+              <li><a class="dropdown-item" href="videos.html">Videos & Audio</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li>
+          <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
+          <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <a class="btn btn-primary-fv btn-sm active" href="login.html">Login</a>
+          <a class="btn btn-outline-fv btn-sm" href="signup.html">Signup</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ================= PAGE HEADER ================= -->
+    <header class="page-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-9">
+            <div class="hero-brand-pill mb-2">Member Portal</div>
+            <h1>Account Login</h1>
+            <p>
+              Sign in to manage your saved bookmarks, view exclusive event passes, and personalize your fandom dashboard.
+            </p>
+          </div>
+          <div class="col-md-3 text-md-end mt-3 mt-md-0">
+            <img src="assets/images/banner.jpg" alt="Login header art" class="page-header-art">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= LOGIN FORM SECTION ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-5">
+            <div class="fv-card p-4">
+              <h2 class="h4 mb-3 text-white text-center">Welcome Back</h2>
+              <p class="text-muted small text-center mb-4">Enter your credentials to access your FandomVerse account.</p>
+
+              <div id="loginAlertPlaceholder"></div>
+
+              <form id="loginForm" novalidate>
+                <div class="mb-3">
+                  <label for="loginEmail" class="form-label text-muted small fw-bold">Email Address *</label>
+                  <input type="email" class="form-control fv-form-control" id="loginEmail" placeholder="fan@example.com" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="loginPassword" class="form-label text-muted small fw-bold">Password *</label>
+                  <input type="password" class="form-control fv-form-control" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                    <label class="form-check-label text-muted small" for="rememberMe">Remember me</label>
+                  </div>
+                  <a href="#" class="small text-info" onclick="alert('Demo notice: In this student project, you can use any sample email and password to log in!')">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary-fv w-100 py-2">Sign In &rarr;</button>
+              </form>
+
+              <div class="text-center mt-4 pt-3 border-top border-secondary border-opacity-25">
+                <span class="text-muted small">Don't have an account yet? </span>
+                <a href="signup.html" class="small text-info fw-bold">Create Free Account</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="fv-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h3 class="footer-brand">FandomVerse</h3>
+          <p class="footer-text">A home for fans of anime, gaming, cinema, television, music, comics, and manga.</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="category.html?cat=Anime">Anime</a></li>
+            <li><a href="category.html?cat=Gaming">Gaming</a></li>
+            <li><a href="category.html?cat=Movies">Movies</a></li>
+            <li><a href="category.html?cat=TV Shows">TV Shows</a></li>
+            <li><a href="category.html?cat=K-Pop">K-Pop</a></li>
+            <li><a href="category.html?cat=Comics">Comics</a></li>
+            <li><a href="category.html?cat=Manga">Manga</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="trailers.html">Trailers</a></li>
+            <li><a href="videos.html">Videos & Audio</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h4 class="footer-heading">Live Community</h4>
+          <div class="stats-bar mb-3">
+            <div class="stat-item"><span>&#128337;</span> <span>Clock:</span> <span class="stat-val" id="liveClock">--:--:--</span></div>
+            <div class="stat-item"><span>&#128101;</span> <span>Visitors:</span> <span class="stat-val" id="visitorCounter">--</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-muted small text-center">
+        &copy; 2026 FandomVerse. All rights reserved. Student Project.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= CHATBOT WIDGET ================= -->
+  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle"><span>&#128172;</span> Chat & FAQ</button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
+      <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose"></button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chat-bubble bot">Hello! You can log in using any test credentials for this demonstration!</div>
+    </div>
+    <div class="chat-chips-area" id="chatChips">
+      <span class="chat-chip">Do I need an account to browse?</span>
+      <span class="chat-chip">What categories are available?</span>
+      <span class="chat-chip">How do bookmarks work?</span>
+    </div>
+    <div class="chatbot-input-bar">
+      <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
+      <button type="button" id="chatbotSend" class="btn btn-primary-fv btn-sm">&#10148;</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var form = document.getElementById("loginForm");
+      var alertBox = document.getElementById("loginAlertPlaceholder");
+
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var email = document.getElementById("loginEmail").value.trim();
+          var pass = document.getElementById("loginPassword").value.trim();
+
+          if (!email || !pass) {
+            alertBox.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert">' +
+              'Please enter both your email address and password.' +
+              '<button type="button" class="btn-close" data-bs-dismiss="alert"></button>' +
+            '</div>';
+            return;
+          }
+
+          if (!email.includes("@") || !email.includes(".")) {
+            alertBox.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert">' +
+              'Please enter a valid email format (e.g., user@example.com).' +
+              '<button type="button" class="btn-close" data-bs-dismiss="alert"></button>' +
+            '</div>';
+            return;
+          }
+
+          // Successful dummy login
+          alertBox.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
+            '<strong>Login Successful!</strong> Welcome back, ' + email + '. (Student Demo Mode)' +
+            '<button type="button" class="btn-close" data-bs-dismiss="alert"></button>' +
+          '</div>';
+
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

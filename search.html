@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global Content Search | FandomVerse</title>
+  <meta name="description" content="Search and filter through all FandomVerse content by title, category, media type, and tags.">
+
+  <!-- Bootstrap 5 CSS & Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-xl fv-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <span>FandomVerse</span>
+        <span class="brand-badge">HUB</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="catDropdown" role="button" data-bs-toggle="dropdown">Categories</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item" href="category.html?cat=Anime">Anime</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Gaming">Gaming</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Movies">Movies</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=TV Shows">TV Shows</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=K-Pop">K-Pop</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Comics">Comics</a></li>
+              <li><a class="dropdown-item" href="category.html?cat=Manga">Manga</a></li>
+              <li><hr class="dropdown-divider border-secondary opacity-25"></li>
+              <li><a class="dropdown-item fw-bold text-info" href="categories.html">All Categories &rarr;</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">Explore</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv">
+              <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+              <li><a class="dropdown-item" href="characters.html">Characters</a></li>
+              <li><a class="dropdown-item" href="articles.html">Articles</a></li>
+              <li><a class="dropdown-item" href="events.html">Events</a></li>
+              <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+              <li><a class="dropdown-item" href="videos.html">Videos & Audio</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li>
+          <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
+          <li class="nav-item"><a class="nav-link active" href="search.html">Search</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <a class="btn btn-outline-fv btn-sm" href="login.html">Login</a>
+          <a class="btn btn-primary-fv btn-sm" href="signup.html">Signup</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ================= PAGE HEADER ================= -->
+    <header class="page-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-9">
+            <div class="hero-brand-pill mb-2">Universal Finder</div>
+            <h1>Global Fandom Search</h1>
+            <p>
+              Instantly search through articles, characters, trailers, video guides, and releases across all seven fandom universes.
+            </p>
+          </div>
+          <div class="col-md-3 text-md-end mt-3 mt-md-0">
+            <img src="assets/images/banner.jpg" alt="Search header art" class="page-header-art">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= SEARCH & FILTER SECTION ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="fv-toolbar mb-4">
+          <!-- Search Row -->
+          <div class="row g-3">
+            <div class="col-12 col-lg-6">
+              <label for="globalSearchInput" class="form-label text-muted small fw-bold">Keyword Search</label>
+              <input type="search" id="globalSearchInput" class="form-control fv-form-control" placeholder="Search by title, description, category or tag (e.g., Swordsman, Sci-Fi)...">
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <label for="globalCategorySelect" class="form-label text-muted small fw-bold">Universe</label>
+              <select id="globalCategorySelect" class="form-select fv-form-select">
+                <option value="all">All Universes</option>
+                <option value="Anime">Anime</option>
+                <option value="Gaming">Gaming</option>
+                <option value="Movies">Movies</option>
+                <option value="TV Shows">TV Shows</option>
+                <option value="K-Pop">K-Pop</option>
+                <option value="Comics">Comics</option>
+                <option value="Manga">Manga</option>
+              </select>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <label for="globalSortSelect" class="form-label text-muted small fw-bold">Sort By</label>
+              <select id="globalSortSelect" class="form-select fv-form-select">
+                <option value="newest">Newest First</option>
+                <option value="az">A to Z (Alphabetical)</option>
+                <option value="popular">Most Popular</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Content Type Filter Buttons -->
+          <div class="mt-3 pt-3 border-top border-secondary border-opacity-25">
+            <span class="text-muted small d-block mb-2 fw-bold">Content Type:</span>
+            <div class="filter-btn-group" id="globalTypeFilters">
+              <button type="button" class="filter-chip active" data-type="all">All Types</button>
+              <button type="button" class="filter-chip" data-type="article">Articles</button>
+              <button type="button" class="filter-chip" data-type="character">Characters</button>
+              <button type="button" class="filter-chip" data-type="trailer">Trailers</button>
+              <button type="button" class="filter-chip" data-type="event">Events</button>
+              <button type="button" class="filter-chip" data-type="video">Videos</button>
+              <button type="button" class="filter-chip" data-type="audio">Audio</button>
+              <button type="button" class="filter-chip" data-type="release">Releases</button>
+              <button type="button" class="filter-chip" data-type="merchandise">Merchandise</button>
+              <button type="button" class="filter-chip text-danger" id="resetSearchFiltersBtn">Reset Filters</button>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-3 text-muted small">
+            <span id="searchResultSummary">Loading content...</span>
+            <span>Click any card for full details</span>
+          </div>
+        </div>
+
+        <!-- Search Results Grid -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="searchResultsGrid">
+          <!-- Loaded via JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="fv-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <h3 class="footer-brand">FandomVerse</h3>
+          <p class="footer-text">A home for fans of anime, gaming, cinema, television, music, comics, and manga.</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="category.html?cat=Anime">Anime</a></li>
+            <li><a href="category.html?cat=Gaming">Gaming</a></li>
+            <li><a href="category.html?cat=Movies">Movies</a></li>
+            <li><a href="category.html?cat=TV Shows">TV Shows</a></li>
+            <li><a href="category.html?cat=K-Pop">K-Pop</a></li>
+            <li><a href="category.html?cat=Comics">Comics</a></li>
+            <li><a href="category.html?cat=Manga">Manga</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="trailers.html">Trailers</a></li>
+            <li><a href="videos.html">Videos & Audio</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h4 class="footer-heading">Live Community</h4>
+          <div class="stats-bar mb-3">
+            <div class="stat-item"><span>&#128337;</span> <span>Clock:</span> <span class="stat-val" id="liveClock">--:--:--</span></div>
+            <div class="stat-item"><span>&#128101;</span> <span>Visitors:</span> <span class="stat-val" id="visitorCounter">--</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-muted small text-center">
+        &copy; 2026 FandomVerse. All rights reserved. Student Project.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= DETAILS MODAL ================= -->
+  <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content fv-modal">
+        <div class="modal-header">
+          <h3 class="modal-title h5 mb-0" id="modalTitle">Details</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" class="modal-image" src="" alt="Preview">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge badge-category" id="modalCategory">Category</span>
+            <span class="badge badge-type" id="modalType">Type</span>
+          </div>
+          <p id="modalDescription" class="mb-3"></p>
+          <ul class="tag-list" id="modalTags"></ul>
+          <p class="text-muted small mb-0" id="modalMeta"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-fv btn-sm" id="modalBookmarkBtn">☆ Add Bookmark</button>
+          <button type="button" class="btn btn-primary-fv btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CHATBOT WIDGET ================= -->
+  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle"><span>&#128172;</span> Chat & FAQ</button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
+      <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose"></button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chat-bubble bot">Hello! Use the search filters above to explore our fandom library!</div>
+    </div>
+    <div class="chat-chips-area" id="chatChips">
+      <span class="chat-chip">How can I search?</span>
+      <span class="chat-chip">What categories are available?</span>
+      <span class="chat-chip">How do bookmarks work?</span>
+    </div>
+    <div class="chatbot-input-bar">
+      <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
+      <button type="button" id="chatbotSend" class="btn btn-primary-fv btn-sm">&#10148;</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    var searchState = {
+      keyword: "",
+      category: "all",
+      type: "all",
+      sort: "newest"
+    };
+
+    function executeSearch() {
+      // 1. Filter by keyword (title, description, category, tags)
+      var results = allContent.filter(function(item) {
+        var q = searchState.keyword.toLowerCase().trim();
+        var matchesKeyword = !q;
+        if (q) {
+          var title = (item.title || item.name || "").toLowerCase();
+          var desc = (item.description || item.fullBio || "").toLowerCase();
+          var cat = (item.category || "").toLowerCase();
+          var tagsStr = (item.tags || item.abilities || []).join(" ").toLowerCase();
+          matchesKeyword = title.includes(q) || desc.includes(q) || cat.includes(q) || tagsStr.includes(q);
+        }
+
+        // 2. Filter by Category
+        var matchesCat = searchState.category === "all" || item.category === searchState.category;
+
+        // 3. Filter by Type
+        var matchesType = searchState.type === "all" || item.type === searchState.type;
+
+        return matchesKeyword && matchesCat && matchesType;
+      });
+
+      // 4. Sorting
+      results.sort(function(a, b) {
+        if (searchState.sort === "az") {
+          var titleA = a.title || a.name || "";
+          var titleB = b.title || b.name || "";
+          return titleA.localeCompare(titleB);
+        } else if (searchState.sort === "popular") {
+          var popA = parseInt(a.popularity || "0", 10);
+          var popB = parseInt(b.popularity || "0", 10);
+          return popB - popA;
+        } else {
+          // newest
+          var dateA = a.date || "2026-01-01";
+          var dateB = b.date || "2026-01-01";
+          return dateB.localeCompare(dateA);
+        }
+      });
+
+      // 5. Render results
+      var container = document.getElementById("searchResultsGrid");
+      var summaryEl = document.getElementById("searchResultSummary");
+      if (!container) return;
+
+      summaryEl.textContent = "Showing " + results.length + " of " + allContent.length + " matching items";
+
+      if (results.length === 0) {
+        container.innerHTML = '<div class="col-12 text-center py-5 text-muted"><p>No items found matching your search. Try different keywords or clear your filters.</p></div>';
+        return;
+      }
+
+      var html = "";
+      results.forEach(function(item) {
+        var tagsHtml = (item.tags || item.abilities || []).slice(0, 3).map(function(t) {
+          return '<span class="tag">' + t + '</span>';
+        }).join("");
+
+        html += '<div class="col">' +
+          '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allContent.find(function(c){return c.id===' + item.id + '}))">' +
+            '<div class="card-img-wrap">' +
+              '<img src="' + (item.image || item.thumbnail) + '" alt="' + (item.title || item.name) + '" loading="lazy">' +
+            '</div>' +
+            '<div class="card-body">' +
+              '<div class="d-flex justify-content-between align-items-center mb-2">' +
+                '<span class="badge badge-category">' + item.category + '</span>' +
+                '<span class="badge badge-type">' + item.type + '</span>' +
+              '</div>' +
+              '<h3 class="card-title h5">' + (item.title || item.name) + '</h3>' +
+              '<p class="card-text small">' + item.description + '</p>' +
+              '<div class="tag-list mt-auto">' + tagsHtml + '</div>' +
+              '<button type="button" class="btn btn-outline-fv btn-sm align-self-start mt-2">View Details &rarr;</button>' +
+            '</div>' +
+          '</article>' +
+        '</div>';
+      });
+
+      container.innerHTML = html;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Load content from content.json
+      fetch("data/content.json")
+        .then(function(res) { return res.json(); })
+        .then(function(content) {
+          allContent = content;
+          executeSearch();
+        });
+
+      // Search input listener
+      var searchInput = document.getElementById("globalSearchInput");
+      if (searchInput) {
+        searchInput.addEventListener("input", function(e) {
+          searchState.keyword = e.target.value;
+          executeSearch();
+        });
+      }
+
+      // Category select listener
+      var catSelect = document.getElementById("globalCategorySelect");
+      if (catSelect) {
+        catSelect.addEventListener("change", function(e) {
+          searchState.category = e.target.value;
+          executeSearch();
+        });
+      }
+
+      // Sort select listener
+      var sortSelect = document.getElementById("globalSortSelect");
+      if (sortSelect) {
+        sortSelect.addEventListener("change", function(e) {
+          searchState.sort = e.target.value;
+          executeSearch();
+        });
+      }
+
+      // Type filter chips
+      var typeChips = document.querySelectorAll("#globalTypeFilters .filter-chip:not(#resetSearchFiltersBtn)");
+      typeChips.forEach(function(chip) {
+        chip.addEventListener("click", function() {
+          typeChips.forEach(function(c) { c.classList.remove("active"); });
+          chip.classList.add("active");
+          searchState.type = chip.dataset.type;
+          executeSearch();
+        });
+      });
+
+      // Reset button
+      var resetBtn = document.getElementById("resetSearchFiltersBtn");
+      if (resetBtn) {
+        resetBtn.addEventListener("click", function() {
+          searchState.keyword = "";
+          searchState.category = "all";
+          searchState.type = "all";
+          searchState.sort = "newest";
+
+          if (searchInput) searchInput.value = "";
+          if (catSelect) catSelect.value = "all";
+          if (sortSelect) sortSelect.value = "newest";
+          typeChips.forEach(function(c) { c.classList.toggle("active", c.dataset.type === "all"); });
+
+          executeSearch();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
