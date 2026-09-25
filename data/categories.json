@@ -1,11 +1,11 @@
 [
   {
     "id": "anime",
-    "name": "Anime",
+    "name": "Demon Slayer",
     "slug": "Anime",
     "description": "Epic series, films, and legendary heroes from Japanese animation.",
     "itemCount": 48,
-    "image": "assets/images/cat-anime.jpg",
+    "image": "assets/images/demonslayer.jpeg",
     "accentColor": "#38bdf8",
     "featuredTitle": "Crimson Blade Chronicles"
   },
@@ -15,7 +15,7 @@
     "slug": "Gaming",
     "description": "Blockbuster games, cybernetic worlds, esports, and interactive adventures.",
     "itemCount": 62,
-    "image": "assets/images/cat-gaming.jpg",
+    "image": "assets/images/call_of_duty.jpeg",
     "accentColor": "#818cf8",
     "featuredTitle": "Ashen Kingdoms"
   },

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿[
     {
         "id":  401,
@@ -79,4 +80,87 @@
         "description":  "Professional mangaka starter kit with 3 nib types, waterproof black sumi ink, and Bristol pads.",
         "fullDetails":  "Includes G-pen, Maru-pen, and Saji-pen nibs, wooden pen holder, 60ml non-bleeding ink, and a step-by-step panel drawing tutorial booklet."
     }
+=======
+[
+  {
+    "id": 401,
+    "title": "Demon Slayer",
+    "category": "Anime",
+    "price": 18.00,
+    "rating": 4.9,
+    "image": "assets/images/demonslayer.jpeg",
+    "description": "Demon Slayer has become one of the most recognized modern anime series and continues to attract fans around the world.",
+    "fullDetails": "Demon Slayer: Kimetsu no Yaiba is a popular Japanese anime series based on the manga written and illustrated by Koyoharu Gotouge. The story follows Tanjiro Kamado, a kind-hearted young boy whose life changes after a demon attacks his family."
+  },
+  {
+    "id": 402,
+    "title": "Valorant: The Tactical Shooter",
+    "category": "Gaming",
+    "price": 45.00,
+    "rating": 4.8,
+    "image": "assets/images/valorant.jpeg",
+    "description": "Valorant is based around 5-versus-5 team matches. Players choose different agents, each with their own abilities and role.",
+    "fullDetails": "Valorant is a popular tactical first-person shooter developed by Riot Games. The game combines precise gunplay with unique character abilities, creating a competitive experience where teamwork, strategy, and quick decision-making are important."
+  },
+  {
+    "id": 403,
+    "title": "Call of Duty: A Legendary Shooter",
+    "category": "Gaming",
+    "price": 60.00,
+    "rating": 5.0,
+    "image": "assets/images/call_of_duty.jpeg",
+    "description": "Call of Duty offers a fast and action-packed gaming experience built around combat, teamwork, competition, and storytelling.",
+    "fullDetails": "Call of Duty is one of the most famous first-person shooter franchises in gaming. Known for intense combat, cinematic campaigns, multiplayer battles, and competitive gameplay, the series has attracted millions of players around the world."
+  },
+  {
+    "id": 404,
+    "title": "Fandom Factions Enamel Pin Pack",
+    "category": "Comics",
+    "price": 12.00,
+    "rating": 4.7,
+    "image": "assets/images/merch-4.jpg",
+    "description": "Set of four hard enamel pins with rubber clutches, celebrating hero and rogue symbols.",
+    "fullDetails": "High-polish nickel plating, smooth cloissoné hard enamel colors, and laser-engraved backing stamps. Perfect for backpacks and jackets."
+  },
+  {
+    "id": 405,
+    "title": "Lunar Bloom Official Heart Lightstick",
+    "category": "K-Pop",
+    "price": 55.00,
+    "rating": 4.9,
+    "image": "assets/images/cat-kpop.jpg",
+    "description": "Concert-ready Bluetooth synchronized lightstick with 6 radiant light modes.",
+    "fullDetails": "Syncs automatically with stadium concert frequencies or smartphone app. Features a glowing iridescent heart chamber, wrist strap, and battery pack."
+  },
+  {
+    "id": 406,
+    "title": "The Lighthouse Protocol Coffee Mug",
+    "category": "Movies",
+    "price": 15.00,
+    "rating": 4.6,
+    "image": "assets/images/cat-movies.jpg",
+    "description": "Matte black ceramic mug with heat-activated star chart and radio signal constellation.",
+    "fullDetails": "15oz ceramic mug. Pour hot coffee or tea to reveal the hidden starship trajectory and quantum timeline coordinates."
+  },
+  {
+    "id": 407,
+    "title": "Harrow Point Detective Field Notebook",
+    "category": "TV Shows",
+    "price": 14.00,
+    "rating": 4.8,
+    "image": "assets/images/tv-shows/maren-holt.jpg",
+    "description": "Distressed faux-leather bound journal with dotted grid paper and ribbon bookmark.",
+    "fullDetails": "Includes authentic replicas of case sketches, town maps, and notes from Detective Maren Holt's investigation file."
+  },
+  {
+    "id": 408,
+    "title": "Tidewalker Manga Ink Drawing Set",
+    "category": "Manga",
+    "price": 32.00,
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80",
+    "description": "Professional mangaka starter kit with 3 nib types, waterproof black sumi ink, and Bristol pads.",
+    "fullDetails": "Includes G-pen, Maru-pen, and Saji-pen nibs, wooden pen holder, 60ml non-bleeding ink, and a step-by-step panel drawing tutorial booklet."
+  }
+>>>>>>> origin
 ]
