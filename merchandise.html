@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
@@ -106,7 +106,7 @@
             </div>
 
             <!-- Cart Trigger Button -->
-            <button type="button" class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#cartModal" onclick="renderCartModal()">
+            <button type="button" class="btn btn-lg px-4 fw=bold" style="background-color:#38bdf8; color: #0d1b2a;" data-bs-toggle="modal" data-bs-target="#cartModal" onclick="renderCartModal()">
               🛒 View Cart (<span id="cartCountBadge">0</span>)
             </button>
           </div>
@@ -250,8 +250,8 @@
               '<h3 class="card-title h5">' + item.title + '</h3>' +
               '<p class="card-text small">' + item.description + '</p>' +
               '<div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-25">' +
-                '<span class="fs-5 fw-bold text-warning">$' + item.price.toFixed(2) + '</span>' +
-                '<button type="button" class="btn btn-gold btn-sm" onclick="addToCart(allMerchandise.find(function(m){return m.id===' + item.id + '}))">+ Add to Cart</button>' +
+                '<span class="fs-5 fw-bold text-white">$' + item.price.toFixed(2) + '</span>' +
+                '<button type="button" class="btn btn-primary-fv btn-sm" onclick="addToCart(allMerchandise.find(function(m){return m.id===' + item.id + '}))">+ Add to Cart</button>' +
               '</div>' +
             '</div>' +
           '</article>' +

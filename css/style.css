@@ -641,7 +641,7 @@ img {
   bottom: 25px;
   right: 25px;
   z-index: 1050;
-  background: linear-gradient(135deg, var(--accent-blue-deep), var(--accent-blue));
+  background: #38bdf8;
   color: #ffffff;
   border: none;
   border-radius: 50px;

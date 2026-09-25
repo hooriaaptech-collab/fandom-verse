@@ -104,10 +104,23 @@
               Discover stories, original characters, trailers, events and unforgettable fan moments from the worlds you love most.
             </p>
             <div class="d-flex flex-wrap gap-3">
-              <a href="categories.html" class="btn btn-gold btn-lg">Explore Now</a>
+              <a href="categories.html" class="btn btn-lg  fw-bold" style="background-color:#38bdf8; color:#0d1b2a;">Explore Now</a>
               <a href="search.html" class="btn btn-outline-fv btn-lg">Search Content</a>
             </div>
+            <div class="stats-bar mb-0 mt-3  flex-wrap gap-3">
+            <div class="stat-item">
+              <span>&#128337;</span>
+              <span>Clock:</span>
+              <span class="stat-val" id="liveClock">Loading...</span>
+            </div>
+            <div class="stat-item">
+              <span>&#128101;</span>
+              <span>Visitors:</span>
+              <span class="stat-val" id="visitorCounter">1,042</span>
+            </div>
           </div>
+          </div>
+          
         </div>
       </div>
     </header>
@@ -240,18 +253,7 @@
         <div class="col-md-6 col-lg-4">
           <h4 class="footer-heading">Live Community</h4>
           <p class="text-muted small">Stay up to date with live fandom updates and active visitors.</p>
-          <div class="stats-bar mb-3">
-            <div class="stat-item">
-              <span>&#128337;</span>
-              <span>Clock:</span>
-              <span class="stat-val" id="liveClock">Loading...</span>
-            </div>
-            <div class="stat-item">
-              <span>&#128101;</span>
-              <span>Visitors:</span>
-              <span class="stat-val" id="visitorCounter">1,042</span>
-            </div>
-          </div>
+          
           <div class="d-flex gap-2">
             <a href="about.html" class="btn btn-outline-fv btn-sm">About Us</a>
             <a href="contact.html" class="btn btn-outline-fv btn-sm">Contact Support</a>
@@ -298,12 +300,12 @@
 
   <!-- ================= CHATBOT FLOATING WIDGET ================= -->
   <button type="button" class="chatbot-toggle-btn" id="chatbotToggle" aria-label="Open Chatbot">
-    <span>&#128172;</span> Chat & FAQ
+    <span></span> Chat & FAQ
   </button>
 
   <div class="chatbot-window" id="chatbotWindow">
     <div class="chatbot-header">
-      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
+      <h6><span></span> FandomVerse Assistant</h6>
       <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose" aria-label="Close Chatbot"></button>
     </div>
     <div class="chatbot-messages" id="chatbotMessages">

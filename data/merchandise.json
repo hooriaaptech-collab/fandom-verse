@@ -1,33 +1,33 @@
 [
   {
     "id": 401,
-    "title": "Crimson Blade Art Poster Set",
+    "title": "Demon Slayer",
     "category": "Anime",
     "price": 18.00,
     "rating": 4.9,
-    "image": "assets/images/merch-1.jpg",
-    "description": "Premium metallic foil finish 3-poster collection featuring Ren Kazama and key vistas.",
-    "fullDetails": "Printed on 300gsm heavyweight archival art paper with embossed gold foil details. Set of three 18x24 inch prints ready for framing."
+    "image": "assets/images/demonslayer.jpeg",
+    "description": "Demon Slayer has become one of the most recognized modern anime series and continues to attract fans around the world.",
+    "fullDetails": "Demon Slayer: Kimetsu no Yaiba is a popular Japanese anime series based on the manga written and illustrated by Koyoharu Gotouge. The story follows Tanjiro Kamado, a kind-hearted young boy whose life changes after a demon attacks his family."
   },
   {
     "id": 402,
-    "title": "FandomVerse Signature Hoodie",
+    "title": "Valorant: The Tactical Shooter",
     "category": "Gaming",
     "price": 45.00,
     "rating": 4.8,
-    "image": "assets/images/merch-2.jpg",
-    "description": "Ultra-soft cotton blend hoodie with embroidered celestial badge on the chest.",
-    "fullDetails": "80% ring-spun organic cotton, 20% polyester fleece. Features deep front pouch pocket, metal-tipped drawstrings, and custom inner lining."
+    "image": "assets/images/valorant.jpeg",
+    "description": "Valorant is based around 5-versus-5 team matches. Players choose different agents, each with their own abilities and role.",
+    "fullDetails": "Valorant is a popular tactical first-person shooter developed by Riot Games. The game combines precise gunplay with unique character abilities, creating a competitive experience where teamwork, strategy, and quick decision-making are important."
   },
   {
     "id": 403,
-    "title": "Vex-09 Collector's Action Figure",
+    "title": "Call of Duty: A Legendary Shooter",
     "category": "Gaming",
     "price": 60.00,
     "rating": 5.0,
-    "image": "assets/images/merch-3.jpg",
-    "description": "1/10 scale hand-painted figure featuring LED holo-shield and interchangeable weapons.",
-    "fullDetails": "Stands 8.5 inches tall with 28 points of articulation. Includes magnetic plasma rifle, deployable translucent blue shield, and display base."
+    "image": "assets/images/call_of_duty.jpeg",
+    "description": "Call of Duty offers a fast and action-packed gaming experience built around combat, teamwork, competition, and storytelling.",
+    "fullDetails": "Call of Duty is one of the most famous first-person shooter franchises in gaming. Known for intense combat, cinematic campaigns, multiplayer battles, and competitive gameplay, the series has attracted millions of players around the world."
   },
   {
     "id": 404,
