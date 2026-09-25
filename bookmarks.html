@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Saved Bookmarks | FandomVerse</title>
-  <meta name="description" content="View and manage your bookmarked characters, articles, trailers, and fandom media.">
+  <title>Your Saved Bookmarks & Notes | FandomVerse</title>
+  <meta name="description" content="View and manage your bookmarked characters, articles, trailers, and fandom media with session notes.">
 
   <!-- Bootstrap 5 CSS & Google Fonts -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -57,8 +57,14 @@
           <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li>
           <li class="nav-item"><a class="nav-link active" href="bookmarks.html">Bookmarks</a></li>
           <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <form class="navbar-search-form d-none d-lg-block me-2" id="navbarSearchForm">
+            <span class="search-icon">🔍</span>
+            <input type="search" id="navbarSearchInput" placeholder="Quick search..." aria-label="Quick Search">
+          </form>
           <a class="btn btn-outline-fv btn-sm" href="login.html">Login</a>
           <a class="btn btn-primary-fv btn-sm" href="signup.html">Signup</a>
         </div>
@@ -70,12 +76,20 @@
     <!-- ================= PAGE HEADER ================= -->
     <header class="page-header">
       <div class="container">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="fv-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Bookmarks & Notes</li>
+          </ol>
+        </nav>
+
         <div class="row align-items-center">
           <div class="col-md-9">
             <div class="hero-brand-pill mb-2">Saved Collection</div>
-            <h1>Your Bookmarks</h1>
+            <h1>Your Bookmarks & Notes</h1>
             <p>
-              Your saved collection of characters, articles, trailers, and fandom lore. Stored locally in your web browser.
+              Your saved collection of characters, articles, trailers, and lore. Bookmarks persist via localStorage, and your private notes stay active in sessionStorage.
             </p>
           </div>
           <div class="col-md-3 text-md-end mt-3 mt-md-0">
@@ -88,9 +102,12 @@
     <!-- ================= BOOKMARKS SECTION ================= -->
     <section class="section">
       <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-secondary border-opacity-25">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-2 border-bottom border-secondary border-opacity-25 gap-3">
           <span class="text-muted small" id="bookmarkCountSummary">Loading saved items...</span>
-          <button type="button" class="btn btn-outline-danger btn-sm" id="clearAllBookmarksBtn" onclick="clearAllBookmarks()">Clear All Bookmarks</button>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-gold btn-sm" id="exportBookmarksBtn" onclick="exportBookmarks()">📥 Export Bookmarks (.txt)</button>
+            <button type="button" class="btn btn-outline-danger btn-sm" id="clearAllBookmarksBtn" onclick="clearAllBookmarks()">Clear All</button>
+          </div>
         </div>
 
         <!-- Bookmarks Grid -->
@@ -163,6 +180,7 @@
           <p id="modalDescription" class="mb-3"></p>
           <ul class="tag-list" id="modalTags"></ul>
           <p class="text-muted small mb-0" id="modalMeta"></p>
+          <div id="modalNotesContainer"></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-fv btn-sm" id="modalBookmarkBtn">☆ Add Bookmark</button>
@@ -173,19 +191,23 @@
   </div>
 
   <!-- ================= CHATBOT WIDGET ================= -->
-  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle"><span>&#128172;</span> Chat & FAQ</button>
+  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle" aria-label="Open Chatbot">
+    <span>💬</span> Chat & FAQ
+  </button>
   <div class="chatbot-window" id="chatbotWindow">
     <div class="chatbot-header">
-      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
+      <h6><span>🤖</span> FandomVerse Assistant</h6>
       <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose"></button>
     </div>
     <div class="chatbot-messages" id="chatbotMessages">
-      <div class="chat-bubble bot">Hello! You can manage your saved bookmarks on this page!</div>
+      <div class="chat-bubble bot">Hello! You can manage your saved bookmarks and session notes on this page!</div>
     </div>
     <div class="chat-chips-area" id="chatChips">
       <span class="chat-chip">How do bookmarks work?</span>
-      <span class="chat-chip">What categories are available?</span>
-      <span class="chat-chip">How can I search?</span>
+      <span class="chat-chip">How do personal notes work?</span>
+      <span class="chat-chip">Explore Anime</span>
+      <span class="chat-chip">Explore Gaming</span>
+      <span class="chat-chip">Help</span>
     </div>
     <div class="chatbot-input-bar">
       <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
@@ -201,12 +223,14 @@
       var container = document.getElementById("bookmarks-grid");
       var countEl = document.getElementById("bookmarkCountSummary");
       var clearBtn = document.getElementById("clearAllBookmarksBtn");
+      var exportBtn = document.getElementById("exportBookmarksBtn");
       if (!container) return;
 
-      countEl.textContent = "You have " + bookmarks.length + " bookmarked item(s)";
+      countEl.textContent = "You have " + bookmarks.length + " bookmarked item(s) saved in localStorage";
 
       if (bookmarks.length === 0) {
-        clearBtn.style.display = "none";
+        if (clearBtn) clearBtn.style.display = "none";
+        if (exportBtn) exportBtn.style.display = "none";
         container.innerHTML = '<div class="col-12 text-center py-5">' +
           '<div class="text-muted mb-3 fs-1">⭐</div>' +
           '<h3 class="h4">No Bookmarks Saved Yet</h3>' +
@@ -216,10 +240,17 @@
         return;
       }
 
-      clearBtn.style.display = "inline-block";
+      if (clearBtn) clearBtn.style.display = "inline-block";
+      if (exportBtn) exportBtn.style.display = "inline-block";
 
       var html = "";
       bookmarks.forEach(function(item) {
+        var note = getPersonalNote(item.id, item.type);
+        var noteHtml = note ?
+          '<div class="p-2 rounded bg-dark border border-secondary border-opacity-25 mt-2 small text-warning">' +
+            '<strong>📝 Note:</strong> ' + note +
+          '</div>' : '';
+
         html += '<div class="col">' +
           '<article class="card fv-card h-100">' +
             '<div class="card-img-wrap" style="aspect-ratio: 16/10;">' +
@@ -228,12 +259,13 @@
             '<div class="card-body">' +
               '<div class="d-flex justify-content-between align-items-center mb-2">' +
                 '<span class="badge badge-category">' + item.category + '</span>' +
-                '<span class="badge badge-type">' + item.type + '</span>' +
+                '<span class="badge badge-type">' + (item.type || "Fandom") + '</span>' +
               '</div>' +
               '<h3 class="card-title h5">' + item.title + '</h3>' +
               '<p class="card-text small">' + item.description + '</p>' +
+              noteHtml +
               '<div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-25">' +
-                '<button type="button" class="btn btn-outline-fv btn-sm" onclick="openDetailsModal(' + JSON.stringify(item).replace(/"/g, '&quot;') + ')">View Details</button>' +
+                '<button type="button" class="btn btn-outline-fv btn-sm" onclick="openDetailsModal(' + JSON.stringify(item).replace(/"/g, '&quot;') + ')">View / Add Note</button>' +
                 '<button type="button" class="btn btn-outline-danger btn-sm" onclick="removeSpecificBookmark(' + item.id + ', \'' + item.type + '\')">Remove</button>' +
               '</div>' +
             '</div>' +
@@ -247,14 +279,14 @@
     function removeSpecificBookmark(id, type) {
       var bookmarks = getBookmarks();
       bookmarks = bookmarks.filter(function(b) {
-        return !(b.id === id && b.type === type);
+        return !(b.id === id && (b.type === type || !type));
       });
       localStorage.setItem("fv_bookmarks", JSON.stringify(bookmarks));
       displayBookmarks();
     }
 
     function clearAllBookmarks() {
-      if (confirm("Are you sure you want to remove all saved bookmarks?")) {
+      if (confirm("Are you sure you want to remove all saved bookmarks from localStorage?")) {
         localStorage.removeItem("fv_bookmarks");
         displayBookmarks();
       }

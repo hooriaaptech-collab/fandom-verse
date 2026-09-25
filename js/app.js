@@ -1,6 +1,6 @@
 // ==========================================================
 // FandomVerse - app.js
-// Clean, Beginner-Friendly JavaScript
+// Clean, Beginner-Friendly Vanilla JavaScript
 // Easy to explain during viva / presentations!
 // ==========================================================
 
@@ -16,7 +16,7 @@ var chatbotData = [];
 // 1. CLOCK & VISITOR COUNTER
 // ==========================================================
 
-// Starts the real-time digital clock and updates every second
+// Starts the real-time digital clock and updates every second (12-hour format with AM/PM)
 function initClock() {
   function updateClock() {
     var now = new Date();
@@ -31,10 +31,10 @@ function initClock() {
     seconds = seconds < 10 ? "0" + seconds : seconds;
 
     var timeString = hours + ":" + minutes + ":" + seconds + " " + ampm;
-    var clockElement = document.getElementById("liveClock");
-    if (clockElement) {
-      clockElement.textContent = timeString;
-    }
+    var clockElements = document.querySelectorAll("#liveClock, .live-clock");
+    clockElements.forEach(function (el) {
+      el.textContent = timeString;
+    });
   }
 
   updateClock();
@@ -51,14 +51,14 @@ function initVisitorCounter() {
   }
   localStorage.setItem("fv_visitor_count", count);
 
-  var counterElement = document.getElementById("visitorCounter");
-  if (counterElement) {
-    counterElement.textContent = count.toLocaleString();
-  }
+  var counterElements = document.querySelectorAll("#visitorCounter, .visitor-counter");
+  counterElements.forEach(function (el) {
+    el.textContent = count.toLocaleString();
+  });
 }
 
 // ==========================================================
-// 2. NAVBAR & ACTIVE LINK HIGHLIGHTING
+// 2. NAVBAR, ACTIVE LINK & NAVBAR GLOBAL SEARCH
 // ==========================================================
 
 function highlightCurrentPage() {
@@ -77,11 +77,29 @@ function highlightCurrentPage() {
   });
 }
 
+// Initialize navbar quick search if present
+function initNavbarSearch() {
+  var navbarSearchForm = document.getElementById("navbarSearchForm");
+  var navbarSearchInput = document.getElementById("navbarSearchInput");
+
+  if (navbarSearchForm && navbarSearchInput) {
+    navbarSearchForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var q = navbarSearchInput.value.trim();
+      if (q) {
+        window.location.href = "search.html?q=" + encodeURIComponent(q);
+      } else {
+        window.location.href = "search.html";
+      }
+    });
+  }
+}
+
 // ==========================================================
-// 3. BOOKMARK SYSTEM (localStorage)
+// 3. BOOKMARKS (localStorage) & PERSONAL NOTES (sessionStorage)
 // ==========================================================
 
-// Get all bookmarks from localStorage as an array
+// Get all bookmarks from localStorage
 function getBookmarks() {
   var saved = localStorage.getItem("fv_bookmarks");
   if (saved) {
@@ -98,7 +116,7 @@ function getBookmarks() {
 function isBookmarked(id, type) {
   var bookmarks = getBookmarks();
   return bookmarks.some(function (item) {
-    return item.id === id && item.type === type;
+    return item.id === id && (item.type === type || !type);
   });
 }
 
@@ -106,24 +124,26 @@ function isBookmarked(id, type) {
 function toggleBookmark(item) {
   var bookmarks = getBookmarks();
   var existingIndex = bookmarks.findIndex(function (b) {
-    return b.id === item.id && b.type === item.type;
+    return b.id === item.id && (b.type === item.type || !item.type);
   });
+
+  var title = item.title || item.name || "Item";
 
   if (existingIndex !== -1) {
     bookmarks.splice(existingIndex, 1);
     localStorage.setItem("fv_bookmarks", JSON.stringify(bookmarks));
-    alert("'" + item.title + "' was removed from your bookmarks.");
+    alert("'" + title + "' was removed from your bookmarks.");
   } else {
     bookmarks.push(item);
     localStorage.setItem("fv_bookmarks", JSON.stringify(bookmarks));
-    alert("'" + item.title + "' was added to your bookmarks!");
+    alert("'" + title + "' was added to your bookmarks!");
   }
 
   // Update modal bookmark button text if modal is open
   updateModalBookmarkButton(item);
 
   // If on bookmarks.html, refresh the display
-  if (document.getElementById("bookmarks-grid")) {
+  if (typeof displayBookmarks === "function") {
     displayBookmarks();
   }
 }
@@ -134,96 +154,88 @@ function updateModalBookmarkButton(item) {
   if (btn) {
     if (isBookmarked(item.id, item.type)) {
       btn.innerHTML = "★ Bookmarked (Remove)";
-      btn.className = "btn btn-gold";
+      btn.className = "btn btn-gold btn-sm";
     } else {
       btn.innerHTML = "☆ Add Bookmark";
-      btn.className = "btn btn-outline-fv";
+      btn.className = "btn btn-outline-fv btn-sm";
     }
   }
 }
 
+// Personal Notes: stored in sessionStorage per item (active browser session only as per SRS)
+function getPersonalNote(id, type) {
+  var key = "fv_note_" + id + "_" + (type || "item");
+  return sessionStorage.getItem(key) || "";
+}
+
+function savePersonalNote(id, type, noteText) {
+  var key = "fv_note_" + id + "_" + (type || "item");
+  sessionStorage.setItem(key, noteText);
+}
+
+// Export bookmarks as a formatted downloadable text file
+function exportBookmarks() {
+  var bookmarks = getBookmarks();
+  if (bookmarks.length === 0) {
+    alert("You have no saved bookmarks to export. Add some bookmarks first!");
+    return;
+  }
+
+  var text = "==================================================\n";
+  text += "        FANDOMVERSE - SAVED BOOKMARKS LIST        \n";
+  text += "==================================================\n\n";
+  text += "Exported on: " + new Date().toLocaleString() + "\n";
+  text += "Total Bookmarked Items: " + bookmarks.length + "\n\n";
+
+  bookmarks.forEach(function (item, idx) {
+    text += "--------------------------------------------------\n";
+    text += (idx + 1) + ". " + (item.title || item.name) + "\n";
+    text += "   Category: " + (item.category || "General") + "\n";
+    text += "   Type: " + (item.type || "Fandom Entry") + "\n";
+    if (item.description) {
+      text += "   Description: " + item.description + "\n";
+    }
+    var note = getPersonalNote(item.id, item.type);
+    if (note) {
+      text += "   Personal Note: " + note + "\n";
+    }
+    text += "\n";
+  });
+
+  text += "==================================================\n";
+  text += "Visit FandomVerse to explore more fandom universes!\n";
+
+  // Create downloadable text blob
+  var blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement("a");
+  a.href = url;
+  a.download = "fandomverse_bookmarks_" + Date.now() + ".txt";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 // ==========================================================
-// 4. SHARED DETAILS MODAL POPUP
+// 4. DETAIL PAGE NAVIGATION (replaces modal popup)
 // ==========================================================
 
-// Opens the details modal with full item information
+// Routes to the standalone detail.html page instead of a modal popup
 function openDetailsModal(item) {
   if (!item) return;
-
-  var titleEl = document.getElementById("modalTitle");
-  var imgEl = document.getElementById("modalImage");
-  var catEl = document.getElementById("modalCategory");
-  var typeEl = document.getElementById("modalType");
-  var descEl = document.getElementById("modalDescription");
-  var tagsEl = document.getElementById("modalTags");
-  var metaEl = document.getElementById("modalMeta");
-  var bookmarkBtn = document.getElementById("modalBookmarkBtn");
-
-  if (titleEl) titleEl.textContent = item.title || item.name;
-  if (imgEl) {
-    imgEl.src = item.image || item.thumbnail || "assets/images/banner.jpg";
-    imgEl.alt = item.title || item.name;
-  }
-  if (catEl) catEl.textContent = item.category || "Fandom";
-  if (typeEl) typeEl.textContent = item.type || item.role || item.releaseStatus || "Featured";
-
-  if (descEl) {
-    descEl.textContent = item.fullBio || item.fullDetails || item.description || "";
-  }
-
-  if (tagsEl) {
-    var tags = item.tags || item.abilities || [];
-    var tagsHtml = "";
-    tags.forEach(function (tag) {
-      tagsHtml += '<li class="tag">' + tag + '</li>';
-    });
-    tagsEl.innerHTML = tagsHtml;
-  }
-
-  if (metaEl) {
-    var metaText = "";
-    if (item.date) metaText += "Date: " + item.date + " | ";
-    if (item.popularity) metaText += "Popularity: " + item.popularity + " | ";
-    if (item.location) metaText += "Location: " + item.location + " | ";
-    if (item.price) metaText += "Price: $" + item.price.toFixed(2) + " | ";
-    if (metaText.endsWith(" | ")) {
-      metaText = metaText.substring(0, metaText.length - 3);
-    }
-    metaEl.textContent = metaText;
-  }
-
-  if (bookmarkBtn) {
-    var normalizedItem = {
-      id: item.id,
-      title: item.title || item.name,
-      category: item.category,
-      type: item.type || item.role || "item",
-      image: item.image || item.thumbnail || "assets/images/banner.jpg",
-      description: item.description || ""
-    };
-
-    updateModalBookmarkButton(normalizedItem);
-
-    // Remove any previous listener by cloning
-    var newBtn = bookmarkBtn.cloneNode(true);
-    bookmarkBtn.parentNode.replaceChild(newBtn, bookmarkBtn);
-    newBtn.addEventListener("click", function () {
-      toggleBookmark(normalizedItem);
-    });
-  }
-
-  var modalElement = document.getElementById("detailsModal");
-  if (modalElement && typeof bootstrap !== "undefined") {
-    var modalInstance = bootstrap.Modal.getOrCreateInstance(modalElement);
-    modalInstance.show();
-  }
+  var type = item.type || item.role || item.releaseStatus || "featured";
+  var url = "detail.html?id=" + item.id + "&type=" + encodeURIComponent(type);
+  window.location.href = url;
 }
 
+
 // ==========================================================
-// 5. CHATBOT / FAQ SYSTEM
+// 5. CHATBOT / VIRTUAL ASSISTANT SYSTEM
 // ==========================================================
 
 function initChatbot() {
+  // Load pre-scripted rule-based dataset from data/chatbot.json
   fetch("data/chatbot.json")
     .then(function (res) { return res.json(); })
     .then(function (data) {
@@ -244,6 +256,9 @@ function initChatbot() {
 
   toggleBtn.addEventListener("click", function () {
     chatWindow.classList.toggle("open");
+    if (chatWindow.classList.contains("open") && inputEl) {
+      inputEl.focus();
+    }
   });
 
   if (closeBtn) {
@@ -252,43 +267,60 @@ function initChatbot() {
     });
   }
 
-  function appendMessage(sender, text) {
+  // Appends a user or bot message bubble to the chat conversation
+  function appendMessage(sender, text, linkText, linkUrl) {
     var msgBox = document.getElementById("chatbotMessages");
     if (!msgBox) return;
 
     var bubble = document.createElement("div");
     bubble.className = "chat-bubble " + sender;
-    bubble.textContent = text;
+
+    var textNode = document.createElement("div");
+    textNode.textContent = text;
+    bubble.appendChild(textNode);
+
+    if (linkText && linkUrl) {
+      var linkEl = document.createElement("a");
+      linkEl.className = "chat-link-btn";
+      linkEl.href = linkUrl;
+      linkEl.textContent = linkText;
+      bubble.appendChild(linkEl);
+    }
+
     msgBox.appendChild(bubble);
     msgBox.scrollTop = msgBox.scrollHeight;
   }
 
+  // Processes user question, applies keyword/synonym rules, and responds
   function handleQuestion(userText) {
     if (!userText || userText.trim() === "") return;
 
     appendMessage("user", userText);
 
-    var cleanQuery = userText.toLowerCase().trim();
+    // Normalize input: lowercase, trim, remove excessive punctuation
+    var cleanQuery = userText.toLowerCase().replace(/[?!.,'"]/g, " ").trim();
     var match = null;
 
     if (chatbotData && chatbotData.length > 0) {
+      // Find matching rule from chatbot.json
       match = chatbotData.find(function (entry) {
         return entry.keywords.some(function (k) {
-          return cleanQuery.includes(k.toLowerCase());
+          var cleanK = k.toLowerCase().replace(/[?!.,'"]/g, " ").trim();
+          return cleanQuery.includes(cleanK);
         });
       });
     }
 
+    // Delayed bot response for realistic feel
     setTimeout(function () {
       if (match) {
-        appendMessage("bot", match.answer);
+        appendMessage("bot", match.answer, match.linkText, match.linkUrl);
       } else {
-        appendMessage(
-          "bot",
-          "I'm your FandomVerse assistant! Try asking about categories, bookmarks, merchandise, events, or how to search."
-        );
+        // Helpful fallback response with guidance
+        var fallbackText = "I'm not sure about that yet! Try asking me about Anime, Gaming, Movies, TV Shows, K-Pop, Comics, Manga, Articles, Characters, Events, Trailers, Merchandise, or Upcoming Releases.";
+        appendMessage("bot", fallbackText, "Explore All Categories →", "categories.html");
       }
-    }, 400);
+    }, 350);
   }
 
   if (sendBtn && inputEl) {
@@ -344,13 +376,15 @@ function updateCartBadge() {
     return sum + item.quantity;
   }, 0);
 
-  var badge = document.getElementById("cartCountBadge");
-  if (badge) {
-    badge.textContent = totalItems;
-  }
+  var badges = document.querySelectorAll("#cartCountBadge, .cart-badge");
+  badges.forEach(function (b) {
+    b.textContent = totalItems;
+  });
 }
 
 function addToCart(product) {
+  if (!product) return;
+
   var cart = getCart();
   var existing = cart.find(function (item) {
     return item.id === product.id;
@@ -369,7 +403,7 @@ function addToCart(product) {
   }
 
   saveCart(cart);
-  alert("Added '" + product.title + "' to your cart!");
+  alert("Added '" + product.title + "' to your shopping cart!");
   renderCartModal();
 }
 
@@ -439,6 +473,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initClock();
   initVisitorCounter();
   highlightCurrentPage();
+  initNavbarSearch();
   initChatbot();
   updateCartBadge();
 });

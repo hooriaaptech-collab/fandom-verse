@@ -57,8 +57,14 @@
           <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li>
           <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
           <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <form class="navbar-search-form d-none d-lg-block me-2" id="navbarSearchForm">
+            <span class="search-icon">🔍</span>
+            <input type="search" id="navbarSearchInput" placeholder="Quick search..." aria-label="Quick Search">
+          </form>
           <a class="btn btn-outline-fv btn-sm" href="login.html">Login</a>
           <a class="btn btn-primary-fv btn-sm" href="signup.html">Signup</a>
         </div>
@@ -70,6 +76,15 @@
     <!-- ================= PAGE HEADER ================= -->
     <header class="page-header">
       <div class="container">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="fv-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="categories.html">Explore</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Characters</li>
+          </ol>
+        </nav>
+
         <div class="row align-items-center">
           <div class="col-md-9">
             <div class="hero-brand-pill mb-2">Original Fandom Roster</div>
@@ -112,12 +127,12 @@
             <span>Click any card to open full profile & abilities modal</span>
           </div>
         </div>
+
         <!-- Character Cards Grid -->
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-4" id="charactersGrid">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="charactersGrid">
           <!-- Loaded via characters.json -->
         </div>
       </div>
-      
     </section>
   </main>
 
@@ -175,16 +190,16 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <img id="modalImage" class="modal-image" src="" alt="Character">
+          <img id="modalImage" class="modal-image" src="" alt="Character Profile">
           <div class="d-flex flex-wrap gap-2 mb-3">
             <span class="badge badge-category" id="modalCategory">Category</span>
             <span class="badge badge-type" id="modalType">Role</span>
           </div>
-          <h4 class="h6 text-info mb-2">Backstory & Lore</h4>
           <p id="modalDescription" class="mb-3"></p>
-          <h4 class="h6 text-warning mb-2">Key Abilities & Traits</h4>
+          <h4 class="h6 text-info mb-2">Special Abilities & Traits:</h4>
           <ul class="tag-list" id="modalTags"></ul>
           <p class="text-muted small mb-0" id="modalMeta"></p>
+          <div id="modalNotesContainer"></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-fv btn-sm" id="modalBookmarkBtn">☆ Add Bookmark</button>
@@ -195,19 +210,27 @@
   </div>
 
   <!-- ================= CHATBOT WIDGET ================= -->
-  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle"><span>&#128172;</span> Chat & FAQ</button>
+  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle" aria-label="Open Chatbot">
+    <span>💬</span> Chat & FAQ
+  </button>
   <div class="chatbot-window" id="chatbotWindow">
     <div class="chatbot-header">
-      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
+      <h6><span>🤖</span> FandomVerse Assistant</h6>
       <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose"></button>
     </div>
     <div class="chatbot-messages" id="chatbotMessages">
-      <div class="chat-bubble bot">Hello! Click any character card to view their full backstory and signature skills!</div>
+      <div class="chat-bubble bot">Hello! Ask me about any character, hero abilities, or lore!</div>
     </div>
     <div class="chat-chips-area" id="chatChips">
-      <span class="chat-chip">What categories are available?</span>
-      <span class="chat-chip">How do bookmarks work?</span>
-      <span class="chat-chip">How can I search?</span>
+      <span class="chat-chip">Characters</span>
+      <span class="chat-chip">Explore Anime</span>
+      <span class="chat-chip">Explore Gaming</span>
+      <span class="chat-chip">Explore Movies</span>
+      <span class="chat-chip">Explore TV Shows</span>
+      <span class="chat-chip">Explore K-Pop</span>
+      <span class="chat-chip">Explore Comics</span>
+      <span class="chat-chip">Explore Manga</span>
+      <span class="chat-chip">Help</span>
     </div>
     <div class="chatbot-input-bar">
       <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
@@ -218,21 +241,19 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>
   <script>
-    var currentCatFilter = "all";
-    var currentSearchText = "";
+    var currentCategory = "all";
+    var currentSearch = "";
 
     function renderCharacters() {
       var filtered = allCharacters.filter(function(char) {
-        var catMatch = currentCatFilter === "all" || char.category === currentCatFilter;
-        var q = currentSearchText.toLowerCase().trim();
-        var searchMatch = !q || (
+        var matchesCat = currentCategory === "all" || char.category === currentCategory;
+        var q = currentSearch.toLowerCase().trim();
+        var matchesSearch = !q ||
           char.name.toLowerCase().includes(q) ||
           char.role.toLowerCase().includes(q) ||
-          char.franchise.toLowerCase().includes(q) ||
           char.description.toLowerCase().includes(q) ||
-          (char.abilities && char.abilities.join(" ").toLowerCase().includes(q))
-        );
-        return catMatch && searchMatch;
+          char.abilities.some(function(a){ return a.toLowerCase().includes(q); });
+        return matchesCat && matchesSearch;
       });
 
       var container = document.getElementById("charactersGrid");
@@ -242,23 +263,31 @@
       countEl.textContent = "Showing " + filtered.length + " of " + allCharacters.length + " characters";
 
       if (filtered.length === 0) {
-        container.innerHTML = '<div class="col-12 text-center py-5 text-muted"><p>No characters found matching your filters.</p></div>';
+        container.innerHTML = '<div class="col-12 text-center py-5 text-muted"><p>No characters match your search criteria.</p></div>';
         return;
       }
 
       var html = "";
       filtered.forEach(function(char) {
+        var abilitiesHtml = char.abilities.slice(0, 2).map(function(a) {
+          return '<span class="tag">' + a + '</span>';
+        }).join("");
+
         html += '<div class="col">' +
           '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allCharacters.find(function(c){return c.id===' + char.id + '}))">' +
-            '<div class="card-img-wrap" style="aspect-ratio: 4/5;">' +
+            '<div class="card-img-wrap" style="aspect-ratio: 3/4;">' +
               '<img src="' + char.image + '" alt="' + char.name + '" loading="lazy">' +
             '</div>' +
             '<div class="card-body">' +
-              '<span class="card-meta">' + char.category + ' &middot; ' + char.role + '</span>' +
-              '<h3 class="card-title h6 mb-1">' + char.name + '</h3>' +
-              '<p class="text-muted small mb-2">' + char.franchise + '</p>' +
-              '<p class="card-text small mb-3">' + char.description + '</p>' +
-              '<button type="button" class="btn btn-outline-fv btn-sm mt-auto align-self-start">Full Profile</button>' +
+              '<div class="d-flex justify-content-between align-items-center mb-1">' +
+                '<span class="badge badge-category">' + char.category + '</span>' +
+                '<span class="text-warning small fw-bold">⭐ ' + char.popularity + '</span>' +
+              '</div>' +
+              '<h3 class="card-title h5 mb-1">' + char.name + '</h3>' +
+              '<span class="card-meta d-block mb-2">' + char.role + '</span>' +
+              '<p class="card-text small">' + char.description + '</p>' +
+              '<div class="tag-list mt-auto">' + abilitiesHtml + '</div>' +
+              '<button type="button" class="btn btn-outline-fv btn-sm align-self-start mt-2">View Bio &rarr;</button>' +
             '</div>' +
           '</article>' +
         '</div>';
@@ -275,25 +304,23 @@
           renderCharacters();
         });
 
-      // Filter chips click
+      var searchInput = document.getElementById("characterSearchInput");
+      if (searchInput) {
+        searchInput.addEventListener("input", function(e) {
+          currentSearch = e.target.value;
+          renderCharacters();
+        });
+      }
+
       var chips = document.querySelectorAll("#characterCategoryFilters .filter-chip");
       chips.forEach(function(chip) {
         chip.addEventListener("click", function() {
           chips.forEach(function(c) { c.classList.remove("active"); });
           chip.classList.add("active");
-          currentCatFilter = chip.dataset.category;
+          currentCategory = chip.dataset.category;
           renderCharacters();
         });
       });
-
-      // Search input
-      var searchInput = document.getElementById("characterSearchInput");
-      if (searchInput) {
-        searchInput.addEventListener("input", function(e) {
-          currentSearchText = e.target.value;
-          renderCharacters();
-        });
-      }
     });
   </script>
 </body>

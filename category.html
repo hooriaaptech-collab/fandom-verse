@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Category Details | FandomVerse</title>
+  <title>Category Hub | FandomVerse</title>
   <meta name="description" content="Explore in-depth characters, stories, media and events for your chosen fandom universe.">
 
   <!-- Bootstrap 5 CSS & Google Fonts -->
@@ -22,7 +22,7 @@
         <span>FandomVerse</span>
         <span class="brand-badge">HUB</span>
       </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -30,10 +30,10 @@
         <ul class="navbar-nav me-auto mb-2 mb-xl-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" href="#" id="catDropdown" role="button" data-bs-toggle="dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="catDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categories
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark-fv">
+            <ul class="dropdown-menu dropdown-menu-dark-fv" aria-labelledby="catDropdown">
               <li><a class="dropdown-item" href="category.html?cat=Anime">Anime</a></li>
               <li><a class="dropdown-item" href="category.html?cat=Gaming">Gaming</a></li>
               <li><a class="dropdown-item" href="category.html?cat=Movies">Movies</a></li>
@@ -46,10 +46,10 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Explore
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark-fv">
+            <ul class="dropdown-menu dropdown-menu-dark-fv" aria-labelledby="exploreDropdown">
               <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
               <li><a class="dropdown-item" href="characters.html">Characters</a></li>
               <li><a class="dropdown-item" href="articles.html">Articles</a></li>
@@ -61,8 +61,14 @@
           <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li>
           <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
           <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <form class="navbar-search-form d-none d-lg-block me-2" id="navbarSearchForm">
+            <span class="search-icon">🔍</span>
+            <input type="search" id="navbarSearchInput" placeholder="Quick search..." aria-label="Quick Search">
+          </form>
           <a class="btn btn-outline-fv btn-sm" href="login.html">Login</a>
           <a class="btn btn-primary-fv btn-sm" href="signup.html">Signup</a>
         </div>
@@ -74,12 +80,21 @@
     <!-- ================= PAGE HEADER ================= -->
     <header class="page-header">
       <div class="container">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="fv-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="categories.html">Categories</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="breadcrumbCategoryName">Category</li>
+          </ol>
+        </nav>
+
         <div class="row align-items-center">
           <div class="col-md-9">
             <div class="hero-brand-pill mb-2"><span id="headerCategoryPill">Fandom Realm</span></div>
-            <h1 id="categoryTitle">Anime Universe</h1>
+            <h1 id="categoryTitle">Universe Hub</h1>
             <p id="categoryDescription">
-              Series, films, and legendary original heroes from animated worlds.
+              Series, films, and legendary original heroes from this animated world.
             </p>
           </div>
           <div class="col-md-3 text-md-end mt-3 mt-md-0">
@@ -94,7 +109,7 @@
       <div class="container">
         <div class="section-heading">
           <h2>Iconic Characters</h2>
-          <p>Key protagonists, tacticians, and champions in this fandom.</p>
+          <p>Key protagonists, tacticians, and champions in this fandom universe.</p>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="cat-characters-grid">
           <!-- Filled by JS -->
@@ -105,10 +120,21 @@
     <!-- ================= CATEGORY CONTENT & MEDIA ================= -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-heading">
-          <h2>Featured Media & Articles</h2>
-          <p>Trailers, sound tracks, reviews and releases.</p>
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+          <div class="section-heading mb-0">
+            <h2>Featured Media & Lore</h2>
+            <p>Articles, trailers, sound tracks, reviews, and releases.</p>
+          </div>
+          <!-- Filter chips for content type -->
+          <div class="filter-btn-group mt-2 mt-md-0" id="catContentFilterGroup">
+            <button type="button" class="filter-chip active" data-type="all">All Media</button>
+            <button type="button" class="filter-chip" data-type="article">Articles</button>
+            <button type="button" class="filter-chip" data-type="trailer">Trailers</button>
+            <button type="button" class="filter-chip" data-type="audio">Audio</button>
+            <button type="button" class="filter-chip" data-type="release">Releases</button>
+          </div>
         </div>
+
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="cat-content-grid">
           <!-- Filled by JS -->
         </div>
@@ -120,7 +146,7 @@
       <div class="container">
         <div class="section-heading">
           <h2>Community Events</h2>
-          <p>Upcoming conventions, screenings, and meetups.</p>
+          <p>Upcoming conventions, screenings, and meetups for this fandom.</p>
         </div>
         <div class="row row-cols-1 row-cols-md-3 g-4" id="cat-events-grid">
           <!-- Filled by JS -->
@@ -188,7 +214,7 @@
       <div class="modal-content fv-modal">
         <div class="modal-header">
           <h3 class="modal-title h5 mb-0" id="modalTitle">Item Details</h3>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <img id="modalImage" class="modal-image" src="assets/images/banner.jpg" alt="Item preview">
@@ -199,6 +225,7 @@
           <p id="modalDescription" class="mb-3"></p>
           <ul class="tag-list" id="modalTags"></ul>
           <p class="text-muted small mb-0" id="modalMeta"></p>
+          <div id="modalNotesContainer"></div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-fv btn-sm" id="modalBookmarkBtn">☆ Add Bookmark</button>
@@ -209,21 +236,29 @@
   </div>
 
   <!-- ================= CHATBOT WIDGET ================= -->
-  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle">
-    <span>&#128172;</span> Chat & FAQ
+  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle" aria-label="Open Chatbot">
+    <span>💬</span> Chat & FAQ
   </button>
   <div class="chatbot-window" id="chatbotWindow">
     <div class="chatbot-header">
-      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
-      <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose"></button>
+      <h6><span>🤖</span> FandomVerse Assistant</h6>
+      <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose" aria-label="Close Chatbot"></button>
     </div>
     <div class="chatbot-messages" id="chatbotMessages">
-      <div class="chat-bubble bot">Hello! Ask me any question about this category or FandomVerse!</div>
+      <div class="chat-bubble bot">Hello! Ask me any question about this category or explore the site!</div>
     </div>
     <div class="chat-chips-area" id="chatChips">
-      <span class="chat-chip">What categories are available?</span>
-      <span class="chat-chip">How do bookmarks work?</span>
-      <span class="chat-chip">How can I search?</span>
+      <span class="chat-chip">What is FandomVerse?</span>
+      <span class="chat-chip">Explore Anime</span>
+      <span class="chat-chip">Explore Gaming</span>
+      <span class="chat-chip">Explore Movies</span>
+      <span class="chat-chip">Explore TV Shows</span>
+      <span class="chat-chip">Explore K-Pop</span>
+      <span class="chat-chip">Explore Comics</span>
+      <span class="chat-chip">Explore Manga</span>
+      <span class="chat-chip">Characters</span>
+      <span class="chat-chip">Events</span>
+      <span class="chat-chip">Help</span>
     </div>
     <div class="chatbot-input-bar">
       <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
@@ -234,6 +269,47 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>
   <script>
+    var currentContentCategory = "all";
+    var categoryContentItems = [];
+
+    function renderCategoryContent() {
+      var container = document.getElementById("cat-content-grid");
+      if (!container) return;
+
+      var filtered = categoryContentItems.filter(function(item) {
+        return currentContentCategory === "all" || item.type === currentContentCategory;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div class="col-12 text-muted py-4"><p>No items found for the selected filter.</p></div>';
+        return;
+      }
+
+      var html = "";
+      filtered.forEach(function(item) {
+        var tagsHtml = item.tags ? item.tags.slice(0, 2).map(function(t) { return '<span class="tag">' + t + '</span>'; }).join("") : "";
+        html += '<div class="col">' +
+          '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allContent.find(function(c){return c.id===' + item.id + '}))">' +
+            '<div class="card-img-wrap">' +
+              '<img src="' + item.image + '" alt="' + item.title + '">' +
+            '</div>' +
+            '<div class="card-body">' +
+              '<div class="d-flex gap-2 mb-2">' +
+                '<span class="badge badge-category">' + item.category + '</span>' +
+                '<span class="badge badge-type">' + item.type + '</span>' +
+              '</div>' +
+              '<h3 class="card-title h5">' + item.title + '</h3>' +
+              '<p class="card-text">' + item.description + '</p>' +
+              '<div class="tag-list mt-auto">' + tagsHtml + '</div>' +
+              '<button type="button" class="btn btn-outline-fv btn-sm mt-2 align-self-start">Details &rarr;</button>' +
+            '</div>' +
+          '</article>' +
+        '</div>';
+      });
+
+      container.innerHTML = html;
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
       var urlParams = new URLSearchParams(window.location.search);
       var selectedCat = urlParams.get("cat") || "Anime";
@@ -243,12 +319,13 @@
         .then(function(res) { return res.json(); })
         .then(function(categories) {
           var current = categories.find(function(c) {
-            return c.name.toLowerCase() === selectedCat.toLowerCase();
+            return c.name.toLowerCase() === selectedCat.toLowerCase() || c.slug.toLowerCase() === selectedCat.toLowerCase();
           }) || categories[0];
 
-          document.title = current.name + " | FandomVerse";
+          document.title = current.name + " Universe | FandomVerse";
           document.getElementById("categoryTitle").textContent = current.name + " Universe";
-          document.getElementById("headerCategoryPill").textContent = current.name + " Universe";
+          document.getElementById("headerCategoryPill").textContent = current.name + " Realm";
+          document.getElementById("breadcrumbCategoryName").textContent = current.name;
           document.getElementById("categoryDescription").textContent = current.description;
           document.getElementById("categoryArt").src = current.image;
         });
@@ -280,7 +357,7 @@
               '</article>' +
             '</div>';
           });
-          container.innerHTML = html;
+          container.innerHTML = html || '<p class="text-muted">No character profiles found for this universe.</p>';
         });
 
       // 3. Fetch content / media for this category
@@ -288,33 +365,23 @@
         .then(function(res) { return res.json(); })
         .then(function(content) {
           allContent = content;
-          var matchingContent = content.filter(function(item) {
+          categoryContentItems = content.filter(function(item) {
             return item.category.toLowerCase() === selectedCat.toLowerCase();
           });
 
-          var container = document.getElementById("cat-content-grid");
-          if (!container) return;
-          var html = "";
-          matchingContent.forEach(function(item) {
-            html += '<div class="col">' +
-              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allContent.find(function(c){return c.id===' + item.id + '}))">' +
-                '<div class="card-img-wrap">' +
-                  '<img src="' + item.image + '" alt="' + item.title + '">' +
-                '</div>' +
-                '<div class="card-body">' +
-                  '<div class="d-flex gap-2 mb-2">' +
-                    '<span class="badge badge-category">' + item.category + '</span>' +
-                    '<span class="badge badge-type">' + item.type + '</span>' +
-                  '</div>' +
-                  '<h3 class="card-title h5">' + item.title + '</h3>' +
-                  '<p class="card-text">' + item.description + '</p>' +
-                  '<button type="button" class="btn btn-outline-fv btn-sm mt-auto align-self-start">Details</button>' +
-                '</div>' +
-              '</article>' +
-            '</div>';
-          });
-          container.innerHTML = html || '<p class="text-muted">No media entries found for this category.</p>';
+          renderCategoryContent();
         });
+
+      // Content Filter Chips Listener
+      var filterChips = document.querySelectorAll("#catContentFilterGroup .filter-chip");
+      filterChips.forEach(function(chip) {
+        chip.addEventListener("click", function() {
+          filterChips.forEach(function(c) { c.classList.remove("active"); });
+          chip.classList.add("active");
+          currentContentCategory = chip.dataset.type;
+          renderCategoryContent();
+        });
+      });
 
       // 4. Fetch events for this category
       fetch("data/events.json")
@@ -335,7 +402,7 @@
                   '<img src="' + ev.image + '" alt="' + ev.title + '">' +
                 '</div>' +
                 '<div class="card-body">' +
-                  '<span class="card-meta">' + ev.date + ' &middot; ' + ev.location + '</span>' +
+                  '<span class="card-meta">📅 ' + ev.date + ' &middot; 📍 ' + ev.location + '</span>' +
                   '<h3 class="card-title h5">' + ev.title + '</h3>' +
                   '<p class="card-text">' + ev.description + '</p>' +
                   '<button type="button" class="btn btn-outline-fv btn-sm mt-auto align-self-start">View Event</button>' +

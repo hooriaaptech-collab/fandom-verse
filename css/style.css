@@ -1,13 +1,10 @@
 /* ==========================================================
    FandomVerse - style.css
    Modern, Clean, Professional Dark Navy Fandom Theme
-   Beginner-friendly, Accessible, Responsive
+   Beginner-friendly, Accessible, Responsive (No Gradients)
    ========================================================== */
 
 /* ---------- 1. THEME VARIABLES ---------- */
-*{
-  font-family: 'Times New Roman', Times, serif;
-}
 :root {
   --bg-dark: #0a0f1d;
   --bg-surface: #111a2e;
@@ -88,8 +85,7 @@ img {
 
 /* ---------- 3. NAVBAR ---------- */
 .fv-navbar {
-  background-color: rgba(10, 15, 29, 0.95);
-  backdrop-filter: blur(8px);
+  background-color: #0d1527;
   border-bottom: 1px solid var(--border-color);
   padding: 0.75rem 0;
   transition: background-color 0.3s ease;
@@ -105,7 +101,8 @@ img {
 }
 
 .fv-navbar .navbar-brand .brand-badge {
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-deep));
+  background-color: var(--accent-blue-deep);
+  border: 1px solid var(--accent-blue);
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 700;
@@ -162,6 +159,40 @@ img {
 .dropdown-menu-dark-fv .dropdown-item.active {
   background-color: var(--accent-blue-deep);
   color: #ffffff;
+}
+
+/* Navbar Search Box */
+.navbar-search-form {
+  position: relative;
+  min-width: 180px;
+}
+
+.navbar-search-form input {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem 0.35rem 2rem;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.navbar-search-form input:focus {
+  background-color: var(--bg-dark);
+  border-color: var(--accent-blue);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+.navbar-search-form .search-icon {
+  position: absolute;
+  left: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  pointer-events: none;
 }
 
 /* ---------- 4. BUTTONS ---------- */
@@ -232,10 +263,10 @@ img {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: 82vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
-  padding: 5rem 0 4rem;
+  padding: 4.5rem 0 3.5rem;
   background-color: var(--bg-dark);
 }
 
@@ -258,12 +289,7 @@ img {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(10, 15, 29, 0.96) 0%,
-    rgba(10, 15, 29, 0.88) 45%,
-    rgba(10, 15, 29, 0.4) 100%
-  );
+  background-color: rgba(10, 15, 29, 0.88);
 }
 
 .hero-content {
@@ -288,9 +314,9 @@ img {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 1.25rem;
   color: #ffffff;
 }
@@ -300,7 +326,7 @@ img {
 }
 
 .hero-text {
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   color: var(--text-muted);
   max-width: 35rem;
   margin-bottom: 2rem;
@@ -325,8 +351,8 @@ img {
 
 /* Sparkle twinkle */
 @keyframes sparkle {
-  0%, 100% { opacity: 0.3; transform: scale(0.8); }
-  50% { opacity: 1; transform: scale(1.1); }
+  0%, 100% { opacity: 0.4; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.05); }
 }
 
 .sparkle-icon {
@@ -337,39 +363,69 @@ img {
 
 /* ---------- 6. PAGE HEADER (INNER PAGES) ---------- */
 .page-header {
-  background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-dark) 100%);
+  background-color: var(--bg-surface);
   border-bottom: 1px solid var(--border-color);
-  padding: 3.5rem 0 3rem;
+  padding: 3rem 0 2.5rem;
   position: relative;
   overflow: hidden;
 }
 
 .page-header-art {
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 2px solid var(--border-highlight);
   object-fit: cover;
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
   animation: gentleFloat 4.5s ease-in-out infinite;
 }
 
 .page-header h1 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(1.85rem, 3.8vw, 2.6rem);
   font-weight: 800;
   margin-bottom: 0.5rem;
 }
 
 .page-header p {
   color: var(--text-muted);
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   margin-bottom: 0;
   max-width: 40rem;
 }
 
+/* Breadcrumbs */
+.fv-breadcrumb {
+  margin-bottom: 1rem;
+}
+
+.fv-breadcrumb .breadcrumb {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  background: transparent;
+  padding: 0;
+}
+
+.fv-breadcrumb .breadcrumb-item a {
+  color: var(--text-muted);
+}
+
+.fv-breadcrumb .breadcrumb-item a:hover {
+  color: var(--accent-blue);
+}
+
+.fv-breadcrumb .breadcrumb-item.active {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.fv-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: var(--text-dim);
+  content: "›";
+}
+
 /* ---------- 7. SECTIONS ---------- */
 .section {
-  padding: 4.5rem 0;
+  padding: 4rem 0;
 }
 
 .section-alt {
@@ -377,11 +433,11 @@ img {
 }
 
 .section-heading {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.25rem;
 }
 
 .section-heading h2 {
-  font-size: clamp(1.8rem, 3.2vw, 2.3rem);
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
   font-weight: 800;
   margin-bottom: 0.4rem;
   position: relative;
@@ -391,7 +447,7 @@ img {
 .section-heading h2::after {
   content: "";
   display: block;
-  width: 50px;
+  width: 45px;
   height: 3px;
   background-color: var(--accent-blue);
   border-radius: 2px;
@@ -400,7 +456,7 @@ img {
 
 .section-heading p {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 0.98rem;
   margin-top: 0.5rem;
 }
 
@@ -417,7 +473,7 @@ img {
 }
 
 .fv-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
   border-color: var(--border-highlight);
   background-color: var(--bg-card-hover);
@@ -437,7 +493,7 @@ img {
 }
 
 .fv-card:hover .card-img-wrap img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .fv-card .card-body {
@@ -448,7 +504,7 @@ img {
 }
 
 .fv-card .card-title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   line-height: 1.35;
@@ -456,7 +512,7 @@ img {
 
 .fv-card .card-text {
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.55;
   margin-bottom: 1rem;
 }
@@ -583,13 +639,13 @@ img {
 }
 
 .gallery-grid-item:hover img {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .gallery-caption-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(10, 15, 29, 0.9) 0%, rgba(10, 15, 29, 0.2) 60%, transparent 100%);
+  background-color: rgba(10, 15, 29, 0.85);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -607,7 +663,15 @@ img {
   margin-bottom: 0.2rem;
 }
 
-/* ---------- 11. MODAL POPUP ---------- */
+/* Lightbox Nav Buttons */
+.lightbox-nav-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ---------- 11. MODAL POPUP & NOTES ---------- */
 .fv-modal {
   background-color: var(--bg-card);
   border: 1px solid var(--border-highlight);
@@ -638,15 +702,51 @@ img {
   margin-bottom: 1.25rem;
 }
 
+/* Personal Notes Section (sessionStorage) */
+.notes-section {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.notes-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.notes-textarea {
+  width: 100%;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.88rem;
+  resize: vertical;
+  min-height: 70px;
+  transition: border-color 0.2s ease;
+}
+
+.notes-textarea:focus {
+  border-color: var(--accent-gold);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
 /* ---------- 12. CHATBOT / FAQ WIDGET ---------- */
 .chatbot-toggle-btn {
   position: fixed;
   bottom: 25px;
   right: 25px;
   z-index: 1050;
-  background: #38bdf8;
+  background-color: var(--accent-blue-deep);
+  border: 1px solid var(--accent-blue);
   color: #ffffff;
-  border: none;
   border-radius: 50px;
   padding: 0.75rem 1.35rem;
   font-weight: 700;
@@ -662,15 +762,16 @@ img {
 .chatbot-toggle-btn:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
+  background-color: #1d4ed8;
 }
 
 .chatbot-window {
   position: fixed;
   bottom: 85px;
   right: 25px;
-  width: 360px;
+  width: 380px;
   max-width: calc(100vw - 40px);
-  height: 520px;
+  height: 540px;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-highlight);
   border-radius: var(--radius-lg);
@@ -686,7 +787,7 @@ img {
 }
 
 .chatbot-header {
-  background: var(--bg-dark);
+  background-color: var(--bg-dark);
   border-bottom: 1px solid var(--border-color);
   padding: 0.9rem 1.1rem;
   display: flex;
@@ -712,8 +813,8 @@ img {
 }
 
 .chat-bubble {
-  max-width: 85%;
-  padding: 0.6rem 0.9rem;
+  max-width: 88%;
+  padding: 0.65rem 0.95rem;
   border-radius: 12px;
   font-size: 0.88rem;
   line-height: 1.45;
@@ -734,13 +835,33 @@ img {
   border-bottom-right-radius: 2px;
 }
 
+.chat-link-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: var(--accent-blue);
+  color: #0b1329 !important;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.chat-link-btn:hover {
+  background-color: #7dd3fc;
+  color: #0b1329 !important;
+  transform: translateY(-1px);
+}
+
 .chat-chips-area {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.85rem;
   background-color: rgba(255, 255, 255, 0.02);
   border-top: 1px solid var(--border-color);
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
+  max-height: 105px;
+  overflow-y: auto;
 }
 
 .chat-chip {
@@ -752,6 +873,7 @@ img {
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.15s ease;
+  white-space: nowrap;
 }
 
 .chat-chip:hover {
@@ -878,16 +1000,20 @@ img {
     padding: 3.5rem 0;
   }
   .hero-overlay {
-    background: rgba(10, 15, 29, 0.92);
+    background-color: rgba(10, 15, 29, 0.92);
   }
   .section {
     padding: 3rem 0;
+  }
+  .navbar-search-form {
+    min-width: 100%;
+    margin-top: 0.5rem;
   }
 }
 
 @media (max-width: 575.98px) {
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
   .chatbot-window {
     right: 10px;

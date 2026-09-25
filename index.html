@@ -74,9 +74,19 @@
           <li class="nav-item">
             <a class="nav-link" href="search.html">Search</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
 
         <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <form class="navbar-search-form d-none d-lg-block me-2" id="navbarSearchForm">
+            <span class="search-icon">🔍</span>
+            <input type="search" id="navbarSearchInput" placeholder="Quick search..." aria-label="Quick Search">
+          </form>
           <a class="btn btn-outline-fv btn-sm" href="login.html">Login</a>
           <a class="btn btn-primary-fv btn-sm" href="signup.html">Signup</a>
         </div>
@@ -272,52 +282,39 @@
     </div>
   </footer>
 
-  <!-- ================= DETAILS MODAL ================= -->
-  <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content fv-modal">
-        <div class="modal-header">
-          <h3 class="modal-title h5 mb-0" id="modalTitle">Item Details</h3>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img id="modalImage" class="modal-image" src="assets/images/banner.jpg" alt="Item preview">
-          <div class="d-flex flex-wrap gap-2 mb-3">
-            <span class="badge badge-category" id="modalCategory">Category</span>
-            <span class="badge badge-type" id="modalType">Type</span>
-          </div>
-          <p id="modalDescription" class="mb-3"></p>
-          <ul class="tag-list" id="modalTags"></ul>
-          <p class="text-muted small mb-0" id="modalMeta"></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-fv btn-sm" id="modalBookmarkBtn">☆ Add Bookmark</button>
-          <button type="button" class="btn btn-primary-fv btn-sm" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
   <!-- ================= CHATBOT FLOATING WIDGET ================= -->
   <button type="button" class="chatbot-toggle-btn" id="chatbotToggle" aria-label="Open Chatbot">
-    <span></span> Chat & FAQ
+    <span>💬</span> Chat & FAQ
   </button>
 
   <div class="chatbot-window" id="chatbotWindow">
     <div class="chatbot-header">
-      <h6><span></span> FandomVerse Assistant</h6>
+      <h6><span>🤖</span> FandomVerse Assistant</h6>
       <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose" aria-label="Close Chatbot"></button>
     </div>
     <div class="chatbot-messages" id="chatbotMessages">
       <div class="chat-bubble bot">
-        Hello! Welcome to FandomVerse! How can I help you today? Pick a quick question below or type your inquiry.
+        Hello! Welcome to FandomVerse! How can I help you today? Pick a quick option below or type any inquiry.
       </div>
     </div>
     <div class="chat-chips-area" id="chatChips">
       <span class="chat-chip">What is FandomVerse?</span>
-      <span class="chat-chip">What categories are available?</span>
-      <span class="chat-chip">How do bookmarks work?</span>
-      <span class="chat-chip">How can I search?</span>
+      <span class="chat-chip">Explore Anime</span>
+      <span class="chat-chip">Explore Gaming</span>
+      <span class="chat-chip">Explore Movies</span>
+      <span class="chat-chip">Explore TV Shows</span>
+      <span class="chat-chip">Explore K-Pop</span>
+      <span class="chat-chip">Explore Comics</span>
+      <span class="chat-chip">Explore Manga</span>
+      <span class="chat-chip">Characters</span>
+      <span class="chat-chip">Articles</span>
+      <span class="chat-chip">Events</span>
+      <span class="chat-chip">Trailers</span>
+      <span class="chat-chip">Merchandise</span>
+      <span class="chat-chip">Bookmarks</span>
+      <span class="chat-chip">Help</span>
     </div>
     <div class="chatbot-input-bar">
       <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
@@ -369,7 +366,7 @@
           featured.slice(0, 6).forEach(function(item) {
             var tagsHtml = item.tags ? item.tags.slice(0, 2).map(function(t) { return '<span class="tag">' + t + '</span>'; }).join("") : "";
             html += '<div class="col">' +
-              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allContent.find(function(c){return c.id===' + item.id + '}))">' +
+              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="window.location.href=\'detail.html?id=' + item.id + '&type=' + encodeURIComponent(item.type || "featured") + '\'">' +
                 '<div class="card-img-wrap">' +
                   '<img src="' + item.image + '" alt="' + item.title + '">' +
                 '</div>' +
@@ -401,7 +398,7 @@
           var picks = [characters[0], characters[5], characters[10], characters[20]];
           picks.forEach(function(char) {
             html += '<div class="col">' +
-              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allCharacters.find(function(c){return c.id===' + char.id + '}))">' +
+              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="window.location.href=\'detail.html?id=' + char.id + '&type=' + encodeURIComponent(char.role || "Character") + '\'">' +
                 '<div class="card-img-wrap">' +
                   '<img src="' + char.image + '" alt="' + char.name + '">' +
                 '</div>' +
@@ -427,7 +424,7 @@
           var html = "";
           events.slice(0, 3).forEach(function(ev) {
             html += '<div class="col">' +
-              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="openDetailsModal(allEvents.find(function(e){return e.id===' + ev.id + '}))">' +
+              '<article class="card fv-card h-100" style="cursor: pointer;" onclick="window.location.href=\'detail.html?id=' + ev.id + '&type=event\'">' +
                 '<div class="card-img-wrap">' +
                   '<img src="' + ev.image + '" alt="' + ev.title + '">' +
                 '</div>' +

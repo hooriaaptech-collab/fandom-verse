@@ -1,42 +1,212 @@
 [
   {
-    "keywords": ["what is fandomverse", "fandomverse", "about", "who are you", "what is this"],
+    "keywords": ["what is fandomverse", "fandomverse", "about", "who are you", "what is this", "intro", "platform"],
     "question": "What is FandomVerse?",
-    "answer": "FandomVerse is your ultimate community hub celebrating stories, characters, trailers, events, and merchandise across anime, gaming, movies, TV shows, K-pop, comics, and manga!"
+    "answer": "FandomVerse is your all-in-one community hub celebrating 7 major universes: Anime, Gaming, Movies, TV Shows, K-Pop, Comics, and Manga! Discover characters, articles, trailers, events, merchandise, and media in one unified platform.",
+    "linkText": "Learn More About Us",
+    "linkUrl": "about.html"
   },
   {
-    "keywords": ["categories", "category", "what categories", "fandoms", "genres"],
+    "keywords": ["how to use", "guide", "help", "how does this work", "getting started", "features"],
+    "question": "How do I use FandomVerse?",
+    "answer": "Explore universes from the top menu, search using the Global Search bar, click cards to view detailed lore and backstories, save items to your Bookmarks (localStorage), add personal notes (sessionStorage), and add collectibles to your temporary Shopping Cart!",
+    "linkText": "Explore All Categories",
+    "linkUrl": "categories.html"
+  },
+  {
+    "keywords": ["anime", "animé", "japanese animation", "matsuri", "crimson blade", "ren kazama", "skybound", "otaku"],
+    "question": "Tell me about Anime",
+    "answer": "Our Anime universe features epic series like Crimson Blade Chronicles, Skybound Academy, and Hana no Yoru. Discover 5 original swordsmen and alchemists, soundtrack clips, trailers, and convention news.",
+    "linkText": "Explore Anime Universe →",
+    "linkUrl": "category.html?cat=Anime"
+  },
+  {
+    "keywords": ["gaming", "games", "game", "esports", "ashen kingdoms", "vex-09", "speedrun", "fortress tactics", "gamer"],
+    "question": "Tell me about Gaming",
+    "answer": "Dive into Ashen Kingdoms, Neon Harbor Cyber Speed, and Fortress Tactics. Browse cybernetic character profiles, speedrun events, collector figures, and gameplay trailer showcases.",
+    "linkText": "Explore Gaming Universe →",
+    "linkUrl": "category.html?cat=Gaming"
+  },
+  {
+    "keywords": ["movies", "movie", "films", "film", "cinema", "lighthouse protocol", "ines vale", "midnight reel", "sci-fi"],
+    "question": "Tell me about Movies",
+    "answer": "Experience sci-fi blockbusters and neo-noir cinema like The Lighthouse Protocol and Midnight Reel. Explore director masterclasses, character dossiers, red-carpet premieres, and film trailers.",
+    "linkText": "Explore Movies Universe →",
+    "linkUrl": "category.html?cat=Movies"
+  },
+  {
+    "keywords": ["tv shows", "tv", "shows", "series", "television", "harrow point", "maren holt", "kingsbridge", "drama"],
+    "question": "Tell me about TV Shows",
+    "answer": "Follow slow-burn mystery dramas and period sagas like Harrow Point and Kingsbridge. Explore lead detective lore, watch party schedules, teaser trailers, and writer retrospectives.",
+    "linkText": "Explore TV Shows Universe →",
+    "linkUrl": "category.html?cat=TV Shows"
+  },
+  {
+    "keywords": ["k-pop", "kpop", "k pop", "music", "idol", "idols", "lunar bloom", "lightstick", "moonrise", "choreo", "dance"],
+    "question": "Tell me about K-Pop",
+    "answer": "Immerse yourself in world tours and chart-topping hits with Lunar Bloom! Explore idol leader profiles, official heart lightsticks, dance practice clips, and stadium concert tickets.",
+    "linkText": "Explore K-Pop Universe →",
+    "linkUrl": "category.html?cat=K-Pop"
+  },
+  {
+    "keywords": ["comics", "comic", "superhero", "heroes", "ghostlight", "iron meridian", "graphic novel", "marvel", "dc"],
+    "question": "Tell me about Comics",
+    "answer": "Enter the world of vigilante mysteries and magnetic super-beings like Ghostlight and Iron Meridian. View classic cover art, artist signings, enamel pins, and superhero profiles.",
+    "linkText": "Explore Comics Universe →",
+    "linkUrl": "category.html?cat=Comics"
+  },
+  {
+    "keywords": ["manga", "manhwa", "chapters", "mangaka", "tidewalker", "yuki aizawa", "sumi ink", "inked worlds"],
+    "question": "Tell me about Manga",
+    "answer": "Explore serialized ink masterworks like Tidewalker and Inked Worlds. Meet ocean spirit apprentices, read mangaka studio interviews, and shop professional ink drawing sets.",
+    "linkText": "Explore Manga Universe →",
+    "linkUrl": "category.html?cat=Manga"
+  },
+  {
+    "keywords": ["categories", "all categories", "what categories", "fandoms", "universes", "genres"],
     "question": "What categories are available?",
-    "answer": "We feature 7 vibrant categories: Anime, Gaming, Movies, TV Shows, K-Pop, Comics, and Manga. You can explore each one using the navbar dropdown or visit the Categories page!"
+    "answer": "We feature 7 foundational fandom universes: Anime, Gaming, Movies, TV Shows, K-Pop, Comics, and Manga. Each universe has dedicated characters, articles, media, and events.",
+    "linkText": "View All 7 Categories →",
+    "linkUrl": "categories.html"
+  },
+  {
+    "keywords": ["articles", "article", "essays", "lore", "reviews", "retrospective", "read"],
+    "question": "Where can I read articles and lore?",
+    "answer": "Check out our Articles section for in-depth essays, fight choreography analyses, creator room retrospectives, and storytelling deep-dives across all 7 universes.",
+    "linkText": "Browse Articles →",
+    "linkUrl": "articles.html"
+  },
+  {
+    "keywords": ["characters", "character", "heroes", "cast", "roster", "profiles", "bio", "abilities"],
+    "question": "Where are the character profiles?",
+    "answer": "We have 35 original fictional characters (5 per universe) with backstories, roles, abilities, and popularity ratings! Click any card to open the detailed lore modal.",
+    "linkText": "Meet 35 Characters →",
+    "linkUrl": "characters.html"
+  },
+  {
+    "keywords": ["events", "event", "conventions", "cons", "concerts", "tournaments", "calendar", "schedule", "meetup"],
+    "question": "Where can I find fan events?",
+    "answer": "Visit our Community Events calendar to discover 21 conventions, stadium concerts, esports speedrun invitationals, and film screening galas.",
+    "linkText": "View Events Calendar →",
+    "linkUrl": "events.html"
+  },
+  {
+    "keywords": ["trailers", "trailer", "teaser", "video preview", "previews", "sneak peek"],
+    "question": "Where can I watch trailers?",
+    "answer": "Watch official teasers, gameplay showcases, and anime reveals in high definition with status filters (Released, Coming Soon, In Production).",
+    "linkText": "Watch Trailers Vault →",
+    "linkUrl": "trailers.html"
+  },
+  {
+    "keywords": ["videos", "video", "audio", "ost", "soundtrack", "podcast", "podcasts", "stream", "listen", "clips"],
+    "question": "Where can I find videos and audio?",
+    "answer": "Stream orchestral soundtracks, podcast interviews with showrunners, and video breakdowns in our Videos & Audio streaming vault.",
+    "linkText": "Open Videos & Audio →",
+    "linkUrl": "videos.html"
+  },
+  {
+    "keywords": ["merchandise", "merch", "shop", "store", "buy", "hoodie", "poster", "figure", "gear", "products"],
+    "question": "How does merchandise shopping work?",
+    "answer": "Browse official fan gear including poster sets, hoodies, figures, enamel pins, lightsticks, and manga ink sets. You can add items to your temporary browser cart!",
+    "linkText": "Visit Fan Merchandise →",
+    "linkUrl": "merchandise.html"
+  },
+  {
+    "keywords": ["cart", "shopping cart", "checkout", "total", "basket"],
+    "question": "How does the temporary cart work?",
+    "answer": "Your cart is stored locally in your browser using localStorage. You can adjust quantities (+ / -), remove items, and see the calculated total. Note that checkout is simulated for this student project!",
+    "linkText": "Open Merchandise & Cart →",
+    "linkUrl": "merchandise.html"
   },
   {
     "keywords": ["bookmarks", "bookmark", "save", "favorites", "saved"],
     "question": "How do bookmarks work?",
-    "answer": "When you open any card modal (characters, articles, trailers, or events), simply click the 'Bookmark' button! Your saved items are stored securely in your browser's localStorage and can be viewed anytime on the Bookmarks page."
+    "answer": "Click 'Add Bookmark' on any character, article, trailer, or event modal to save it. Bookmarks persist across refreshes via localStorage and can be managed on the Bookmarks page.",
+    "linkText": "View Saved Bookmarks →",
+    "linkUrl": "bookmarks.html"
   },
   {
-    "keywords": ["merchandise", "merch", "cart", "shop", "buy", "store", "price"],
-    "question": "How does merchandise and the cart work?",
-    "answer": "Visit our Merchandise page to browse fan gear. Click 'Add to Cart' to add items to your temporary browser cart. You can review quantities, calculate totals, and manage items in the cart modal without any real payment required!"
+    "keywords": ["notes", "personal notes", "session notes", "note"],
+    "question": "How do personal notes work?",
+    "answer": "You can add personal notes to any bookmarked item directly in the details modal or on the Bookmarks page. In accordance with project SRS requirements, notes are stored in sessionStorage for your active session.",
+    "linkText": "Manage Bookmarks & Notes →",
+    "linkUrl": "bookmarks.html"
   },
   {
-    "keywords": ["search", "find", "filter", "how to search", "lookup"],
+    "keywords": ["search", "find", "filter", "how to search", "lookup", "global search"],
     "question": "How can I search for content?",
-    "answer": "Click 'Search' in the top navbar or visit search.html! You can search by title, category, type, or tags, and filter by content type (articles, trailers, characters, etc.) and sort results by A-Z, Newest, or Popularity."
+    "answer": "Use the Global Search bar in the navbar or visit search.html! You can search across titles, descriptions, categories, and tags, filter by universe and content type, and sort by A-Z, Newest, or Popularity.",
+    "linkText": "Open Global Search →",
+    "linkUrl": "search.html"
   },
   {
-    "keywords": ["events", "conventions", "meetups", "gatherings"],
-    "question": "Where can I find fan events?",
-    "answer": "Head over to the Events page (under Explore in the menu) to find conventions, live orchestra concerts, esports tournaments, film screenings, and fan meetups for all 7 fandom categories!"
+    "keywords": ["gallery", "art", "artwork", "illustrations", "photos", "lightbox", "images"],
+    "question": "Where is the Art & Visual Gallery?",
+    "answer": "Visit our Gallery to browse high-definition key visuals, concept illustrations, stage shots, and comic covers with an interactive lightbox modal.",
+    "linkText": "Open Art Gallery →",
+    "linkUrl": "gallery.html"
   },
   {
-    "keywords": ["characters", "character", "heroes", "cast"],
-    "question": "Can I learn more about characters?",
-    "answer": "Yes! Go to the Characters page to view profiles for heroes, vigilantes, idols, and warriors across every category. Clicking any card opens a detailed modal with backstories, roles, and special abilities."
+    "keywords": ["upcoming", "releases", "coming soon", "schedule", "new releases", "dates"],
+    "question": "Where can I see upcoming releases?",
+    "answer": "Check our Trailers and Category hubs to filter upcoming releases and coming-soon premieres across Anime, Games, Movies, and Shows.",
+    "linkText": "View Upcoming Trailers →",
+    "linkUrl": "trailers.html"
   },
   {
-    "keywords": ["account", "login", "signup", "register"],
+    "keywords": ["contact", "support", "feedback", "reach", "email", "address", "location"],
+    "question": "How can I contact the FandomVerse team?",
+    "answer": "Visit our Contact page to send feedback, suggest fandoms, or view our interactive Google Map and contact coordinates.",
+    "linkText": "Go to Contact Us →",
+    "linkUrl": "contact.html"
+  },
+  {
+    "keywords": ["login", "signin", "sign in", "signup", "register", "account", "member"],
     "question": "Do I need an account to browse?",
-    "answer": "Browsing, searching, and bookmarking work freely without an account. You can also try our student-friendly dummy Login and Signup pages in the navbar."
+    "answer": "Browsing, searching, and bookmarking work freely without an account. You can also explore our student-friendly UI Login and Signup member portals.",
+    "linkText": "Go to Member Login →",
+    "linkUrl": "login.html"
+  },
+  {
+    "keywords": ["i like anime", "recommend anime", "anime recommendation", "best anime"],
+    "question": "I like anime! What do you recommend?",
+    "answer": "For anime enthusiasts, we highly recommend checking out 'Crimson Blade Chronicles' featuring the wandering swordsman Ren Kazama, and the soaring aerial action of 'Skybound Academy'!",
+    "linkText": "Explore Anime Universe →",
+    "linkUrl": "category.html?cat=Anime"
+  },
+  {
+    "keywords": ["i like gaming", "i like games", "recommend games", "gaming recommendation", "best games"],
+    "question": "I like gaming! What do you recommend?",
+    "answer": "For gamers, dive into 'Ashen Kingdoms' (open-world fantasy RPG) and check out the 'Neon Harbor Speedrun Invitational' and Vex-09 action figure!",
+    "linkText": "Explore Gaming Universe →",
+    "linkUrl": "category.html?cat=Gaming"
+  },
+  {
+    "keywords": ["i like movies", "i like film", "recommend movies", "movie recommendation", "best movies"],
+    "question": "I like movies! What do you recommend?",
+    "answer": "Check out our sci-fi blockbuster 'The Lighthouse Protocol' and the atmospheric neo-noir 'Midnight Reel: Shadows of Sector 4'!",
+    "linkText": "Explore Movies Universe →",
+    "linkUrl": "category.html?cat=Movies"
+  },
+  {
+    "keywords": ["i like kpop", "i like k-pop", "recommend kpop", "recommend music", "kpop recommendation"],
+    "question": "I like K-Pop! What do you recommend?",
+    "answer": "You will love 'Lunar Bloom'! Check out their Moonrise MV teaser, stadium concert tour schedule, and the Bluetooth heart lightstick!",
+    "linkText": "Explore K-Pop Universe →",
+    "linkUrl": "category.html?cat=K-Pop"
+  },
+  {
+    "keywords": ["i like comics", "recommend comics", "comic recommendation"],
+    "question": "I like comics! What do you recommend?",
+    "answer": "Check out 'Ghostlight: The Origin Story' and 'Iron Meridian', featuring magnetic energy powers and vintage hero covers!",
+    "linkText": "Explore Comics Universe →",
+    "linkUrl": "category.html?cat=Comics"
+  },
+  {
+    "keywords": ["i like manga", "recommend manga", "manga recommendation"],
+    "question": "I like manga! What do you recommend?",
+    "answer": "Dive into 'Tidewalker' and its ocean mythology with apprentice Yuki Aizawa, or read our documentary essay on mangaka studio inking!",
+    "linkText": "Explore Manga Universe →",
+    "linkUrl": "category.html?cat=Manga"
   }
 ]

@@ -15,7 +15,7 @@ A modern, clean, and professional multi-page fandom hub celebrating seven core e
 ## 📁 Project Structure
 
 ```
-fandom_verse/
+fandom-verse/
 ├── index.html            # Main home page with hero banner & highlights
 ├── categories.html       # Overview of all 7 universes
 ├── category.html         # Universe-specific hub (characters, media, events)
@@ -63,5 +63,5 @@ fandom_verse/
 
 ## 🚀 How to Run
 1. Open the project directory in **VS Code**.
-2. Right-click [index.html](file:///c:/Users/hamdan/Videos/fandom_verse/index.html) and select **"Open with Live Server"** (or run `npx serve .` / any local HTTP server).
+2. Right-click [index.html](file:///c:/Users/hamdan/Videos/fandom-verse/index.html) and select **"Open with Live Server"** (or run `npx serve .` / any local HTTP server).
 3. Browse and enjoy!

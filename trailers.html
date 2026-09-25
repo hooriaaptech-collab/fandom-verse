@@ -57,8 +57,14 @@
           <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li>
           <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
           <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <form class="navbar-search-form d-none d-lg-block me-2" id="navbarSearchForm">
+            <span class="search-icon">🔍</span>
+            <input type="search" id="navbarSearchInput" placeholder="Quick search..." aria-label="Quick Search">
+          </form>
           <a class="btn btn-outline-fv btn-sm" href="login.html">Login</a>
           <a class="btn btn-primary-fv btn-sm" href="signup.html">Signup</a>
         </div>
@@ -70,12 +76,21 @@
     <!-- ================= PAGE HEADER ================= -->
     <header class="page-header">
       <div class="container">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="fv-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="categories.html">Explore</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Trailers</li>
+          </ol>
+        </nav>
+
         <div class="row align-items-center">
           <div class="col-md-9">
             <div class="hero-brand-pill mb-2">Cinematic Video Vault</div>
             <h1>Official Trailers & Teasers</h1>
             <p>
-              Watch official teasers, premiere trailers, anime reveals, and gameplay showcases with high-definition video previews.
+              Watch official teasers, premiere trailers, anime reveals, and gameplay showcases with video previews and release status filtering.
             </p>
           </div>
           <div class="col-md-3 text-md-end mt-3 mt-md-0">
@@ -100,12 +115,10 @@
                 <button type="button" class="filter-chip" data-category="Movies">Movies</button>
                 <button type="button" class="filter-chip" data-category="TV Shows">TV Shows</button>
                 <button type="button" class="filter-chip" data-category="K-Pop">K-Pop</button>
-                <button type="button" class="filter-chip" data-category="Comics">Comics</button>
-                <button type="button" class="filter-chip" data-category="Manga">Manga</button>
               </div>
             </div>
             <div class="col-lg-5">
-              <span class="text-muted small d-block mb-1">Filter by Release Status:</span>
+              <span class="text-muted small d-block mb-1">Release Status:</span>
               <div class="filter-btn-group" id="trailerStatusFilters">
                 <button type="button" class="filter-chip active" data-status="all">All Status</button>
                 <button type="button" class="filter-chip" data-status="Released">Released</button>
@@ -114,7 +127,10 @@
               </div>
             </div>
           </div>
-          <div class="mt-3 text-muted small" id="trailerCountSummary">Showing trailers</div>
+          <div class="d-flex justify-content-between align-items-center mt-3 text-muted small">
+            <span id="trailerCount">Showing trailers</span>
+            <span>Click any trailer to watch preview</span>
+          </div>
         </div>
 
         <!-- Trailers Grid -->
@@ -170,53 +186,58 @@
     </div>
   </footer>
 
-  <!-- ================= TRAILER VIDEO MODAL ================= -->
-  <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalTitle" aria-hidden="true">
+  <!-- ================= VIDEO PLAYER MODAL ================= -->
+  <div class="modal fade" id="trailerPlayerModal" tabindex="-1" aria-labelledby="videoModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content fv-modal">
         <div class="modal-header">
-          <h3 class="modal-title h5 mb-0" id="trailerModalTitle">Watch Trailer</h3>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" onclick="stopTrailerVideo()"></button>
+          <h3 class="modal-title h5 mb-0" id="videoModalTitle">Watch Trailer</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" id="videoModalCloseBtn" aria-label="Close"></button>
         </div>
         <div class="modal-body p-0">
           <div class="ratio ratio-16x9 bg-black">
-            <video id="trailerVideoPlayer" controls playsinline>
-              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <video id="trailerVideoPlayer" controls poster="assets/images/banner.jpg" preload="none">
+              <source id="trailerVideoSource" src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
           <div class="p-3">
-            <div class="d-flex flex-wrap gap-2 mb-2">
-              <span class="badge badge-category" id="trailerCatBadge">Category</span>
-              <span class="badge badge-type" id="trailerStatusBadge">Status</span>
-              <span class="text-muted small align-self-center" id="trailerDurationBadge">0m 00s</span>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge badge-category" id="videoModalCategory">Category</span>
+              <span class="badge badge-type" id="videoModalStatus">Status</span>
             </div>
-            <p id="trailerModalDesc" class="mb-2 text-light"></p>
-            <p id="trailerModalFull" class="small text-muted mb-0"></p>
+            <p class="small text-muted mb-0" id="videoModalDescription"></p>
+            <div id="modalNotesContainer"></div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-fv btn-sm" id="trailerBookmarkBtn">☆ Bookmark Trailer</button>
-          <button type="button" class="btn btn-primary-fv btn-sm" data-bs-dismiss="modal" onclick="stopTrailerVideo()">Close</button>
+          <button type="button" class="btn btn-outline-fv btn-sm" id="modalBookmarkBtn">☆ Add Bookmark</button>
+          <button type="button" class="btn btn-primary-fv btn-sm" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- ================= CHATBOT WIDGET ================= -->
-  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle"><span>&#128172;</span> Chat & FAQ</button>
+  <button type="button" class="chatbot-toggle-btn" id="chatbotToggle" aria-label="Open Chatbot">
+    <span>💬</span> Chat & FAQ
+  </button>
   <div class="chatbot-window" id="chatbotWindow">
     <div class="chatbot-header">
-      <h6><span>&#128172;</span> FandomVerse Assistant</h6>
+      <h6><span>🤖</span> FandomVerse Assistant</h6>
       <button type="button" class="btn-close btn-close-white btn-sm" id="chatbotClose"></button>
     </div>
     <div class="chatbot-messages" id="chatbotMessages">
-      <div class="chat-bubble bot">Hello! Click 'Watch Trailer' on any card to play the video preview!</div>
+      <div class="chat-bubble bot">Hello! Ask me about trailers, teaser releases, and upcoming premieres!</div>
     </div>
     <div class="chat-chips-area" id="chatChips">
-      <span class="chat-chip">What categories are available?</span>
-      <span class="chat-chip">How do bookmarks work?</span>
-      <span class="chat-chip">How can I search?</span>
+      <span class="chat-chip">Trailers</span>
+      <span class="chat-chip">Upcoming Releases</span>
+      <span class="chat-chip">Explore Anime</span>
+      <span class="chat-chip">Explore Gaming</span>
+      <span class="chat-chip">Explore Movies</span>
+      <span class="chat-chip">Explore TV Shows</span>
+      <span class="chat-chip">Help</span>
     </div>
     <div class="chatbot-input-bar">
       <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
@@ -230,98 +251,44 @@
     var currentCat = "all";
     var currentStatus = "all";
 
-    function stopTrailerVideo() {
-      var player = document.getElementById("trailerVideoPlayer");
-      if (player) {
-        player.pause();
-      }
-    }
-
-    function playTrailer(id) {
-      var item = allTrailers.find(function(t) { return t.id === id; });
-      if (!item) return;
-
-      document.getElementById("trailerModalTitle").textContent = item.title;
-      document.getElementById("trailerCatBadge").textContent = item.category;
-      document.getElementById("trailerStatusBadge").textContent = item.releaseStatus;
-      document.getElementById("trailerDurationBadge").textContent = item.duration || "2m 00s";
-      document.getElementById("trailerModalDesc").textContent = item.description;
-      document.getElementById("trailerModalFull").textContent = item.fullDetails || "";
-
-      var player = document.getElementById("trailerVideoPlayer");
-      if (player) {
-        player.src = item.videoUrl || "https://www.w3schools.com/html/mov_bbb.mp4";
-        player.load();
-        player.play().catch(function(){}); // Catch autoplay restrictions
-      }
-
-      var bookmarkBtn = document.getElementById("trailerBookmarkBtn");
-      if (bookmarkBtn) {
-        var normItem = {
-          id: item.id,
-          title: item.title,
-          category: item.category,
-          type: "trailer",
-          image: item.thumbnail,
-          description: item.description
-        };
-        var isSaved = isBookmarked(normItem.id, normItem.type);
-        bookmarkBtn.textContent = isSaved ? "★ Bookmarked (Remove)" : "☆ Bookmark Trailer";
-        bookmarkBtn.className = isSaved ? "btn btn-gold btn-sm" : "btn btn-outline-fv btn-sm";
-
-        var newBtn = bookmarkBtn.cloneNode(true);
-        bookmarkBtn.parentNode.replaceChild(newBtn, bookmarkBtn);
-        newBtn.addEventListener("click", function() {
-          toggleBookmark(normItem);
-          var nowSaved = isBookmarked(normItem.id, normItem.type);
-          newBtn.textContent = nowSaved ? "★ Bookmarked (Remove)" : "☆ Bookmark Trailer";
-          newBtn.className = nowSaved ? "btn btn-gold btn-sm" : "btn btn-outline-fv btn-sm";
-        });
-      }
-
-      var modalEl = document.getElementById("trailerModal");
-      bootstrap.Modal.getOrCreateInstance(modalEl).show();
-    }
-
     function renderTrailers() {
       var filtered = allTrailers.filter(function(item) {
-        var catMatch = currentCat === "all" || item.category === currentCat;
-        var statusMatch = currentStatus === "all" || item.releaseStatus === currentStatus;
-        return catMatch && statusMatch;
+        var matchesCat = currentCat === "all" || item.category === currentCat;
+        var matchesStatus = currentStatus === "all" || item.releaseStatus === currentStatus;
+        return matchesCat && matchesStatus;
       });
 
       var container = document.getElementById("trailersGrid");
-      var countEl = document.getElementById("trailerCountSummary");
+      var countEl = document.getElementById("trailerCount");
       if (!container) return;
 
       countEl.textContent = "Showing " + filtered.length + " of " + allTrailers.length + " trailers";
 
       if (filtered.length === 0) {
-        container.innerHTML = '<div class="col-12 text-center py-5 text-muted"><p>No trailers match your selected filters.</p></div>';
+        container.innerHTML = '<div class="col-12 text-center py-5 text-muted"><p>No trailers found for the selected filter combination.</p></div>';
         return;
       }
 
       var html = "";
       filtered.forEach(function(item) {
-        var statusClass = item.releaseStatus === "Released" ? "text-success" : (item.releaseStatus === "Coming Soon" ? "text-warning" : "text-info");
         html += '<div class="col">' +
-          '<article class="card fv-card h-100">' +
-            '<div class="card-img-wrap" style="cursor: pointer;" onclick="playTrailer(' + item.id + ')">' +
+          '<article class="card fv-card h-100" style="cursor: pointer;" onclick="playTrailer(' + item.id + ')">' +
+            '<div class="card-img-wrap" style="aspect-ratio: 16/9;">' +
               '<img src="' + item.thumbnail + '" alt="' + item.title + '" loading="lazy">' +
               '<div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.35);">' +
-                '<span style="font-size: 2.5rem; color: #fff; text-shadow: 0 4px 12px rgba(0,0,0,0.8);">&#9658;</span>' +
+                '<span style="font-size: 2.2rem; color: #fff; background: rgba(56,189,248,0.85); width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding-left: 4px;">▶</span>' +
               '</div>' +
             '</div>' +
             '<div class="card-body">' +
               '<div class="d-flex justify-content-between align-items-center mb-2">' +
                 '<span class="badge badge-category">' + item.category + '</span>' +
-                '<span class="small fw-bold ' + statusClass + '">● ' + item.releaseStatus + '</span>' +
+                '<span class="badge badge-type">' + item.releaseStatus + '</span>' +
               '</div>' +
               '<h3 class="card-title h5">' + item.title + '</h3>' +
-              '<p class="card-text">' + item.description + '</p>' +
-              '<div class="d-flex justify-content-between align-items-center mt-auto pt-2">' +
-                '<span class="text-muted small">⏱ ' + item.duration + '</span>' +
-                '<button type="button" class="btn btn-gold btn-sm" onclick="playTrailer(' + item.id + ')">&#9658; Watch Trailer</button>' +
+              '<p class="card-text small">' + item.description + '</p>' +
+              '<div class="d-flex justify-content-between align-items-center mt-auto pt-2 text-muted small">' +
+                '<span>⏱ ' + item.duration + '</span>' +
+                '<span>📅 ' + item.year + '</span>' +
               '</div>' +
             '</div>' +
           '</article>' +
@@ -329,6 +296,76 @@
       });
 
       container.innerHTML = html;
+    }
+
+    function playTrailer(id) {
+      var item = allTrailers.find(function(t) { return t.id === id; });
+      if (!item) return;
+
+      var titleEl = document.getElementById("videoModalTitle");
+      var videoEl = document.getElementById("trailerVideoPlayer");
+      var sourceEl = document.getElementById("trailerVideoSource");
+      var catEl = document.getElementById("videoModalCategory");
+      var statusEl = document.getElementById("videoModalStatus");
+      var descEl = document.getElementById("videoModalDescription");
+      var bookmarkBtn = document.getElementById("modalBookmarkBtn");
+      var notesContainer = document.getElementById("modalNotesContainer");
+
+      if (titleEl) titleEl.textContent = item.title;
+      if (catEl) catEl.textContent = item.category;
+      if (statusEl) statusEl.textContent = item.releaseStatus;
+      if (descEl) descEl.textContent = item.fullDetails || item.description;
+
+      if (videoEl && sourceEl) {
+        sourceEl.src = item.videoUrl;
+        videoEl.poster = item.thumbnail;
+        videoEl.load();
+      }
+
+      var normalizedItem = {
+        id: item.id,
+        title: item.title,
+        category: item.category,
+        type: "trailer",
+        image: item.thumbnail,
+        description: item.description
+      };
+
+      if (bookmarkBtn) {
+        updateModalBookmarkButton(normalizedItem);
+        var newBtn = bookmarkBtn.cloneNode(true);
+        bookmarkBtn.parentNode.replaceChild(newBtn, bookmarkBtn);
+        newBtn.addEventListener("click", function () {
+          toggleBookmark(normalizedItem);
+        });
+      }
+
+      if (notesContainer) {
+        var currentNote = getPersonalNote(item.id, "trailer");
+        notesContainer.innerHTML =
+          '<div class="notes-section mt-2">' +
+            '<label class="notes-label" for="trailerNoteInput">📝 Personal Note (sessionStorage):</label>' +
+            '<textarea id="trailerNoteInput" class="notes-textarea" placeholder="Add session notes for this trailer...">' + currentNote + '</textarea>' +
+            '<div class="d-flex justify-content-end mt-1">' +
+              '<button type="button" class="btn btn-outline-gold btn-sm" id="saveTrailerNoteBtn" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">Save Note</button>' +
+            '</div>' +
+          '</div>';
+
+        var saveBtn = document.getElementById("saveTrailerNoteBtn");
+        var noteInput = document.getElementById("trailerNoteInput");
+        if (saveBtn && noteInput) {
+          saveBtn.addEventListener("click", function() {
+            savePersonalNote(item.id, "trailer", noteInput.value.trim());
+            alert("Note saved for this session!");
+          });
+        }
+      }
+
+      var modalEl = document.getElementById("trailerPlayerModal");
+      if (modalEl && typeof bootstrap !== "undefined") {
+        var modalInstance = bootstrap.Modal.getOrCreateInstance(modalEl);
+        modalInstance.show();
+      }
     }
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -339,7 +376,7 @@
           renderTrailers();
         });
 
-      // Category filter clicks
+      // Category filter chips
       var catChips = document.querySelectorAll("#trailerCategoryFilters .filter-chip");
       catChips.forEach(function(chip) {
         chip.addEventListener("click", function() {
@@ -350,7 +387,7 @@
         });
       });
 
-      // Status filter clicks
+      // Status filter chips
       var statusChips = document.querySelectorAll("#trailerStatusFilters .filter-chip");
       statusChips.forEach(function(chip) {
         chip.addEventListener("click", function() {
@@ -360,6 +397,15 @@
           renderTrailers();
         });
       });
+
+      // Pause video when modal is closed
+      var modalEl = document.getElementById("trailerPlayerModal");
+      if (modalEl) {
+        modalEl.addEventListener("hidden.bs.modal", function () {
+          var videoEl = document.getElementById("trailerVideoPlayer");
+          if (videoEl) videoEl.pause();
+        });
+      }
     });
   </script>
 </body>

@@ -57,8 +57,14 @@
           <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li>
           <li class="nav-item"><a class="nav-link" href="bookmarks.html">Bookmarks</a></li>
           <li class="nav-item"><a class="nav-link" href="search.html">Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="d-flex align-items-center gap-2 mt-3 mt-xl-0">
+          <form class="navbar-search-form d-none d-lg-block me-2" id="navbarSearchForm">
+            <span class="search-icon">🔍</span>
+            <input type="search" id="navbarSearchInput" placeholder="Quick search..." aria-label="Quick Search">
+          </form>
           <a class="btn btn-primary-fv btn-sm active" href="login.html">Login</a>
           <a class="btn btn-outline-fv btn-sm" href="signup.html">Signup</a>
         </div>
@@ -70,6 +76,14 @@
     <!-- ================= PAGE HEADER ================= -->
     <header class="page-header">
       <div class="container">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="fv-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Login</li>
+          </ol>
+        </nav>
+
         <div class="row align-items-center">
           <div class="col-md-9">
             <div class="hero-brand-pill mb-2">Member Portal</div>
@@ -185,9 +199,17 @@
       <div class="chat-bubble bot">Hello! You can log in using any test credentials for this demonstration!</div>
     </div>
     <div class="chat-chips-area" id="chatChips">
+      <span class="chat-chip">What is FandomVerse?</span>
       <span class="chat-chip">Do I need an account to browse?</span>
-      <span class="chat-chip">What categories are available?</span>
+      <span class="chat-chip">Explore Anime</span>
+      <span class="chat-chip">Explore Gaming</span>
+      <span class="chat-chip">Explore Movies</span>
+      <span class="chat-chip">Explore TV Shows</span>
+      <span class="chat-chip">Explore K-Pop</span>
+      <span class="chat-chip">Explore Comics</span>
+      <span class="chat-chip">Explore Manga</span>
       <span class="chat-chip">How do bookmarks work?</span>
+      <span class="chat-chip">How can I search?</span>
     </div>
     <div class="chatbot-input-bar">
       <input type="text" id="chatbotInput" class="form-control form-control-sm fv-form-control" placeholder="Ask a question...">
