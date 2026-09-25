@@ -1,428 +1,598 @@
-[
-  {
-    "id": 101,
-    "name": "Ren Kazama",
-    "category": "Anime",
-    "role": "Reluctant Swordsman",
-    "franchise": "Crimson Blade Chronicles",
-    "description": "A wandering swordsman who harnesses azure lightning through an ancestral katana.",
-    "fullBio": "Ren Kazama is a master of the ancient Mist Blossom blade style. Exiled from his mountain dojo after defending helpless villagers from warlords, he journeys through turbulent provinces fighting for ordinary people while seeking redemption for past regrets.",
-    "abilities": ["Azure Blade Flash", "Wind Walking", "Ki Focus", "Lightning Deflection"],
-    "popularity": "98%",
-    "image": "assets/images/cat-anime.jpg"
-  },
-  {
-    "id": 102,
-    "name": "Aoi Tachibana",
-    "category": "Anime",
-    "role": "Skybound Academy Prodigy",
-    "franchise": "Skybound Academy",
-    "description": "An aerial tactician equipped with gravity wings who leads class missions across floating islands.",
-    "fullBio": "Born in the high sky-citadels, Aoi developed an innate talent for manipulating atmospheric currents. She stands at the top of Skybound Academy's exam rankings, renowned for her cool-headed tactical mindset in aerial combat.",
-    "abilities": ["Atmospheric Glide", "Vortex Blast", "Tactical Scan", "Aero Shield"],
-    "popularity": "94%",
-    "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 103,
-    "name": "Kaelen Drake",
-    "category": "Anime",
-    "role": "Dragonbound Knight",
-    "franchise": "Dragon Forge Echoes",
-    "description": "A fire-forged warrior wielding a blazing greatsword infused with ancient dragon embers.",
-    "fullBio": "Bonded to the spirit of a slumbering fire drake during the Siege of Solis, Kaelen channels molten energy into battle armor. Despite his fierce fighting style, he remains fiercely loyal to his comrades and fights to restore peace.",
-    "abilities": ["Dragonfire Cleave", "Flame Barrier", "Iron Will", "Inferno Stride"],
-    "popularity": "91%",
-    "image": "https://images.unsplash.com/photo-1563089145-599997674d42?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 104,
-    "name": "Mei Lin",
-    "category": "Anime",
-    "role": "Celestial Alchemist",
-    "franchise": "Hana no Yoru",
-    "description": "A gentle apothecary who blends mystical botanicals and astral resonance to heal and protect.",
-    "fullBio": "Mei travels between isolated mountain shrines collecting rare moonlit herbs. Her harmonic alchemy can mend mortal wounds and ward off spiritual corruption with calming celestial petals.",
-    "abilities": ["Moonpetal Renewal", "Astral Concoctions", "Aura Ward", "Resonance Song"],
-    "popularity": "89%",
-    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 105,
-    "name": "Jin Shirogane",
-    "category": "Anime",
-    "role": "Shadow Shinobi",
-    "franchise": "Night Clan Chronicles",
-    "description": "A quiet stealth operative who blends into shadows and dismantles corrupt syndicate operations.",
-    "fullBio": "Jin was raised in the covert Night Clan before breaking away to dismantle human trafficking syndicates. Operating from the dark rooftops of feudal neon cities, he strikes silently before disappearing like smoke.",
-    "abilities": ["Shadow Meld", "Kunai Throw", "Phantom Decoy", "Silent Step"],
-    "popularity": "92%",
-    "image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80"
-  },
-
-  {
-    "id": 106,
-    "name": "Vex-09",
-    "category": "Gaming",
-    "role": "Cybernetic Enforcer",
-    "franchise": "Ashen Kingdoms & Neon Harbor",
-    "description": "A heavily augmented urban operative with tactical holo-shields and precision plasma rifles.",
-    "fullBio": "Vex-09 was an elite peacekeeping vanguard in the mega-city of Neo-Sol before turning mercenary to expose the megacorporation that weaponized his cybernetic enhancements. He defends rogue communities in the under-levels.",
-    "abilities": ["Holo-Shield Overdrive", "Plasma Precision", "Tactical EMP", "Kinetic Dash"],
-    "popularity": "97%",
-    "image": "assets/images/cat-gaming.jpg"
-  },
-  {
-    "id": 107,
-    "name": "Nova Sparks",
-    "category": "Gaming",
-    "role": "Cyberpunk Tech Specialist",
-    "franchise": "Neon Harbor Speedrun",
-    "description": "A cheerful drone mechanic and speed runner who turns scrap into lethal tech gadgets.",
-    "fullBio": "Equipped with neon visor goggles and powered gauntlets, Nova is the premier hacker in Neon Harbor. She can override planetary security grids in seconds and navigate rooftops with zero-gravity roller thrusters.",
-    "abilities": ["Grid Overclock", "Drone Swarm", "Power Gauntlet Smash", "Glitch Teleport"],
-    "popularity": "95%",
-    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 108,
-    "name": "Lord Torin",
-    "category": "Gaming",
-    "role": "Fortress Marshal",
-    "franchise": "Fortress Tactics",
-    "description": "A tactical battlefield general known for defending besieged keeps against impossible odds.",
-    "fullBio": "Veterans under Torin say he can calculate an opposing legion's movements before the first horn sounds. Clad in enchanted steel plates, he plants his banner firmly in the earth and rallies his soldiers to victory.",
-    "abilities": ["Iron Bulwark", "Battle Cry", "Tactical Phalanx", "Siege Breaker"],
-    "popularity": "88%",
-    "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 109,
-    "name": "Lyra Frost",
-    "category": "Gaming",
-    "role": "Cryo Marksman",
-    "franchise": "Sub-Zero Apex",
-    "description": "A sniper operative operating across frozen tundras with cryo-charged rounds.",
-    "fullBio": "Lyra survived three winter sieges behind enemy lines using homemade camouflage and cryo-rifles. She rarely misses a shot and can freeze entire barricades to pave an assault route.",
-    "abilities": ["Cryo Snipe", "Glacial Trap", "Thermal Cloak", "Frost Nova"],
-    "popularity": "93%",
-    "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 110,
-    "name": "Brixx",
-    "category": "Gaming",
-    "role": "Brawler Titan",
-    "franchise": "Rumble Protocol",
-    "description": "A towering mechanized gladiator who dominates tournament arenas with hydraulic fists.",
-    "fullBio": "Built from industrial mining rigs, Brixx gained self-awareness in the scrap leagues and quickly climbed to champion status. Fans love his thunderous ground-slams and sportsmanship.",
-    "abilities": ["Ground Quake", "Hydraulic Upper", "Overdrive Armor", "Seismic Slam"],
-    "popularity": "90%",
-    "image": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&auto=format&fit=crop&q=80"
-  },
-
-  {
-    "id": 111,
-    "name": "Captain Ines Vale",
-    "category": "Movies",
-    "role": "Deep Space Starship Pilot",
-    "franchise": "The Lighthouse Protocol & Skyline",
-    "description": "A disgraced pilot turned galactic expedition commander investigating anomalies at the edge of known space.",
-    "fullBio": "Ines Vale commanded the frigate Odyssey through the Great Solar Flare, saving three hundred civilian crew members. Despite facing court-martial for violating fleet quarantine, she was recruited to lead the secretive Lighthouse Protocol.",
-    "abilities": ["Sub-Light Maneuvering", "Crisis Leadership", "Zero-G Combat", "Deep Space Navigation"],
-    "popularity": "96%",
-    "image": "assets/images/movies/ines-vale.jpg"
-  },
-  {
-    "id": 112,
-    "name": "Dr. Elijah Vance",
-    "category": "Movies",
-    "role": "Quantum Physicist",
-    "franchise": "The Lighthouse Protocol",
-    "description": "The scientist who deciphered radio waves originating from twenty-four hours in the future.",
-    "fullBio": "Elijah spent decades monitoring deep-space listening posts in the Aleutian Islands before detecting the impossible chronological echo. His calm analytical brilliance guides the team when physical laws break down.",
-    "abilities": ["Chronal Calculation", "Signal Decoding", "Field Forensics", "Data Analysis"],
-    "popularity": "87%",
-    "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 113,
-    "name": "Seraphina Cross",
-    "category": "Movies",
-    "role": "Bounty Tracker",
-    "franchise": "Midnight Reel Noir",
-    "description": "A trench-coated neo-noir operative who tracks missing orbital diplomats in crowded neon seaports.",
-    "fullBio": "Known as the ghost of Sector 4, Seraphina never leaves a trail and never fails to locate a target. Her dual stun pistols and sharp interrogation instincts make her feared across planetary dockyards.",
-    "abilities": ["Pulse Stun", "Target Tracking", "Evasion", "Underworld Contacts"],
-    "popularity": "92%",
-    "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 114,
-    "name": "Marcus Stone",
-    "category": "Movies",
-    "role": "Expedition Specialist",
-    "franchise": "Abyssal Rift",
-    "description": "A deep-sea submersible diver exploring submerged alien monoliths in the Mariana Trench.",
-    "fullBio": "Marcus has logged more hours in extreme oceanic depths than any living diver. When a volcanic trench fissure reveals glowing ancient architecture, Marcus leads the first manned dive into the unknown.",
-    "abilities": ["Submersible Piloting", "High-Pressure Diving", "Geological Survey", "Rescue Protocol"],
-    "popularity": "88%",
-    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 115,
-    "name": "Selene Ray",
-    "category": "Movies",
-    "role": "Rebel Corsair",
-    "franchise": "Starfall Dynasty",
-    "description": "A charismatic outlaw space captain who steals luxury energy crystals from interstellar imperial dreadnoughts.",
-    "fullBio": "Selene leads a ragtag crew aboard the ship 'Lucky Comet'. Famous for daring heists and flamboyant escapes, she is wanted across twelve solar sectors with a twenty-million credit bounty on her head.",
-    "abilities": ["Starship Drifting", "Quick Draw Blaster", "Grappling Hook", "Smooth Diplomacy"],
-    "popularity": "94%",
-    "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80"
-  },
-
-  {
-    "id": 116,
-    "name": "Detective Maren Holt",
-    "category": "TV Shows",
-    "role": "Chief Inspector",
-    "franchise": "Harrow Point",
-    "description": "The observant, weathered detective who untangles dark coastal conspiracies and cold cases.",
-    "fullBio": "Stationed in the windswept seaside town of Harrow Point, Detective Holt relies on psychological intuition, old notebooks, and relentless persistence to uncover family secrets that powerful landowners tried to bury.",
-    "abilities": ["Deductive Analysis", "Interrogation", "Crime Scene Reconstruction", "Archive Research"],
-    "popularity": "95%",
-    "image": "assets/images/tv-shows/maren-holt.jpg"
-  },
-  {
-    "id": 117,
-    "name": "Lady Eleanor Vance",
-    "category": "TV Shows",
-    "role": "Estate Matriarch",
-    "franchise": "Kingsbridge Manor",
-    "description": "The formidable aristocrat defending her family legacy during political upheaval in Victorian England.",
-    "fullBio": "With biting wit and an iron grip on parliamentary alliances, Lady Eleanor navigates high-society scandals and trade disputes while safeguarding the ancient Kingsbridge estate.",
-    "abilities": ["Political Strategy", "High-Society Influence", "Legal Acumen", "Diplomatic Maneuvers"],
-    "popularity": "90%",
-    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 118,
-    "name": "Julian Mercer",
-    "category": "TV Shows",
-    "role": "Investigative Journalist",
-    "franchise": "The Fourth Estate",
-    "description": "A dogged reporter who risks everything to broadcast the truth behind clandestine government contracts.",
-    "fullBio": "Working from a cluttered newsroom with coffee-stained desks, Julian tracks paper trails and leaks that whistleblowers provide, piecing together revelations that shake city hall.",
-    "abilities": ["Whistleblower Relations", "Paperwork Forensics", "Undercover Reporting", "Rapid Fact-Checking"],
-    "popularity": "88%",
-    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 119,
-    "name": "Constable Tom Brody",
-    "category": "TV Shows",
-    "role": "Junior Detective",
-    "franchise": "Harrow Point",
-    "description": "Holt's honest junior partner whose local roots and empathy unlock town testimonies.",
-    "fullBio": "Brody grew up in Harrow Point and knows every fisherman, shopkeeper, and teacher by name. His earnest nature balances Holt's cynicism, forming an unstoppable investigative duo.",
-    "abilities": ["Witness Outreach", "Forensic Tracking", "Local Knowledge", "Field Response"],
-    "popularity": "86%",
-    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 120,
-    "name": "Arthur Pendelton",
-    "category": "TV Shows",
-    "role": "Master Architect",
-    "franchise": "Kingsbridge Manor",
-    "description": "The visionary builder behind the iconic iron cathedral bridge that transforms the town.",
-    "fullBio": "Arthur combines cutting-edge industrial engineering with artistic passion, overcoming political sabotage and stormy winters to erect the monumental bridge that links two rival provinces.",
-    "abilities": ["Structural Engineering", "Drafting", "Project Leadership", "Crisis Calculation"],
-    "popularity": "85%",
-    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&auto=format&fit=crop&q=80"
-  },
-
-  {
-    "id": 121,
-    "name": "Min-seo (Mina)",
-    "category": "K-Pop",
-    "role": "Main Vocalist & Leader",
-    "franchise": "Lunar Bloom",
-    "description": "The charismatic leader of Lunar Bloom with a four-octave vocal range and luminous stage presence.",
-    "fullBio": "Trained for six years in classical piano and vocal resonance, Mina is the anchor of Lunar Bloom. Her soaring high notes in 'Moonrise' propelled the group to international chart-topping acclaim.",
-    "abilities": ["Harmonic High Notes", "Stage Leadership", "Vocal Arrangement", "Songwriting"],
-    "popularity": "99%",
-    "image": "assets/images/cat-kpop.jpg"
-  },
-  {
-    "id": 122,
-    "name": "Yuna Park",
-    "category": "K-Pop",
-    "role": "Main Dancer & Center",
-    "franchise": "Lunar Bloom",
-    "description": "The dynamic choreographer whose sharp isolations and expressive charisma mesmerize concert arenas.",
-    "fullBio": "A former contemporary ballet dancer, Yuna brings athletic elegance and magnetic energy to every stage routine. Fans revere her viral choreography breakdown videos.",
-    "abilities": ["Point Choreography", "Freestyle Dance", "Stage Charisma", "Visual Center"],
-    "popularity": "97%",
-    "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 123,
-    "name": "Chae-young (Chloe)",
-    "category": "K-Pop",
-    "role": "Lead Rapper & Producer",
-    "franchise": "Lunar Bloom",
-    "description": "The edgy lyricist whose fast flow and rhythmic delivery give Lunar Bloom their signature modern punch.",
-    "fullBio": "Chloe writes her own rap verses and co-produces the group's electronic synth tracks in the late-night studio sessions, blending Korean wordplay with futuristic hip-hop cadence.",
-    "abilities": ["Speed Rap Flow", "Beat Production", "Lyrical Wordplay", "Fashion Styling"],
-    "popularity": "94%",
-    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 124,
-    "name": "Ha-neul (Sky)",
-    "category": "K-Pop",
-    "role": "Sub-Vocalist & Maknae",
-    "franchise": "Lunar Bloom",
-    "description": "The bright and energetic youngest member whose sunny disposition and honey-smooth vocals warm fan hearts.",
-    "fullBio": "Sky's playful variety show appearances and charming acoustic guitar covers have earned her millions of fan followers worldwide, bringing heartwarming joy to the team.",
-    "abilities": ["Acoustic Vocals", "Variety Entertainment", "Fan Engagement", "Guitar Chords"],
-    "popularity": "93%",
-    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 125,
-    "name": "Taeyang Vance",
-    "category": "K-Pop",
-    "role": "Solo Artist & Producer",
-    "franchise": "Starlight Echo",
-    "description": "A visionary solo idol who blends retro synthwave aesthetics with modern R&B choreography.",
-    "fullBio": "Starting as a boy group prodigy, Taeyang debuted as a solo superstar with record-shattering streaming numbers and dazzling holographic stadium tours.",
-    "abilities": ["Falsetto Vocals", "Synthwave Arrangement", "Solo Choreography", "Creative Direction"],
-    "popularity": "95%",
-    "image": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&auto=format&fit=crop&q=80"
-  },
-
-  {
-    "id": 126,
-    "name": "Ghostlight",
-    "category": "Comics",
-    "role": "Vigilante of Crescent City",
-    "franchise": "Ghostlight Origins",
-    "description": "A masked hero who manipulates hard-light constructs and patrols twilight alleys.",
-    "fullBio": "Former electrical engineer Nathan Croft survived an industrial lab meltdown, gaining the ability to condense photons into solid blades, shields, and gliding wings to purge the criminal underworld.",
-    "abilities": ["Hard-Light Constructs", "Photon Gliding", "Flash Stun", "Detective Mind"],
-    "popularity": "97%",
-    "image": "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 127,
-    "name": "Iron Meridian",
-    "category": "Comics",
-    "role": "Armored Defender",
-    "franchise": "Iron Meridian",
-    "description": "A high-tech sentinel forged in magnetic alloy who protects Earth from orbital incursions.",
-    "fullBio": "Brilliant aviator Claire Vance piloted experimental orbital platforms before merging with an extraterrestrial magnetic core, creating the world's most indestructible flying guardian.",
-    "abilities": ["Magnetic Levitation", "Hyper-Armor", "Orbital Repulsor", "Kinetic Absorption"],
-    "popularity": "94%",
-    "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 128,
-    "name": "Nightweaver",
-    "category": "Comics",
-    "role": "Mystic Shadow Sorceress",
-    "franchise": "Shadow Syndicate",
-    "description": "A dimension-hopping sorceress who spins shadow-threads into protective seals and bindings.",
-    "fullBio": "Guardian of the Veil between realms, Nightweaver safeguards mortal city streets from demonic breaches while teaching young meta-humans how to master their supernatural gifts.",
-    "abilities": ["Shadow Silk Bindings", "Dimensional Rifts", "Astral Shield", "Clairvoyance"],
-    "popularity": "92%",
-    "image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 129,
-    "name": "Captain Dynamo",
-    "category": "Comics",
-    "role": "Golden Age Champion",
-    "franchise": "All-Star Brigade",
-    "description": "A timeless symbol of justice and courage who channels pure solar energy into heroic feats.",
-    "fullBio": "Ever since the Golden Age of comics, Captain Dynamo has inspired generations of readers with his unwavering moral compass and earth-shattering solar strength.",
-    "abilities": ["Solar Invulnerability", "Supersonic Flight", "Thermo-Beam", "Inspiring Aura"],
-    "popularity": "90%",
-    "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 130,
-    "name": "Cipher",
-    "category": "Comics",
-    "role": "Rogue Anti-Hero",
-    "franchise": "Ghostlight Rogues",
-    "description": "A stealth infiltrator who hacks digital grids with synaptic neural implants.",
-    "fullBio": "Neither hero nor villain, Cipher works for the highest bidder until innocent lives are threatened, at which point his electronic disruption blades silence every enemy gun in the sector.",
-    "abilities": ["Synaptic Cyber-Hack", "Invisibility Cloak", "Disruption Blades", "Parkour Acrobatics"],
-    "popularity": "89%",
-    "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80"
-  },
-
-  {
-    "id": 131,
-    "name": "Yuki Aizawa",
-    "category": "Manga",
-    "role": "Tidewalker Apprentice",
-    "franchise": "Tidewalker",
-    "description": "A quiet ocean-dweller who communes with mythical sea spirits to calm treacherous storms.",
-    "fullBio": "Yuki was discovered washed ashore near the coastal village of Shiranui clutching an ancient coral pendant. As storms menace the coastline, he masters deep tide magic to protect the fishing fleets.",
-    "abilities": ["Tidal Surge", "Coral Barrier", "Ocean Empathy", "Vortex Step"],
-    "popularity": "96%",
-    "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 132,
-    "name": "Haruto Senju",
-    "category": "Manga",
-    "role": "Ink Sage",
-    "franchise": "Inked Worlds",
-    "description": "A wandering artist whose brush strokes materialize into living mythical beasts and shields.",
-    "fullBio": "Carrying an oversized scroll and special charcoal ink, Haruto travels across ink-washed mountain ranges. Whatever he paints with intention comes to life to defend the innocent.",
-    "abilities": ["Ink Beast Summon", "Calligraphy Ward", "Scroll Barrier", "Sumi-e Mirage"],
-    "popularity": "93%",
-    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 133,
-    "name": "Kiyomi Kuroda",
-    "category": "Manga",
-    "role": "Spirit Blade Mistress",
-    "franchise": "Soul Gatekeeper",
-    "description": "A shrine guardian who banishes malevolent specters with ancestral jade bells and wooden talismans.",
-    "fullBio": "Heir to a two-thousand-year-old shrine at the foot of Mount Fuji, Kiyomi balances high school examinations with guarding spiritual gates from chaotic otherworldly entities.",
-    "abilities": ["Jade Talismans", "Spiritual Purification", "Gate Seal", "Fox Flame Shield"],
-    "popularity": "91%",
-    "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 134,
-    "name": "Daiki Morita",
-    "category": "Manga",
-    "role": "Windrunner Courier",
-    "franchise": "Storm Frontier",
-    "description": "A fearless sand-skater who delivers urgent messages across endless dunes on a rocket-powered board.",
-    "fullBio": "In a desert world cut off by perpetual electrical sandstorms, Daiki's lightning-fast reflexes and loyal mechanical desert hawk ensure critical medical supplies reach isolated outposts.",
-    "abilities": ["Sand Skim", "Desert Navigation", "Falcon Scout", "Gale Boost"],
-    "popularity": "88%",
-    "image": "https://images.unsplash.com/photo-1563089145-599997674d42?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 135,
-    "name": "Rei Katsuragi",
-    "category": "Manga",
-    "role": "Clockwork Machinist",
-    "franchise": "Gears of Chronos",
-    "description": "A teenage clockmaker who repairs temporal mechanisms to prevent paradox collapses.",
-    "fullBio": "Working inside the grand clocktower of Oakhaven, Rei uses brass gears, spring-wound chronometers, and temporal tuning forks to repair fractures in the space-time fabric.",
-    "abilities": ["Time Rewind (5 sec)", "Clockwork Automaton", "Chronometer Pulse", "Gear Trap"],
-    "popularity": "92%",
-    "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80"
-  }
+﻿[
+    {
+        "id":  101,
+        "name":  "Ren Kazama",
+        "category":  "Anime",
+        "role":  "Reluctant Swordsman",
+        "franchise":  "Crimson Blade Chronicles",
+        "description":  "A wandering swordsman who harnesses azure lightning through an ancestral katana.",
+        "fullBio":  "Ren Kazama is a master of the ancient Mist Blossom blade style. Exiled from his mountain dojo after defending helpless villagers from warlords, he journeys through turbulent provinces fighting for ordinary people while seeking redemption for past regrets.",
+        "abilities":  [
+                          "Azure Blade Flash",
+                          "Wind Walking",
+                          "Ki Focus",
+                          "Lightning Deflection"
+                      ],
+        "popularity":  "98%",
+        "image":  "images/anime/ren-kazama.jpg"
+    },
+    {
+        "id":  102,
+        "name":  "Aoi Tachibana",
+        "category":  "Anime",
+        "role":  "Skybound Academy Prodigy",
+        "franchise":  "Skybound Academy",
+        "description":  "An aerial tactician equipped with gravity wings who leads class missions across floating islands.",
+        "fullBio":  "Born in the high sky-citadels, Aoi developed an innate talent for manipulating atmospheric currents. She stands at the top of Skybound Academy\u0027s exam rankings, renowned for her cool-headed tactical mindset in aerial combat.",
+        "abilities":  [
+                          "Atmospheric Glide",
+                          "Vortex Blast",
+                          "Tactical Scan",
+                          "Aero Shield"
+                      ],
+        "popularity":  "94%",
+        "image":  "images/anime/crimson-blade.jpg"
+    },
+    {
+        "id":  103,
+        "name":  "Kaelen Drake",
+        "category":  "Anime",
+        "role":  "Dragonbound Knight",
+        "franchise":  "Dragon Forge Echoes",
+        "description":  "A fire-forged warrior wielding a blazing greatsword infused with ancient dragon embers.",
+        "fullBio":  "Bonded to the spirit of a slumbering fire drake during the Siege of Solis, Kaelen channels molten energy into battle armor. Despite his fierce fighting style, he remains fiercely loyal to his comrades and fights to restore peace.",
+        "abilities":  [
+                          "Dragonfire Cleave",
+                          "Flame Barrier",
+                          "Iron Will",
+                          "Inferno Stride"
+                      ],
+        "popularity":  "91%",
+        "image":  "images/anime/crimson-blade.jpg"
+    },
+    {
+        "id":  104,
+        "name":  "Mei Lin",
+        "category":  "Anime",
+        "role":  "Celestial Alchemist",
+        "franchise":  "Hana no Yoru",
+        "description":  "A gentle apothecary who blends mystical botanicals and astral resonance to heal and protect.",
+        "fullBio":  "Mei travels between isolated mountain shrines collecting rare moonlit herbs. Her harmonic alchemy can mend mortal wounds and ward off spiritual corruption with calming celestial petals.",
+        "abilities":  [
+                          "Moonpetal Renewal",
+                          "Astral Concoctions",
+                          "Aura Ward",
+                          "Resonance Song"
+                      ],
+        "popularity":  "89%",
+        "image":  "images/anime/hana-no-yoru.jpg"
+    },
+    {
+        "id":  105,
+        "name":  "Jin Shirogane",
+        "category":  "Anime",
+        "role":  "Shadow Shinobi",
+        "franchise":  "Night Clan Chronicles",
+        "description":  "A quiet stealth operative who blends into shadows and dismantles corrupt syndicate operations.",
+        "fullBio":  "Jin was raised in the covert Night Clan before breaking away to dismantle human trafficking syndicates. Operating from the dark rooftops of feudal neon cities, he strikes silently before disappearing like smoke.",
+        "abilities":  [
+                          "Shadow Meld",
+                          "Kunai Throw",
+                          "Phantom Decoy",
+                          "Silent Step"
+                      ],
+        "popularity":  "92%",
+        "image":  "images/anime/deathnote.jpeg"
+    },
+    {
+      
+        "id":  106,
+        "name":  "Vex-09",
+        "category":  "Gaming",
+        "role":  "Cybernetic Enforcer",
+        "franchise":  "Ashen Kingdoms \u0026 Neon Harbor",
+        "description":  "A heavily augmented urban operative with tactical holo-shields and precision plasma rifles.",
+        "fullBio":  "Vex-09 was an elite peacekeeping vanguard in the mega-city of Neo-Sol before turning mercenary to expose the megacorporation that weaponized his cybernetic enhancements. He defends rogue communities in the under-levels.",
+        "abilities":  [
+                          "Holo-Shield Overdrive",
+                          "Plasma Precision",
+                          "Tactical EMP",
+                          "Kinetic Dash"
+                      ],
+        "popularity":  "97%",
+        "image":  "images/games/ashen-kingdoms.jpg"
+    },
+    {
+        "id":  107,
+        "name":  "Nova Sparks",
+        "category":  "Gaming",
+        "role":  "Cyberpunk Tech Specialist",
+        "franchise":  "Neon Harbor Speedrun",
+        "description":  "A cheerful drone mechanic and speed runner who turns scrap into lethal tech gadgets.",
+        "fullBio":  "Equipped with neon visor goggles and powered gauntlets, Nova is the premier hacker in Neon Harbor. She can override planetary security grids in seconds and navigate rooftops with zero-gravity roller thrusters.",
+        "abilities":  [
+                          "Grid Overclock",
+                          "Drone Swarm",
+                          "Power Gauntlet Smash",
+                          "Glitch Teleport"
+                      ],
+        "popularity":  "95%",
+        "image":  "images/games/speedrun-night.jpg"
+    },
+    {
+        "id":  108,
+        "name":  "Lord Torin",
+        "category":  "Gaming",
+        "role":  "Fortress Marshal",
+        "franchise":  "Fortress Tactics",
+        "description":  "A tactical battlefield general known for defending besieged keeps against impossible odds.",
+        "fullBio":  "Veterans under Torin say he can calculate an opposing legion\u0027s movements before the first horn sounds. Clad in enchanted steel plates, he plants his banner firmly in the earth and rallies his soldiers to victory.",
+        "abilities":  [
+                          "Iron Bulwark",
+                          "Battle Cry",
+                          "Tactical Phalanx",
+                          "Siege Breaker"
+                      ],
+        "popularity":  "88%",
+        "image":  "images/games/fortress-tactics.jpg"
+    },
+    {
+        "id":  109,
+        "name":  "Lyra Frost",
+        "category":  "Gaming",
+        "role":  "Cryo Marksman",
+        "franchise":  "Sub-Zero Apex",
+        "description":  "A sniper operative operating across frozen tundras with cryo-charged rounds.",
+        "fullBio":  "Lyra survived three winter sieges behind enemy lines using homemade camouflage and cryo-rifles. She rarely misses a shot and can freeze entire barricades to pave an assault route.",
+        "abilities":  [
+                          "Cryo Snipe",
+                          "Glacial Trap",
+                          "Thermal Cloak",
+                          "Frost Nova"
+                      ],
+        "popularity":  "93%",
+        "image":  "images/games/collectors-edition.jpg"
+    },
+    {
+        "id":  110,
+        "name":  "Brixx",
+        "category":  "Gaming",
+        "role":  "Brawler Titan",
+        "franchise":  "Rumble Protocol",
+        "description":  "A towering mechanized gladiator who dominates tournament arenas with hydraulic fists.",
+        "fullBio":  "Built from industrial mining rigs, Brixx gained self-awareness in the scrap leagues and quickly climbed to champion status. Fans love his thunderous ground-slams and sportsmanship.",
+        "abilities":  [
+                          "Ground Quake",
+                          "Hydraulic Upper",
+                          "Overdrive Armor",
+                          "Seismic Slam"
+                      ],
+        "popularity":  "90%",
+        "image":  "images/games/ashen-kingdoms.jpg"
+    },
+    {
+        "id":  111,
+        "name":  "Captain Ines Vale",
+        "category":  "Movies",
+        "role":  "Deep Space Starship Pilot",
+        "franchise":  "The Lighthouse Protocol \u0026 Skyline",
+        "description":  "A disgraced pilot turned galactic expedition commander investigating anomalies at the edge of known space.",
+        "fullBio":  "Ines Vale commanded the frigate Odyssey through the Great Solar Flare, saving three hundred civilian crew members. Despite facing court-martial for violating fleet quarantine, she was recruited to lead the secretive Lighthouse Protocol.",
+        "abilities":  [
+                          "Sub-Light Maneuvering",
+                          "Crisis Leadership",
+                          "Zero-G Combat",
+                          "Deep Space Navigation"
+                      ],
+        "popularity":  "96%",
+        "image":  "images/movies/ines-vale.jpg"
+    },
+    {
+        "id":  112,
+        "name":  "Dr. Elijah Vance",
+        "category":  "Movies",
+        "role":  "Quantum Physicist",
+        "franchise":  "The Lighthouse Protocol",
+        "description":  "The scientist who deciphered radio waves originating from twenty-four hours in the future.",
+        "fullBio":  "Elijah spent decades monitoring deep-space listening posts in the Aleutian Islands before detecting the impossible chronological echo. His calm analytical brilliance guides the team when physical laws break down.",
+        "abilities":  [
+                          "Chronal Calculation",
+                          "Signal Decoding",
+                          "Field Forensics",
+                          "Data Analysis"
+                      ],
+        "popularity":  "87%",
+        "image":  "images/movies/lighthouse-protocol.jpg"
+    },
+    {
+        "id":  113,
+        "name":  "Seraphina Cross",
+        "category":  "Movies",
+        "role":  "Bounty Tracker",
+        "franchise":  "Midnight Reel Noir",
+        "description":  "A trench-coated neo-noir operative who tracks missing orbital diplomats in crowded neon seaports.",
+        "fullBio":  "Known as the ghost of Sector 4, Seraphina never leaves a trail and never fails to locate a target. Her dual stun pistols and sharp interrogation instincts make her feared across planetary dockyards.",
+        "abilities":  [
+                          "Pulse Stun",
+                          "Target Tracking",
+                          "Evasion",
+                          "Underworld Contacts"
+                      ],
+        "popularity":  "92%",
+        "image":  "images/movies/behind-the-frame.jpg"
+    },
+    {
+        "id":  114,
+        "name":  "Marcus Stone",
+        "category":  "Movies",
+        "role":  "Expedition Specialist",
+        "franchise":  "Abyssal Rift",
+        "description":  "A deep-sea submersible diver exploring submerged alien monoliths in the Mariana Trench.",
+        "fullBio":  "Marcus has logged more hours in extreme oceanic depths than any living diver. When a volcanic trench fissure reveals glowing ancient architecture, Marcus leads the first manned dive into the unknown.",
+        "abilities":  [
+                          "Submersible Piloting",
+                          "High-Pressure Diving",
+                          "Geological Survey",
+                          "Rescue Protocol"
+                      ],
+        "popularity":  "88%",
+        "image":  "images/movies/midnight-reel.jpg"
+    },
+    {
+        "id":  115,
+        "name":  "Selene Ray",
+        "category":  "Movies",
+        "role":  "Rebel Corsair",
+        "franchise":  "Starfall Dynasty",
+        "description":  "A charismatic outlaw space captain who steals luxury energy crystals from interstellar imperial dreadnoughts.",
+        "fullBio":  "Selene leads a ragtag crew aboard the ship \u0027Lucky Comet\u0027. Famous for daring heists and flamboyant escapes, she is wanted across twelve solar sectors with a twenty-million credit bounty on her head.",
+        "abilities":  [
+                          "Starship Drifting",
+                          "Quick Draw Blaster",
+                          "Grappling Hook",
+                          "Smooth Diplomacy"
+                      ],
+        "popularity":  "94%",
+        "image":  "images/movies/lighthouse-protocol.jpg"
+    },
+    {
+        "id":  116,
+        "name":  "Detective Maren Holt",
+        "category":  "TV Shows",
+        "role":  "Chief Inspector",
+        "franchise":  "Harrow Point",
+        "description":  "The observant, weathered detective who untangles dark coastal conspiracies and cold cases.",
+        "fullBio":  "Stationed in the windswept seaside town of Harrow Point, Detective Holt relies on psychological intuition, old notebooks, and relentless persistence to uncover family secrets that powerful landowners tried to bury.",
+        "abilities":  [
+                          "Deductive Analysis",
+                          "Interrogation",
+                          "Crime Scene Reconstruction",
+                          "Archive Research"
+                      ],
+        "popularity":  "95%",
+        "image":  "images/series/maren-holt.jpg"
+    },
+    {
+        "id":  117,
+        "name":  "Lady Eleanor Vance",
+        "category":  "TV Shows",
+        "role":  "Estate Matriarch",
+        "franchise":  "Kingsbridge Manor",
+        "description":  "The formidable aristocrat defending her family legacy during political upheaval in Victorian England.",
+        "fullBio":  "With biting wit and an iron grip on parliamentary alliances, Lady Eleanor navigates high-society scandals and trade disputes while safeguarding the ancient Kingsbridge estate.",
+        "abilities":  [
+                          "Political Strategy",
+                          "High-Society Influence",
+                          "Legal Acumen",
+                          "Diplomatic Maneuvers"
+                      ],
+        "popularity":  "90%",
+        "image":  "images/series/kingsbridge-3.jpg"
+    },
+    {
+        "id":  118,
+        "name":  "Julian Mercer",
+        "category":  "TV Shows",
+        "role":  "Investigative Journalist",
+        "franchise":  "The Fourth Estate",
+        "description":  "A dogged reporter who risks everything to broadcast the truth behind clandestine government contracts.",
+        "fullBio":  "Working from a cluttered newsroom with coffee-stained desks, Julian tracks paper trails and leaks that whistleblowers provide, piecing together revelations that shake city hall.",
+        "abilities":  [
+                          "Whistleblower Relations",
+                          "Paperwork Forensics",
+                          "Undercover Reporting",
+                          "Rapid Fact-Checking"
+                      ],
+        "popularity":  "88%",
+        "image":  "images/series/harrow-point.jpg"
+    },
+    {
+        "id":  119,
+        "name":  "Constable Tom Brody",
+        "category":  "TV Shows",
+        "role":  "Junior Detective",
+        "franchise":  "Harrow Point",
+        "description":  "Holt\u0027s honest junior partner whose local roots and empathy unlock town testimonies.",
+        "fullBio":  "Brody grew up in Harrow Point and knows every fisherman, shopkeeper, and teacher by name. His earnest nature balances Holt\u0027s cynicism, forming an unstoppable investigative duo.",
+        "abilities":  [
+                          "Witness Outreach",
+                          "Forensic Tracking",
+                          "Local Knowledge",
+                          "Field Response"
+                      ],
+        "popularity":  "86%",
+        "image":  "images/series/writers-room.jpg"
+    },
+    {
+        "id":  120,
+        "name":  "Arthur Pendelton",
+        "category":  "TV Shows",
+        "role":  "Master Architect",
+        "franchise":  "Kingsbridge Manor",
+        "description":  "The visionary builder behind the iconic iron cathedral bridge that transforms the town.",
+        "fullBio":  "Arthur combines cutting-edge industrial engineering with artistic passion, overcoming political sabotage and stormy winters to erect the monumental bridge that links two rival provinces.",
+        "abilities":  [
+                          "Structural Engineering",
+                          "Drafting",
+                          "Project Leadership",
+                          "Crisis Calculation"
+                      ],
+        "popularity":  "85%",
+        "image":  "images/series/kingsbridge-3.jpg"
+    },
+    {
+        "id":  121,
+        "name":  "Min-seo (Mina)",
+        "category":  "K-Pop",
+        "role":  "Main Vocalist \u0026 Leader",
+        "franchise":  "Lunar Bloom",
+        "description":  "The charismatic leader of Lunar Bloom with a four-octave vocal range and luminous stage presence.",
+        "fullBio":  "Trained for six years in classical piano and vocal resonance, Mina is the anchor of Lunar Bloom. Her soaring high notes in \u0027Moonrise\u0027 propelled the group to international chart-topping acclaim.",
+        "abilities":  [
+                          "Harmonic High Notes",
+                          "Stage Leadership",
+                          "Vocal Arrangement",
+                          "Songwriting"
+                      ],
+        "popularity":  "99%",
+        "image":  "images/other/moonrise.jpg"
+    },
+    {
+        "id":  122,
+        "name":  "Yuna Park",
+        "category":  "K-Pop",
+        "role":  "Main Dancer \u0026 Center",
+        "franchise":  "Lunar Bloom",
+        "description":  "The dynamic choreographer whose sharp isolations and expressive charisma mesmerize concert arenas.",
+        "fullBio":  "A former contemporary ballet dancer, Yuna brings athletic elegance and magnetic energy to every stage routine. Fans revere her viral choreography breakdown videos.",
+        "abilities":  [
+                          "Point Choreography",
+                          "Freestyle Dance",
+                          "Stage Charisma",
+                          "Visual Center"
+                      ],
+        "popularity":  "97%",
+        "image":  "images/other/choreography.jpg"
+    },
+    {
+        "id":  123,
+        "name":  "Chae-young (Chloe)",
+        "category":  "K-Pop",
+        "role":  "Lead Rapper \u0026 Producer",
+        "franchise":  "Lunar Bloom",
+        "description":  "The edgy lyricist whose fast flow and rhythmic delivery give Lunar Bloom their signature modern punch.",
+        "fullBio":  "Chloe writes her own rap verses and co-produces the group\u0027s electronic synth tracks in the late-night studio sessions, blending Korean wordplay with futuristic hip-hop cadence.",
+        "abilities":  [
+                          "Speed Rap Flow",
+                          "Beat Production",
+                          "Lyrical Wordplay",
+                          "Fashion Styling"
+                      ],
+        "popularity":  "94%",
+        "image":  "images/other/lightstick.jpg"
+    },
+    {
+        "id":  124,
+        "name":  "Ha-neul (Sky)",
+        "category":  "K-Pop",
+        "role":  "Sub-Vocalist \u0026 Maknae",
+        "franchise":  "Lunar Bloom",
+        "description":  "The bright and energetic youngest member whose sunny disposition and honey-smooth vocals warm fan hearts.",
+        "fullBio":  "Sky\u0027s playful variety show appearances and charming acoustic guitar covers have earned her millions of fan followers worldwide, bringing heartwarming joy to the team.",
+        "abilities":  [
+                          "Acoustic Vocals",
+                          "Variety Entertainment",
+                          "Fan Engagement",
+                          "Guitar Chords"
+                      ],
+        "popularity":  "93%",
+        "image":  "images/other/world-tour.jpg"
+    },
+    {
+        "id":  125,
+        "name":  "Taeyang Vance",
+        "category":  "K-Pop",
+        "role":  "Solo Artist \u0026 Producer",
+        "franchise":  "Starlight Echo",
+        "description":  "A visionary solo idol who blends retro synthwave aesthetics with modern R\u0026B choreography.",
+        "fullBio":  "Starting as a boy group prodigy, Taeyang debuted as a solo superstar with record-shattering streaming numbers and dazzling holographic stadium tours.",
+        "abilities":  [
+                          "Falsetto Vocals",
+                          "Synthwave Arrangement",
+                          "Solo Choreography",
+                          "Creative Direction"
+                      ],
+        "popularity":  "95%",
+        "image":  "images/other/moonrise.jpg"
+    },
+    {
+        "id":  126,
+        "name":  "Ghostlight",
+        "category":  "Comics",
+        "role":  "Vigilante of Crescent City",
+        "franchise":  "Ghostlight Origins",
+        "description":  "A masked hero who manipulates hard-light constructs and patrols twilight alleys.",
+        "fullBio":  "Former electrical engineer Nathan Croft survived an industrial lab meltdown, gaining the ability to condense photons into solid blades, shields, and gliding wings to purge the criminal underworld.",
+        "abilities":  [
+                          "Hard-Light Constructs",
+                          "Photon Gliding",
+                          "Flash Stun",
+                          "Detective Mind"
+                      ],
+        "popularity":  "97%",
+        "image":  "images/comics/ghostlight-origins.jpg"
+    },
+    {
+        "id":  127,
+        "name":  "Iron Meridian",
+        "category":  "Comics",
+        "role":  "Armored Defender",
+        "franchise":  "Iron Meridian",
+        "description":  "A high-tech sentinel forged in magnetic alloy who protects Earth from orbital incursions.",
+        "fullBio":  "Brilliant aviator Claire Vance piloted experimental orbital platforms before merging with an extraterrestrial magnetic core, creating the world\u0027s most indestructible flying guardian.",
+        "abilities":  [
+                          "Magnetic Levitation",
+                          "Hyper-Armor",
+                          "Orbital Repulsor",
+                          "Kinetic Absorption"
+                      ],
+        "popularity":  "94%",
+        "image":  "images/comics/iron-meridian.jpg"
+    },
+    {
+        "id":  128,
+        "name":  "Nightweaver",
+        "category":  "Comics",
+        "role":  "Mystic Shadow Sorceress",
+        "franchise":  "Shadow Syndicate",
+        "description":  "A dimension-hopping sorceress who spins shadow-threads into protective seals and bindings.",
+        "fullBio":  "Guardian of the Veil between realms, Nightweaver safeguards mortal city streets from demonic breaches while teaching young meta-humans how to master their supernatural gifts.",
+        "abilities":  [
+                          "Shadow Silk Bindings",
+                          "Dimensional Rifts",
+                          "Astral Shield",
+                          "Clairvoyance"
+                      ],
+        "popularity":  "92%",
+        "image":  "images/comics/ghostlight-covers.jpg"
+    },
+    {
+        "id":  129,
+        "name":  "Captain Dynamo",
+        "category":  "Comics",
+        "role":  "Golden Age Champion",
+        "franchise":  "All-Star Brigade",
+        "description":  "A timeless symbol of justice and courage who channels pure solar energy into heroic feats.",
+        "fullBio":  "Ever since the Golden Age of comics, Captain Dynamo has inspired generations of readers with his unwavering moral compass and earth-shattering solar strength.",
+        "abilities":  [
+                          "Solar Invulnerability",
+                          "Supersonic Flight",
+                          "Thermo-Beam",
+                          "Inspiring Aura"
+                      ],
+        "popularity":  "90%",
+        "image":  "images/comics/comic-fair.jpg"
+    },
+    {
+        "id":  130,
+        "name":  "Cipher",
+        "category":  "Comics",
+        "role":  "Rogue Anti-Hero",
+        "franchise":  "Ghostlight Rogues",
+        "description":  "A stealth infiltrator who hacks digital grids with synaptic neural implants.",
+        "fullBio":  "Neither hero nor villain, Cipher works for the highest bidder until innocent lives are threatened, at which point his electronic disruption blades silence every enemy gun in the sector.",
+        "abilities":  [
+                          "Synaptic Cyber-Hack",
+                          "Invisibility Cloak",
+                          "Disruption Blades",
+                          "Parkour Acrobatics"
+                      ],
+        "popularity":  "89%",
+        "image":  "images/comics/ghostlight-origins.jpg"
+    },
+    {
+        "id":  131,
+        "name":  "Yuki Aizawa",
+        "category":  "Manga",
+        "role":  "Tidewalker Apprentice",
+        "franchise":  "Tidewalker",
+        "description":  "A quiet ocean-dweller who communes with mythical sea spirits to calm treacherous storms.",
+        "fullBio":  "Yuki was discovered washed ashore near the coastal village of Shiranui clutching an ancient coral pendant. As storms menace the coastline, he masters deep tide magic to protect the fishing fleets.",
+        "abilities":  [
+                          "Tidal Surge",
+                          "Coral Barrier",
+                          "Ocean Empathy",
+                          "Vortex Step"
+                      ],
+        "popularity":  "96%",
+        "image":  "images/other/yuki-aizawa.jpg"
+    },
+    {
+        "id":  132,
+        "name":  "Haruto Senju",
+        "category":  "Manga",
+        "role":  "Ink Sage",
+        "franchise":  "Inked Worlds",
+        "description":  "A wandering artist whose brush strokes materialize into living mythical beasts and shields.",
+        "fullBio":  "Carrying an oversized scroll and special charcoal ink, Haruto travels across ink-washed mountain ranges. Whatever he paints with intention comes to life to defend the innocent.",
+        "abilities":  [
+                          "Ink Beast Summon",
+                          "Calligraphy Ward",
+                          "Scroll Barrier",
+                          "Sumi-e Mirage"
+                      ],
+        "popularity":  "93%",
+        "image":  "images/other/tidewalker-12.jpg"
+    },
+    {
+        "id":  133,
+        "name":  "Kiyomi Kuroda",
+        "category":  "Manga",
+        "role":  "Spirit Blade Mistress",
+        "franchise":  "Soul Gatekeeper",
+        "description":  "A shrine guardian who banishes malevolent specters with ancestral jade bells and wooden talismans.",
+        "fullBio":  "Heir to a two-thousand-year-old shrine at the foot of Mount Fuji, Kiyomi balances high school examinations with guarding spiritual gates from chaotic otherworldly entities.",
+        "abilities":  [
+                          "Jade Talismans",
+                          "Spiritual Purification",
+                          "Gate Seal",
+                          "Fox Flame Shield"
+                      ],
+        "popularity":  "91%",
+        "image":  "images/other/inked-worlds.jpg"
+    },
+    {
+        "id":  134,
+        "name":  "Daiki Morita",
+        "category":  "Manga",
+        "role":  "Windrunner Courier",
+        "franchise":  "Storm Frontier",
+        "description":  "A fearless sand-skater who delivers urgent messages across endless dunes on a rocket-powered board.",
+        "fullBio":  "In a desert world cut off by perpetual electrical sandstorms, Daiki\u0027s lightning-fast reflexes and loyal mechanical desert hawk ensure critical medical supplies reach isolated outposts.",
+        "abilities":  [
+                          "Sand Skim",
+                          "Desert Navigation",
+                          "Falcon Scout",
+                          "Gale Boost"
+                      ],
+        "popularity":  "88%",
+        "image":  "images/other/studio-tour.jpg"
+    },
+    {
+        "id":  135,
+        "name":  "Rei Katsuragi",
+        "category":  "Manga",
+        "role":  "Clockwork Machinist",
+        "franchise":  "Gears of Chronos",
+        "description":  "A teenage clockmaker who repairs temporal mechanisms to prevent paradox collapses.",
+        "fullBio":  "Working inside the grand clocktower of Oakhaven, Rei uses brass gears, spring-wound chronometers, and temporal tuning forks to repair fractures in the space-time fabric.",
+        "abilities":  [
+                          "Time Rewind (5 sec)",
+                          "Clockwork Automaton",
+                          "Chronometer Pulse",
+                          "Gear Trap"
+                      ],
+        "popularity":  "92%",
+        "image":  "images/other/berserk.jpeg"
+    }
 ]

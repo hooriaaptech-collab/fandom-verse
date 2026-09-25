@@ -5,6 +5,9 @@
    ========================================================== */
 
 /* ---------- 1. THEME VARIABLES ---------- */
+*{
+  font-family: 'Times New Roman', Times, serif;
+}
 :root {
   --bg-dark: #0a0f1d;
   --bg-surface: #111a2e;

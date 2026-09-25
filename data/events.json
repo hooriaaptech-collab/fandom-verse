@@ -1,218 +1,212 @@
-[
-  {
-    "id": 201,
-    "title": "Anime Matsuri Grand Expo",
-    "category": "Anime",
-    "date": "2026-10-18",
-    "location": "Convention Center & Online Stream",
-    "description": "Three days of voice actor panels, cosplay championships, and world premiere screenings.",
-    "fullDetails": "Featuring exclusive sneak peeks of Crimson Blade Chronicles Arc 2, autograph signings with veteran animators, and an international cosplay runway contest with over $10,000 in grand prizes.",
-    "image": "assets/images/cat-anime.jpg"
-  },
-  {
-    "id": 202,
-    "title": "Skybound Academy Screening Night",
-    "category": "Anime",
-    "date": "2026-11-04",
-    "location": "Grand Palace Cinema Hall",
-    "description": "Exclusive advance theatrical screening of episodes 1-3 with cast Q&A session.",
-    "fullDetails": "Fans will experience the stunning aerial battles of Skybound Academy on the giant IMAX screen, followed by a live panel with director Kenji Sato and the primary voice cast.",
-    "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 203,
-    "title": "Sakura Soundtracks Live Orchestra",
-    "category": "Anime",
-    "date": "2026-12-12",
-    "location": "Symphony Hall & YouTube Live",
-    "description": "A 60-piece orchestra performing iconic anime themes under giant synchronized visual projections.",
-    "fullDetails": "Conducted by Maestro Hiroshi Tanba, this unforgettable evening brings epic anime fight themes and emotional acoustic ballads to life with choir and full brass sections.",
-    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80"
-  },
-
-  {
-    "id": 204,
-    "title": "Neon Harbor Speedrun Invitational",
-    "category": "Gaming",
-    "date": "2026-10-24",
-    "location": "Esports Arena, Neon District",
-    "description": "Top international speedrunners compete live for world records in Ashen Kingdoms and Neon Harbor.",
-    "fullDetails": "Watch nail-biting frame-perfect glitches, glitchless any% marathons, and four-way head-to-head races cast by leading community commentators with live charity donation milestones.",
-    "image": "assets/images/cat-gaming.jpg"
-  },
-  {
-    "id": 205,
-    "title": "Fortress Tactics Championship Finals",
-    "category": "Gaming",
-    "date": "2026-11-15",
-    "location": "Cyber Dome & Twitch Main Channel",
-    "description": "The ultimate showdown of sixteen grandmaster tacticians vying for the World Aegis Trophy.",
-    "fullDetails": "Over eight hours of intense siege strategy, real-time counter-picks, and expert meta-breakdowns culminating in the best-of-seven grand finals.",
-    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 206,
-    "title": "Indie Game Developers Showcase",
-    "category": "Gaming",
-    "date": "2026-12-05",
-    "location": "Tech Hub Exhibition Ground",
-    "description": "Hands-on playtests of over 100 upcoming indie games with meet-and-greets with creators.",
-    "fullDetails": "Discover hidden gems, test unreleased playable alpha builds, attend workshops on game design and pixel art, and vote in the Fan Choice Indie Awards.",
-    "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop&q=80"
-  },
-
-  {
-    "id": 207,
-    "title": "Midnight Reel Sci-Fi Film Festival",
-    "category": "Movies",
-    "date": "2026-10-30",
-    "location": "Starlight Cinema complex",
-    "description": "A weekend celebration of restored sci-fi classics and debut indie space thrillers.",
-    "fullDetails": "Screenings include the 4K restoration of Skyline, followed by a director panel on practical special effects vs CGI, prop workshops, and midnight mystery screenings.",
-    "image": "assets/images/cat-movies.jpg"
-  },
-  {
-    "id": 208,
-    "title": "The Lighthouse Protocol Gala Premiere",
-    "category": "Movies",
-    "date": "2026-11-21",
-    "location": "Odeon Red Carpet Theater",
-    "description": "Star-studded red carpet premiere featuring cast arrivals and director introduction.",
-    "fullDetails": "Celebrate the premiere of the year's most anticipated sci-fi thriller. VIP attendees receive commemorative film programs and entry to the after-party lounge.",
-    "image": "assets/images/movies/lighthouse-protocol.jpg"
-  },
-  {
-    "id": 209,
-    "title": "Behind the Lens: Cinematography Masterclass",
-    "category": "Movies",
-    "date": "2026-12-18",
-    "location": "Film Academy Studio B & Zoom",
-    "description": "An interactive workshop on anamorphic lenses, lighting dark spaces, and pacing suspense.",
-    "fullDetails": "Award-winning director of photography Elena Rostova breaks down key scenes from hit films frame by frame, showing lighting setups and camera rigs used in production.",
-    "image": "assets/images/movies/behind-the-frame.jpg"
-  },
-
-  {
-    "id": 210,
-    "title": "Harrow Point Mystery Season 2 Watch Party",
-    "category": "TV Shows",
-    "date": "2026-10-12",
-    "location": "Harbor View Auditorium & Discord",
-    "description": "Live synchronized season launch with community theory sessions and detective trivia.",
-    "fullDetails": "Join thousands of fellow mystery fans as the opening two episodes stream live on the big screen, followed by real-time community clue hunting and prize giveaways.",
-    "image": "assets/images/cat-tv.jpg"
-  },
-  {
-    "id": 211,
-    "title": "Kingsbridge Period Drama Costume Gala",
-    "category": "TV Shows",
-    "date": "2026-11-08",
-    "location": "Historic Grand Ballroom",
-    "description": "Exhibition of authentic Victorian gowns, coats, and period craftsmanship from the series.",
-    "fullDetails": "Walk through reconstructed Victorian sets, admire hand-stitched period costumes up close, and enjoy tea while costume designer Margaret Byrne gives guided tours.",
-    "image": "assets/images/tv-shows/kingsbridge-3.jpg"
-  },
-  {
-    "id": 212,
-    "title": "Television Writers' Room Live Roundtable",
-    "category": "TV Shows",
-    "date": "2026-12-02",
-    "location": "Broadcasting House & YouTube Live",
-    "description": "Showrunners and scriptwriters reveal how to construct multi-season character arcs.",
-    "fullDetails": "From pilot pitch to season finale, four leading TV writers share their whiteboard outlining techniques, how to handle cliffhangers, and how fan feedback shapes writer rooms.",
-    "image": "assets/images/tv-shows/writers-room.jpg"
-  },
-
-  {
-    "id": 213,
-    "title": "Lunar Bloom World Stadium Tour: Kickoff",
-    "category": "K-Pop",
-    "date": "2026-10-20",
-    "location": "Olympic Stadium & Global Weverse Stream",
-    "description": "The explosive first stadium concert of Lunar Bloom's 'Moonrise' world tour.",
-    "fullDetails": "Featuring a massive heart-shaped stage, synchronized lightstick stadium ocean waves, pyrotechnics, and live band arrangements of all mini-album hits.",
-    "image": "assets/images/cat-kpop.jpg"
-  },
-  {
-    "id": 214,
-    "title": "K-Pop Random Dance & Fan Festival",
-    "category": "K-Pop",
-    "date": "2026-11-14",
-    "location": "Downtown Civic Plaza",
-    "description": "Hundreds of fans gather for public random dance play, photocard trading, and fan merch stalls.",
-    "fullDetails": "Show off your choreography skills to the latest hits, trade rare official album photocards with fellow stans, and win official albums and lightsticks in dance-off battles.",
-    "image": "assets/images/k-pop/choreography.jpg"
-  },
-  {
-    "id": 215,
-    "title": "Starlight Idol Global Auditions & Workshop",
-    "category": "K-Pop",
-    "date": "2026-12-20",
-    "location": "Performing Arts Center",
-    "description": "Vocal training, stage projection clinics, and dance classes led by top Seoul choreographers.",
-    "fullDetails": "Aspiring performers receive master coaching in stage presence, vocal endurance, and formation discipline directly from industry choreographers and vocal directors.",
-    "image": "assets/images/k-pop/world-tour.jpg"
-  },
-
-  {
-    "id": 216,
-    "title": "Crescent City Comic Con",
-    "category": "Comics",
-    "date": "2026-10-28",
-    "location": "Metro Exhibition Center",
-    "description": "The premier comic book gathering with over 200 artists, rare back-issue vendors, and panels.",
-    "fullDetails": "Meet legendary cover pencillers, get your favorite issues signed and CGC graded, attend panels on graphic novel storytelling, and browse vintage comic bins.",
-    "image": "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 217,
-    "title": "Ghostlight 10th Anniversary Retrospective",
-    "category": "Comics",
-    "date": "2026-11-22",
-    "location": "Central Art Gallery",
-    "description": "Gallery exhibition of original ink pages, script drafts, and variant cover artwork.",
-    "fullDetails": "Tracing a decade of Crescent City's dark guardian. Highlights include original pencils from issue #1, character concept sheets, and limited-edition anniversary prints.",
-    "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 218,
-    "title": "Indie Comic Creators Portfolio Review",
-    "category": "Comics",
-    "date": "2026-12-08",
-    "location": "Design Collective Studio",
-    "description": "Aspiring writers and illustrators pitch their creator-owned comics to publishing editors.",
-    "fullDetails": "One-on-one portfolio critiques, practical panels on self-publishing and crowdfunding comic books, and networking mixers with seasoned letterers, colorists, and inkers.",
-    "image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80"
-  },
-
-  {
-    "id": 219,
-    "title": "Tokyo Manga Fest & Doujin Market",
-    "category": "Manga",
-    "date": "2026-10-15",
-    "location": "Big Sight Hall & Digital Marketplace",
-    "description": "The world's largest gathering of self-published manga creators and professional serial artists.",
-    "fullDetails": "Explore thousands of independent creator circles, pick up exclusive art books and doujinshi, and witness live digital drawing demonstrations on high-end pen displays.",
-    "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 220,
-    "title": "Tidewalker Volume 12 Midnight Launch",
-    "category": "Manga",
-    "date": "2026-11-18",
-    "location": "Kinokuniya Flagship Bookstore",
-    "description": "Midnight book release party with commemorative poster gifts and trivia contests.",
-    "fullDetails": "Celebrate the climax of the Storm Arc! Early purchasers receive an exclusive holographic bookmark, foil bookplate, and a collectible tote bag while supplies last.",
-    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80"
-  },
-  {
-    "id": 221,
-    "title": "Mangaka Studio Tour & Inking Masterclass",
-    "category": "Manga",
-    "date": "2026-12-14",
-    "location": "Anime & Manga Museum Workshop Hall",
-    "description": "Live demonstration of traditional G-pen inking, screen tones, and panel composition.",
-    "fullDetails": "Experience the classic craft of manga production. Learn how line weight directs reader gaze, master knife scraping techniques on screech tones, and ask questions live.",
-    "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80"
-  }
+﻿[
+    {
+        "id":  201,
+        "title":  "Anime Matsuri Grand Expo",
+        "category":  "Anime",
+        "date":  "2026-10-18",
+        "location":  "Convention Center \u0026 Online Stream",
+        "description":  "Three days of voice actor panels, cosplay championships, and world premiere screenings.",
+        "fullDetails":  "Featuring exclusive sneak peeks of Crimson Blade Chronicles Arc 2, autograph signings with veteran animators, and an international cosplay runway contest with over $10,000 in grand prizes.",
+        "image":  "images/anime/crimson-blade.jpg"
+    },
+    {
+        "id":  202,
+        "title":  "Skybound Academy Screening Night",
+        "category":  "Anime",
+        "date":  "2026-11-04",
+        "location":  "Grand Palace Cinema Hall",
+        "description":  "Exclusive advance theatrical screening of episodes 1-3 with cast Q\u0026A session.",
+        "fullDetails":  "Fans will experience the stunning aerial battles of Skybound Academy on the giant IMAX screen, followed by a live panel with director Kenji Sato and the primary voice cast.",
+        "image":  "images/anime/skybound-academy.jpg"
+    },
+    {
+        "id":  203,
+        "title":  "Sakura Soundtracks Live Orchestra",
+        "category":  "Anime",
+        "date":  "2026-12-12",
+        "location":  "Symphony Hall \u0026 YouTube Live",
+        "description":  "A 60-piece orchestra performing iconic anime themes under giant synchronized visual projections.",
+        "fullDetails":  "Conducted by Maestro Hiroshi Tanba, this unforgettable evening brings epic anime fight themes and emotional acoustic ballads to life with choir and full brass sections.",
+        "image":  "images/anime/hana-no-yoru.jpg"
+    },
+    {
+        "id":  204,
+        "title":  "Neon Harbor Speedrun Invitational",
+        "category":  "Gaming",
+        "date":  "2026-10-24",
+        "location":  "Esports Arena, Neon District",
+        "description":  "Top international speedrunners compete live for world records in Ashen Kingdoms and Neon Harbor.",
+        "fullDetails":  "Watch nail-biting frame-perfect glitches, glitchless any% marathons, and four-way head-to-head races cast by leading community commentators with live charity donation milestones.",
+        "image":  "images/games/speedrun-night.jpg"
+    },
+    {
+        "id":  205,
+        "title":  "Fortress Tactics Championship Finals",
+        "category":  "Gaming",
+        "date":  "2026-11-15",
+        "location":  "Cyber Dome \u0026 Twitch Main Channel",
+        "description":  "The ultimate showdown of sixteen grandmaster tacticians vying for the World Aegis Trophy.",
+        "fullDetails":  "Over eight hours of intense siege strategy, real-time counter-picks, and expert meta-breakdowns culminating in the best-of-seven grand finals.",
+        "image":  "images/games/fortress-tactics.jpg"
+    },
+    {
+        "id":  206,
+        "title":  "Indie Game Developers Showcase",
+        "category":  "Gaming",
+        "date":  "2026-12-05",
+        "location":  "Tech Hub Exhibition Ground",
+        "description":  "Hands-on playtests of over 100 upcoming indie games with meet-and-greets with creators.",
+        "fullDetails":  "Discover hidden gems, test unreleased playable alpha builds, attend workshops on game design and pixel art, and vote in the Fan Choice Indie Awards.",
+        "image":  "images/games/ashen-kingdoms.jpg"
+    },
+    {
+        "id":  207,
+        "title":  "Midnight Reel Sci-Fi Film Festival",
+        "category":  "Movies",
+        "date":  "2026-10-30",
+        "location":  "Starlight Cinema complex",
+        "description":  "A weekend celebration of restored sci-fi classics and debut indie space thrillers.",
+        "fullDetails":  "Screenings include the 4K restoration of Skyline, followed by a director panel on practical special effects vs CGI, prop workshops, and midnight mystery screenings.",
+        "image":  "images/movies/midnight-reel.jpg"
+    },
+    {
+        "id":  208,
+        "title":  "The Lighthouse Protocol Gala Premiere",
+        "category":  "Movies",
+        "date":  "2026-11-21",
+        "location":  "Odeon Red Carpet Theater",
+        "description":  "Star-studded red carpet premiere featuring cast arrivals and director introduction.",
+        "fullDetails":  "Celebrate the premiere of the year\u0027s most anticipated sci-fi thriller. VIP attendees receive commemorative film programs and entry to the after-party lounge.",
+        "image":  "images/movies/lighthouse-protocol.jpg"
+    },
+    {
+        "id":  209,
+        "title":  "Behind the Lens: Cinematography Masterclass",
+        "category":  "Movies",
+        "date":  "2026-12-18",
+        "location":  "Film Academy Studio B \u0026 Zoom",
+        "description":  "An interactive workshop on anamorphic lenses, lighting dark spaces, and pacing suspense.",
+        "fullDetails":  "Award-winning director of photography Elena Rostova breaks down key scenes from hit films frame by frame, showing lighting setups and camera rigs used in production.",
+        "image":  "images/movies/behind-the-frame.jpg"
+    },
+    {
+        "id":  210,
+        "title":  "Harrow Point Mystery Season 2 Watch Party",
+        "category":  "TV Shows",
+        "date":  "2026-10-12",
+        "location":  "Harbor View Auditorium \u0026 Discord",
+        "description":  "Live synchronized season launch with community theory sessions and detective trivia.",
+        "fullDetails":  "Join thousands of fellow mystery fans as the opening two episodes stream live on the big screen, followed by real-time community clue hunting and prize giveaways.",
+        "image":  "images/series/harrow-point.jpg"
+    },
+    {
+        "id":  211,
+        "title":  "Kingsbridge Period Drama Costume Gala",
+        "category":  "TV Shows",
+        "date":  "2026-11-08",
+        "location":  "Historic Grand Ballroom",
+        "description":  "Exhibition of authentic Victorian gowns, coats, and period craftsmanship from the series.",
+        "fullDetails":  "Walk through reconstructed Victorian sets, admire hand-stitched period costumes up close, and enjoy tea while costume designer Margaret Byrne gives guided tours.",
+        "image":  "images/series/kingsbridge-3.jpg"
+    },
+    {
+        "id":  212,
+        "title":  "Television Writers\u0027 Room Live Roundtable",
+        "category":  "TV Shows",
+        "date":  "2026-12-02",
+        "location":  "Broadcasting House \u0026 YouTube Live",
+        "description":  "Showrunners and scriptwriters reveal how to construct multi-season character arcs.",
+        "fullDetails":  "From pilot pitch to season finale, four leading TV writers share their whiteboard outlining techniques, how to handle cliffhangers, and how fan feedback shapes writer rooms.",
+        "image":  "images/series/writers-room.jpg"
+    },
+    {
+        "id":  213,
+        "title":  "Lunar Bloom World Stadium Tour: Kickoff",
+        "category":  "K-Pop",
+        "date":  "2026-10-20",
+        "location":  "Olympic Stadium \u0026 Global Weverse Stream",
+        "description":  "The explosive first stadium concert of Lunar Bloom\u0027s \u0027Moonrise\u0027 world tour.",
+        "fullDetails":  "Featuring a massive heart-shaped stage, synchronized lightstick stadium ocean waves, pyrotechnics, and live band arrangements of all mini-album hits.",
+        "image":  "images/other/moonrise.jpg"
+    },
+    {
+        "id":  214,
+        "title":  "K-Pop Random Dance \u0026 Fan Festival",
+        "category":  "K-Pop",
+        "date":  "2026-11-14",
+        "location":  "Downtown Civic Plaza",
+        "description":  "Hundreds of fans gather for public random dance play, photocard trading, and fan merch stalls.",
+        "fullDetails":  "Show off your choreography skills to the latest hits, trade rare official album photocards with fellow stans, and win official albums and lightsticks in dance-off battles.",
+        "image":  "images/other/choreography.jpg"
+    },
+    {
+        "id":  215,
+        "title":  "Starlight Idol Global Auditions \u0026 Workshop",
+        "category":  "K-Pop",
+        "date":  "2026-12-20",
+        "location":  "Performing Arts Center",
+        "description":  "Vocal training, stage projection clinics, and dance classes led by top Seoul choreographers.",
+        "fullDetails":  "Aspiring performers receive master coaching in stage presence, vocal endurance, and formation discipline directly from industry choreographers and vocal directors.",
+        "image":  "images/other/world-tour.jpg"
+    },
+    {
+        "id":  216,
+        "title":  "Crescent City Comic Con",
+        "category":  "Comics",
+        "date":  "2026-10-28",
+        "location":  "Metro Exhibition Center",
+        "description":  "The premier comic book gathering with over 200 artists, rare back-issue vendors, and panels.",
+        "fullDetails":  "Meet legendary cover pencillers, get your favorite issues signed and CGC graded, attend panels on graphic novel storytelling, and browse vintage comic bins.",
+        "image":  "images/comics/comic-fair.jpg"
+    },
+    {
+        "id":  217,
+        "title":  "Ghostlight 10th Anniversary Retrospective",
+        "category":  "Comics",
+        "date":  "2026-11-22",
+        "location":  "Central Art Gallery",
+        "description":  "Gallery exhibition of original ink pages, script drafts, and variant cover artwork.",
+        "fullDetails":  "Tracing a decade of Crescent City\u0027s dark guardian. Highlights include original pencils from issue #1, character concept sheets, and limited-edition anniversary prints.",
+        "image":  "images/comics/ghostlight-origins.jpg"
+    },
+    {
+        "id":  218,
+        "title":  "Indie Comic Creators Portfolio Review",
+        "category":  "Comics",
+        "date":  "2026-12-08",
+        "location":  "Design Collective Studio",
+        "description":  "Aspiring writers and illustrators pitch their creator-owned comics to publishing editors.",
+        "fullDetails":  "One-on-one portfolio critiques, practical panels on self-publishing and crowdfunding comic books, and networking mixers with seasoned letterers, colorists, and inkers.",
+        "image":  "images/comics/iron-meridian.jpg"
+    },
+    {
+        "id":  219,
+        "title":  "Tokyo Manga Fest \u0026 Doujin Market",
+        "category":  "Manga",
+        "date":  "2026-10-15",
+        "location":  "Big Sight Hall \u0026 Digital Marketplace",
+        "description":  "The world\u0027s largest gathering of self-published manga creators and professional serial artists.",
+        "fullDetails":  "Explore thousands of independent creator circles, pick up exclusive art books and doujinshi, and witness live digital drawing demonstrations on high-end pen displays.",
+        "image":  "images/other/studio-tour.jpg"
+    },
+    {
+        "id":  220,
+        "title":  "Tidewalker Volume 12 Midnight Launch",
+        "category":  "Manga",
+        "date":  "2026-11-18",
+        "location":  "Kinokuniya Flagship Bookstore",
+        "description":  "Midnight book release party with commemorative poster gifts and trivia contests.",
+        "fullDetails":  "Celebrate the climax of the Storm Arc! Early purchasers receive an exclusive holographic bookmark, foil bookplate, and a collectible tote bag while supplies last.",
+        "image":  "images/other/tidewalker-12.jpg"
+    },
+    {
+        "id":  221,
+        "title":  "Mangaka Studio Tour \u0026 Inking Masterclass",
+        "category":  "Manga",
+        "date":  "2026-12-14",
+        "location":  "Anime \u0026 Manga Museum Workshop Hall",
+        "description":  "Live demonstration of traditional G-pen inking, screen tones, and panel composition.",
+        "fullDetails":  "Experience the classic craft of manga production. Learn how line weight directs reader gaze, master knife scraping techniques on screech tones, and ask questions live.",
+        "image":  "images/other/inked-worlds.jpg"
+    }
 ]
