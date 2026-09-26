@@ -1,142 +1,509 @@
 [
   {
     "id": "anime",
-    "name": "Naruto",
+    "name": "Anime",
     "slug": "Anime",
-    "description": "Epic series, films, and legendary heroes from Japanese animation.",
-    "itemCount": 48,
+    "description": "Explore legendary anime series, unforgettable heroes, powerful villains, epic battles, and iconic story worlds.",
     "image": "assets/images/anime/naruto/naruto_coverpage.jpg",
     "accentColor": "#38bdf8",
-    "featuredTitle": ""
+    "fandoms": [
+      {
+        "name": "Naruto",
+        "slug": "naruto",
+        "description": "Hidden villages, shinobi rivalries, legendary clans, and the journey from academy ninja to Hokage.",
+        "image": "assets/images/anime/naruto/naruto_coverpage.jpg",
+        "characters": [
+          "Naruto Uzumaki",
+          "Sasuke Uchiha",
+          "Sakura Haruno",
+          "Kakashi Hatake",
+          "Itachi Uchiha",
+          "Gaara"
+        ]
+      },
+      {
+        "name": "One Piece",
+        "slug": "one-piece",
+        "description": "Pirates, Grand Line adventures, treasure hunts, and unforgettable Straw Hat heroes.",
+        "image": "assets/images/anime/one_piece/One Piece.jpg",
+        "characters": [
+          "Monkey D. Luffy",
+          "Roronoa Zoro",
+          "Nami",
+          "Sanji",
+          "Tony Tony Chopper",
+          "Nico Robin"
+        ]
+      },
+      {
+        "name": "Dragon Ball",
+        "slug": "dragon-ball",
+        "description": "Martial arts battles, Saiyan legends, Dragon Balls, and universe-spanning adventures.",
+        "image": "assets/images/anime/dragon_ball/Dragon_Ball.jpg",
+        "characters": [
+          "Goku",
+          "Vegeta",
+          "Gohan",
+          "Piccolo",
+          "Frieza"
+        ]
+      },
+      {
+        "name": "Bleach",
+        "slug": "bleach",
+        "description": "Soul Reapers, Hollows, Zanpakuto, and battles across the human and spirit worlds.",
+        "image": "assets/images/anime/bleach/Bleach_cover_photo.jpg",
+        "characters": [
+          "Ichigo Kurosaki",
+          "Rukia Kuchiki",
+          "Orihime Inoue",
+          "Uryu Ishida",
+          "Byakuya Kuchiki"
+        ]
+      },
+      {
+        "name": "Demon Slayer",
+        "slug": "demon-slayer",
+        "description": "Demon hunters, breathing styles, powerful Hashira, and a journey through Taisho-era Japan.",
+        "image": "assets/images/anime/demon_slayer/Demon_Slayer.jpg",
+        "characters": [
+          "Tanjiro Kamado",
+          "Nezuko Kamado",
+          "Zenitsu Agatsuma",
+          "Inosuke Hashibira",
+          "Giyu Tomioka"
+        ]
+      },
+      {
+        "name": "Attack on Titan",
+        "slug": "attack-on-titan",
+        "description": "Humanity behind the walls, mysterious Titans, military squads, and difficult choices.",
+        "image": "assets/images/anime/Attack_on_Titan/ATTACK_ON_TITAN.jpg",
+        "characters": [
+          "Eren Yeager",
+          "Mikasa Ackerman",
+          "Armin Arlert",
+          "Levi Ackerman",
+          "Erwin Smith"
+        ]
+      },
+      {
+        "name": "My Hero Academia",
+        "slug": "my-hero-academia",
+        "description": "Hero schools, Quirks, rival students, professional heroes, and high-stakes rescue missions.",
+        "image": "assets/images/anime/My_Hero_Academia/my_hero_academia.jpg",
+        "characters": [
+          "Izuku Midoriya",
+          "Katsuki Bakugo",
+          "Shoto Todoroki",
+          "Ochaco Uraraka",
+          "All Might"
+        ]
+      },
+      {
+        "name": "Jujutsu Kaisen",
+        "slug": "jujutsu-kaisen",
+        "description": "Cursed energy, sorcerers, dangerous spirits, and intense supernatural battles.",
+        "image": "assets/images/anime/Jujutsu_Kaisen/Jujutsu_Kaisen.jpg",
+        "characters": [
+          "Yuji Itadori",
+          "Megumi Fushiguro",
+          "Nobara Kugisaki",
+          "Satoru Gojo",
+          "Sukuna"
+        ]
+      }
+    ]
   },
-  {
-    "id": "anime",
-    "name": "One Piece",
-    "slug": "Anime",
-    "description": "Epic series, films, and legendary heroes from Japanese animation.",
-    "itemCount": 48,
-    "image": "assets/images/anime/one_piece/One Piece.jpg",
-    "accentColor": "#38bdf8",
-    "featuredTitle": "Crimson Blade Chronicles"
-  },
-  {
-    "id": "anime",
-    "name": "Dragon Ball",
-    "slug": "Anime",
-    "description": "Epic series, films, and legendary heroes from Japanese animation.",
-    "itemCount": 48,
-    "image": "assets/images/anime/dragon_ball/Dragon_Ball.jpg",
-    "accentColor": "#38bdf8",
-    "featuredTitle": "Crimson Blade Chronicles"
-  },
-  {
-    "id": "anime",
-    "name": "Bleach",
-    "slug": "Anime",
-    "description": "Epic series, films, and legendary heroes from Japanese animation.",
-    "itemCount": 48,
-    "image": "assets/images/anime/bleach/Bleach_cover_photo.jpg",
-    "accentColor": "#38bdf8",
-    "featuredTitle": "Crimson Blade Chronicles"
-  },
-  {
-    "id": "anime",
-    "name": "Demon Slayer",
-    "slug": "Anime",
-    "description": "Epic series, films, and legendary heroes from Japanese animation.",
-    "itemCount": 48,
-    "image": "assets/images/anime/demon_slayer/Demon_Slayer.jpg",
-    "accentColor": "#38bdf8",
-    "featuredTitle": "Crimson Blade Chronicles"
-  },
-  {
-    "id": "anime",
-    "name": "Attack on Titan",
-    "slug": "Anime",
-    "description": "Epic series, films, and legendary heroes from Japanese animation.",
-    "itemCount": 48,
-    "image": "assets/images/anime/Attack_on_Titan/ATTACK_ON_TITAN.jpg",
-    "accentColor": "#38bdf8",
-    "featuredTitle": "Crimson Blade Chronicles"
-  },
-  {
-    "id": "anime",
-    "name": "My Hero Academia",
-    "slug": "Anime",
-    "description": "Epic series, films, and legendary heroes from Japanese animation.",
-    "itemCount": 48,
-    "image": "assets/images/anime/My_Hero_Academia/my_hero_academia.jpg",
-    "accentColor": "#38bdf8",
-    "featuredTitle": "Crimson Blade Chronicles"
-  },
-  {
-    "id": "anime",
-    "name": "Jujutsu Kaisen",
-    "slug": "Anime",
-    "description": "Epic series, films, and legendary heroes from Japanese animation.",
-    "itemCount": 48,
-    "image": "assets/images/anime/Jujutsu_Kaisen/Jujutsu_Kaisen.jpg",
-    "accentColor": "#38bdf8",
-    "featuredTitle": "Crimson Blade Chronicles"
-  },
+
   {
     "id": "gaming",
     "name": "Gaming",
     "slug": "Gaming",
-    "description": "Blockbuster games, cybernetic worlds, esports, and interactive adventures.",
-    "itemCount": 62,
-    "image": "assets/images/call_of_duty.jpeg",
+    "description": "Explore games, gaming worlds, heroes, villains, esports, adventures, and legendary playable characters.",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1000&auto=format&fit=crop&q=80",
     "accentColor": "#818cf8",
-    "featuredTitle": "Ashen Kingdoms"
+    "fandoms": [
+      {
+        "name": "Ashen Kingdoms",
+        "slug": "ashen-kingdoms",
+        "description": "A dark fantasy RPG of ruined kingdoms, tactical battles, guilds, and ancient magic.",
+        "image": "images/games/ashen-kingdoms.jpg",
+        "characters": [
+          "Vex-09",
+          "Astra Vale",
+          "Darius Flint",
+          "Mira Thorn",
+          "Rook Calder"
+        ]
+      },
+      {
+        "name": "Neon Harbor",
+        "slug": "neon-harbor",
+        "description": "A neon cyber-city built around speedruns, hackers, drones, and rooftop races.",
+        "image": "images/games/speedrun-night.jpg",
+        "characters": [
+          "Nova Sparks",
+          "Jax Zero",
+          "Kira Volt",
+          "Milo Rush",
+          "Echo-7"
+        ]
+      },
+      {
+        "name": "Fortress Tactics",
+        "slug": "fortress-tactics",
+        "description": "A tactical strategy universe of castles, commanders, siege engines, and battlefield planning.",
+        "image": "images/games/fortress-tactics.jpg",
+        "characters": [
+          "Lord Torin",
+          "Elara Stone",
+          "Bran Holt",
+          "Sergeant Vale",
+          "Merek Ash"
+        ]
+      },
+      {
+        "name": "Sub-Zero Apex",
+        "slug": "sub-zero-apex",
+        "description": "Frozen battlefields, cryo weapons, elite squads, and survival-focused competitive combat.",
+        "image": "images/games/collectors-edition.jpg",
+        "characters": [
+          "Lyra Frost",
+          "Kai Mercer",
+          "Rhea Snow",
+          "Atlas Grimm",
+          "Niko Voss"
+        ]
+      },
+      {
+        "name": "Rumble Protocol",
+        "slug": "rumble-protocol",
+        "description": "Mechanized arena combat where champions fight for fame, upgrades, and tournament glory.",
+        "image": "images/games/ashen-kingdoms.jpg",
+        "characters": [
+          "Brixx",
+          "Titan Rex",
+          "Mara Gear",
+          "Volt King",
+          "Axel Forge"
+        ]
+      }
+    ]
   },
-  {
-    "id": "movies",
-    "name": "Movies",
-    "slug": "Movies",
-    "description": "Cinematic blockbusters, sci-fi sagas, thrilling trailers, and behind-the-scenes stories.",
-    "itemCount": 39,
-    "image": "assets/images/cat-movies.jpg",
-    "accentColor": "#f59e0b",
-    "featuredTitle": "The Lighthouse Protocol"
-  },
+
   {
     "id": "tv-shows",
     "name": "TV Shows",
     "slug": "TV Shows",
-    "description": "Binge-worthy drama series, slow-burn mysteries, season premieres, and fan discussions.",
-    "itemCount": 44,
-    "image": "assets/images/cat-tv.jpg",
+    "description": "Discover binge-worthy dramas, mysteries, period shows, newsroom stories, and memorable television characters.",
+    "image": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1000&auto=format&fit=crop&q=80",
     "accentColor": "#10b981",
-    "featuredTitle": "Harrow Point: Season One"
+    "fandoms": [
+      {
+        "name": "Harrow Point",
+        "slug": "harrow-point",
+        "description": "Foggy coastal mysteries, investigations, secrets, and slow-burn character drama.",
+        "image": "images/series/harrow-point.jpg",
+        "characters": [
+          "Detective Maren Holt",
+          "Constable Tom Brody",
+          "Elias North",
+          "June Mercer",
+          "Chief Rowan"
+        ]
+      },
+      {
+        "name": "Kingsbridge Manor",
+        "slug": "kingsbridge-manor",
+        "description": "Victorian-era family drama filled with estates, rivalries, and social politics.",
+        "image": "images/series/kingsbridge-3.jpg",
+        "characters": [
+          "Lady Eleanor Vance",
+          "Arthur Pendelton",
+          "Clara Vance",
+          "Thomas Grey",
+          "Beatrice Hall"
+        ]
+      },
+      {
+        "name": "The Fourth Estate",
+        "slug": "the-fourth-estate",
+        "description": "A newsroom drama about journalists, investigations, deadlines, and public accountability.",
+        "image": "images/series/writers-room.jpg",
+        "characters": [
+          "Julian Mercer",
+          "Nadia Cole",
+          "Peter Shaw",
+          "Mina Grant",
+          "Editor Ross"
+        ]
+      }
+    ]
   },
+
+  {
+    "id": "movies",
+    "name": "Movies",
+    "slug": "Movies",
+    "description": "Explore cinematic adventures, science fiction, mysteries, action stories, and memorable movie characters.",
+    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1000&auto=format&fit=crop&q=80",
+    "accentColor": "#f59e0b",
+    "fandoms": [
+      {
+        "name": "The Lighthouse Protocol",
+        "slug": "the-lighthouse-protocol",
+        "description": "A science-fiction mystery involving a lighthouse signal and impossible transmissions.",
+        "image": "images/movies/lighthouse-protocol.jpg",
+        "characters": [
+          "Captain Ines Vale",
+          "Dr. Elijah Vance",
+          "Maya Chen",
+          "Jonas Reed",
+          "Commander Hale"
+        ]
+      },
+      {
+        "name": "Skyline",
+        "slug": "skyline",
+        "description": "A cinematic space saga of starships, distant colonies, political intrigue, and exploration.",
+        "image": "images/movies/ines-vale.jpg",
+        "characters": [
+          "Captain Ines Vale",
+          "Ari Sol",
+          "Tessa Ward",
+          "Ronan Pike",
+          "Director Cass"
+        ]
+      },
+      {
+        "name": "Midnight Reel Noir",
+        "slug": "midnight-reel-noir",
+        "description": "Neo-noir mysteries, missing targets, shadowy ports, and detectives working after dark.",
+        "image": "images/movies/behind-the-frame.jpg",
+        "characters": [
+          "Seraphina Cross",
+          "Victor Kane",
+          "Lena Hart",
+          "Miles Crowe",
+          "Iris Black"
+        ]
+      },
+      {
+        "name": "Abyssal Rift",
+        "slug": "abyssal-rift",
+        "description": "Deep-sea expeditions uncover an ancient mystery beneath the ocean floor.",
+        "image": "images/movies/midnight-reel.jpg",
+        "characters": [
+          "Marcus Stone",
+          "Dr. Lena Shore",
+          "Evan Cole",
+          "Rafael Cruz",
+          "Nora Wells"
+        ]
+      },
+      {
+        "name": "Starfall Dynasty",
+        "slug": "starfall-dynasty",
+        "description": "A sweeping space-fantasy story about dynasties, pilots, rebels, and a fallen empire.",
+        "image": "images/movies/lighthouse-protocol.jpg",
+        "characters": [
+          "Selene Ray",
+          "Prince Orion",
+          "Commander Lyra",
+          "Cassian Vale",
+          "Empress Nyra"
+        ]
+      }
+    ]
+  },
+
   {
     "id": "k-pop",
     "name": "K-Pop",
     "slug": "K-Pop",
-    "description": "Chart-topping idol groups, world stadium tours, synchronized choreography, and official lightsticks.",
-    "itemCount": 51,
-    "image": "assets/images/cat-kpop.jpg",
+    "description": "Explore idol groups, music releases, performances, choreography, tours, and K-Pop personalities.",
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1000&auto=format&fit=crop&q=80",
     "accentColor": "#ec4899",
-    "featuredTitle": "Lunar Bloom - Moonrise"
+    "fandoms": [
+      {
+        "name": "Lunar Bloom",
+        "slug": "lunar-bloom",
+        "description": "A fictional idol group universe built around music releases, choreography, tours, and fan culture.",
+        "image": "images/other/moonrise.jpg",
+        "characters": [
+          "Min-seo (Mina)",
+          "Yuna Park",
+          "Chae-young (Chloe)",
+          "Ha-neul (Sky)",
+          "Jisoo Han"
+        ]
+      },
+      {
+        "name": "Starlight Echo",
+        "slug": "starlight-echo",
+        "description": "A performance-focused idol universe of global stages, vocals, dance, and behind-the-scenes stories.",
+        "image": "images/other/world-tour.jpg",
+        "characters": [
+          "Taeyang Vance",
+          "Hana Seo",
+          "Ji-won Lee",
+          "Min-jun Park",
+          "Sora Kim"
+        ]
+      }
+    ]
   },
+
   {
     "id": "comics",
     "name": "Comics",
     "slug": "Comics",
-    "description": "Iconic superhero sagas, vigilante mysteries, vintage issues, and legendary artists.",
-    "itemCount": 35,
-    "image": "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&auto=format&fit=crop&q=80",
+    "description": "Explore superhero sagas, masked vigilantes, comic-book teams, villains, and legendary comic universes.",
+    "image": "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=1000&auto=format&fit=crop&q=80",
     "accentColor": "#ef4444",
-    "featuredTitle": "Ghostlight: The Origin Story"
+    "fandoms": [
+      {
+        "name": "Ghostlight Origins",
+        "slug": "ghostlight-origins",
+        "description": "A hard-light vigilante rises from an experimental prototype into a city legend.",
+        "image": "images/comics/ghostlight-origins.jpg",
+        "characters": [
+          "Ghostlight",
+          "Avery Quinn",
+          "Dr. Elias Frost",
+          "Mara Vex",
+          "The Warden"
+        ]
+      },
+      {
+        "name": "Iron Meridian",
+        "slug": "iron-meridian",
+        "description": "Magnetic powers, armored heroes, city-scale threats, and a new generation of superheroes.",
+        "image": "images/comics/iron-meridian.jpg",
+        "characters": [
+          "Iron Meridian",
+          "Magnetar",
+          "Nova Forge",
+          "Steelheart",
+          "Director Kane"
+        ]
+      },
+      {
+        "name": "Shadow Syndicate",
+        "slug": "shadow-syndicate",
+        "description": "Masked operatives and underground heroes battle a secret criminal network.",
+        "image": "images/comics/ghostlight-covers.jpg",
+        "characters": [
+          "Nightweaver",
+          "Black Lantern",
+          "Cipher Fox",
+          "Raven Knox",
+          "The Broker"
+        ]
+      },
+      {
+        "name": "All-Star Brigade",
+        "slug": "all-star-brigade",
+        "description": "A team of super-powered champions defending the world from escalating threats.",
+        "image": "images/comics/comic-fair.jpg",
+        "characters": [
+          "Captain Dynamo",
+          "Solaris",
+          "Tempest",
+          "Titan Guard",
+          "Vector"
+        ]
+      },
+      {
+        "name": "Ghostlight Rogues",
+        "slug": "ghostlight-rogues",
+        "description": "A darker corner of the Ghostlight universe featuring thieves, antiheroes, and rival vigilantes.",
+        "image": "images/comics/ghostlight-origins.jpg",
+        "characters": [
+          "Cipher",
+          "Velvet Mask",
+          "Grim Jack",
+          "Neon Wraith",
+          "Lockpick"
+        ]
+      }
+    ]
   },
+
   {
     "id": "manga",
     "name": "Manga",
     "slug": "Manga",
-    "description": "Masterpiece ink art, weekly chapters, epic story arcs, and mangaka studio sketches.",
-    "itemCount": 42,
-    "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&auto=format&fit=crop&q=80",
+    "description": "Explore manga worlds, creators, heroes, adventures, supernatural stories, and original illustrated universes.",
+    "image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1000&auto=format&fit=crop&q=80",
     "accentColor": "#a855f7",
-    "featuredTitle": "Tidewalker Volume 12"
+    "fandoms": [
+      {
+        "name": "Tidewalker",
+        "slug": "tidewalker",
+        "description": "An oceanic manga adventure filled with storms, friendship, mystery, and emotional moments.",
+        "image": "images/other/tidewalker-12.jpg",
+        "characters": [
+          "Yuki Aizawa",
+          "Ren Kaito",
+          "Mio Hoshino",
+          "Daichi Mori",
+          "Sora Tide"
+        ]
+      },
+      {
+        "name": "Inked Worlds",
+        "slug": "inked-worlds",
+        "description": "A manga universe about artists, dream worlds, ink powers, and stories within stories.",
+        "image": "images/other/inked-worlds.jpg",
+        "characters": [
+          "Haruto Senju",
+          "Aya Kuro",
+          "Renji Sato",
+          "Mika Ito",
+          "Kaito Arashi"
+        ]
+      },
+      {
+        "name": "Soul Gatekeeper",
+        "slug": "soul-gatekeeper",
+        "description": "Spiritual guardians defend the boundary between ordinary life and the unknown.",
+        "image": "images/other/inked-worlds.jpg",
+        "characters": [
+          "Kiyomi Kuroda",
+          "Akira Shun",
+          "Rei Matsu",
+          "Hana Mori",
+          "Daigo Ren"
+        ]
+      },
+      {
+        "name": "Storm Frontier",
+        "slug": "storm-frontier",
+        "description": "A high-energy adventure across floating islands, storms, rival clans, and ancient machines.",
+        "image": "images/other/studio-tour.jpg",
+        "characters": [
+          "Daiki Morita",
+          "Kora Jin",
+          "Tatsu Ren",
+          "Mei Aoki",
+          "Goro Sane"
+        ]
+      },
+      {
+        "name": "Gears of Chronos",
+        "slug": "gears-of-chronos",
+        "description": "Time-traveling warriors, mechanical cities, and a mystery hidden inside a broken clockwork world.",
+        "image": "images/other/berserk.jpeg",
+        "characters": [
+          "Rei Katsuragi",
+          "Chrono Vale",
+          "Mika Ren",
+          "Oren Gear",
+          "Saya Kuro"
+        ]
+      }
+    ]
   }
 ]

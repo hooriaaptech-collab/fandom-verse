@@ -22,7 +22,7 @@
         <span>FandomVerse</span>
         <span class="brand-badge">HUB</span>
       </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -30,8 +30,8 @@
         <ul class="navbar-nav me-auto mb-2 mb-xl-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="catDropdown" role="button" data-bs-toggle="dropdown">Categories</a>
-            <ul class="dropdown-menu dropdown-menu-dark-fv">
+            <a class="nav-link dropdown-toggle" href="#" id="catDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv" aria-labelledby="catDropdown">
               <li><a class="dropdown-item" href="category.html?cat=Anime">Anime</a></li>
               <li><a class="dropdown-item" href="category.html?cat=Gaming">Gaming</a></li>
               <li><a class="dropdown-item" href="category.html?cat=Movies">Movies</a></li>
@@ -44,8 +44,8 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown">Explore</a>
-            <ul class="dropdown-menu dropdown-menu-dark-fv">
+            <a class="nav-link dropdown-toggle" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+            <ul class="dropdown-menu dropdown-menu-dark-fv" aria-labelledby="exploreDropdown">
               <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
               <li><a class="dropdown-item" href="characters.html">Characters</a></li>
               <li><a class="dropdown-item" href="articles.html">Articles</a></li>
@@ -110,12 +110,18 @@
         <!-- Detail Content (Populated via JavaScript) -->
         <div id="detailContentWrapper" style="display: none;">
           <div class="row gy-4">
-            <!-- Left Column: Primary Artwork -->
+            <!-- Left Column: Primary Artwork & Media Player -->
             <div class="col-lg-5">
               <div class="fv-card p-3 h-100 d-flex flex-column">
-                <div class="position-relative overflow-hidden rounded mb-3 bg-black text-center" style="max-height: 480px;">
-                  <img id="detailImage" src="assets/images/banner.jpg" alt="Artwork preview" class="img-fluid w-100 rounded" style="object-fit: cover; max-height: 480px;">
+                <div class="position-relative overflow-hidden rounded mb-3 bg-black text-center" id="detailMediaContainer" style="max-height: 480px;">
+                  <img id="detailImage" src="assets/images/banner.jpg" alt="Artwork preview" class="img-fluid w-100 rounded" style="object-fit: cover; max-height: 480px;" onerror="this.onerror=null;this.src='assets/images/banner.jpg'">
                 </div>
+
+                <!-- Action Button Area (e.g. Add to Cart for merchandise) -->
+                <div id="detailActionArea" class="mb-3" style="display: none;">
+                  <!-- Dynamic action button injected by JS -->
+                </div>
+
                 <div class="d-flex justify-content-between align-items-center mt-auto pt-2 text-muted small">
                   <span id="detailSourceBadge">FandomVerse Archive</span>
                   <span id="detailIdBadge" class="text-info fw-bold">ID: #---</span>
@@ -145,7 +151,7 @@
                 </div>
 
                 <!-- Full Story / Biography / Description -->
-                <h2 class="h5 text-warning mb-2">Overview & Fandom Lore</h2>
+                <h2 class="h5 text-warning mb-2" id="detailLoreHeading">Overview & Lore</h2>
                 <div class="text-light opacity-90 leading-relaxed mb-4" id="detailFullText" style="white-space: pre-line; line-height: 1.75;">
                   <!-- Full bio goes here -->
                 </div>
@@ -166,10 +172,10 @@
                     </label>
                     <span class="badge bg-dark border border-secondary text-muted" style="font-size: 0.7rem;">Active Session Only</span>
                   </div>
-                  <p class="small text-muted mb-2">Write private research notes, watch reminders, or favorite moments. Notes persist throughout your current browsing session.</p>
+                  <p class="small text-muted mb-2">Write private research notes, review thoughts, or watch reminders. Notes persist throughout your current browsing session.</p>
                   <textarea id="detailNoteInput" class="notes-textarea mb-2" rows="3" placeholder="Add private thoughts, chapter reminders, or personal review notes..."></textarea>
                   <div class="d-flex justify-content-between align-items-center">
-                    <span id="noteSaveStatus" class="small text-success fw-bold" style="display: none;">✓ Note saved!</span>
+                    <span id="noteSaveStatus" class="small text-success fw-bold" style="display: none;">✓ Note saved to session!</span>
                     <button type="button" class="btn btn-outline-gold btn-sm ms-auto" id="detailSaveNoteBtn">
                       💾 Save Note to Session
                     </button>
@@ -199,6 +205,29 @@
       </div>
     </section>
   </main>
+
+  <!-- ================= SHOPPING CART MODAL ================= -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content fv-modal">
+        <div class="modal-header">
+          <h3 class="modal-title h5 mb-0" id="cartModalLabel">🛒 Your Shopping Cart</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="cartItemsContainer"></div>
+          <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25">
+            <span class="fs-5 fw-bold">Grand Total:</span>
+            <span class="fs-4 fw-bold text-warning" id="cartGrandTotal">$0.00</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger btn-sm" onclick="clearCart()">Clear Cart</button>
+          <button type="button" class="btn btn-primary-fv btn-sm" data-bs-dismiss="modal">Continue Browsing</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ================= FOOTER ================= -->
   <footer class="fv-footer">
@@ -326,8 +355,8 @@
       var title = item.title || item.name || "Fandom Item";
       var image = item.image || item.thumbnail || "assets/images/banner.jpg";
       var category = item.category || "General";
-      var type = item.type || item.role || (item.releaseStatus ? "Trailer: " + item.releaseStatus : "Featured Entry");
-      var fullBio = item.fullBio || item.fullDetails || item.description || "No full biography available.";
+      var type = item.type || item.role || (item.price ? "Merchandise" : (item.releaseStatus ? "Trailer: " + item.releaseStatus : "Featured Entry"));
+      var fullBio = item.fullBio || item.fullDetails || item.description || "No full overview available.";
 
       // Update Page Title & Breadcrumbs
       document.title = title + " | FandomVerse Details";
@@ -339,12 +368,33 @@
         breadcrumbCat.href = "category.html?cat=" + encodeURIComponent(category);
       }
 
-      // Populate Image & Badges
-      var imgEl = document.getElementById("detailImage");
-      if (imgEl) {
-        imgEl.src = image;
-        imgEl.alt = title;
+      // Populate Image / Media Player
+      var mediaContainer = document.getElementById("detailMediaContainer");
+      if (mediaContainer) {
+        if (item.videoUrl || item.videoSrc) {
+          var vSrc = item.videoUrl || item.videoSrc;
+          mediaContainer.innerHTML = '<video controls playsinline poster="' + image + '" class="w-100 rounded" style="max-height: 480px;"><source src="' + vSrc + '" type="video/mp4">Your browser does not support video.</video>';
+        } else if (item.audioSrc) {
+          mediaContainer.innerHTML = '<div class="p-3 bg-dark rounded text-center"><img src="' + image + '" alt="' + title + '" class="img-fluid rounded mb-3" style="max-height: 320px; object-fit: cover;" onerror="this.onerror=null;this.src=\'assets/images/banner.jpg\'"><audio controls class="w-100"><source src="' + item.audioSrc + '" type="audio/mpeg">Your browser does not support audio.</audio></div>';
+        } else {
+          mediaContainer.innerHTML = '<img id="detailImage" src="' + image + '" alt="' + title + '" class="img-fluid w-100 rounded" style="object-fit: cover; max-height: 480px;" onerror="this.onerror=null;this.src=\'assets/images/banner.jpg\'">';
+        }
       }
+
+      // Action Area (e.g. Merchandise Add to Cart)
+      var actionArea = document.getElementById("detailActionArea");
+      if (actionArea) {
+        if (item.price !== undefined) {
+          actionArea.style.display = "block";
+          actionArea.innerHTML = '<div class="d-flex align-items-center justify-content-between p-3 rounded bg-dark border border-secondary border-opacity-25">' +
+            '<div><span class="text-muted small d-block">Official Merchandise Price</span><span class="fs-4 fw-bold text-warning">$' + Number(item.price).toFixed(2) + '</span></div>' +
+            '<button type="button" class="btn btn-primary-fv fw-bold" onclick="addToCart(currentItem)">🛒 + Add to Cart</button>' +
+            '</div>';
+        } else {
+          actionArea.style.display = "none";
+        }
+      }
+
       var idBadge = document.getElementById("detailIdBadge");
       if (idBadge) idBadge.textContent = "ID: #" + item.id;
 
@@ -359,8 +409,9 @@
 
       var subEl = document.getElementById("detailSubtitle");
       if (subEl) {
-        if (item.alias) subEl.textContent = "Alias: " + item.alias;
-        else if (item.creator) subEl.textContent = item.creator;
+        if (item.franchise) subEl.textContent = "Franchise / Series: " + item.franchise;
+        else if (item.role) subEl.textContent = "Role: " + item.role;
+        else if (item.creator) subEl.textContent = "Creator / Desk: " + item.creator;
         else if (item.studio) subEl.textContent = "Studio: " + item.studio;
         else subEl.textContent = category + " Universe Special";
       }
@@ -369,14 +420,16 @@
       var metaGrid = document.getElementById("detailMetaGrid");
       if (metaGrid) {
         var metaHtml = "";
+        if (item.franchise) metaHtml += '<div class="col-6 col-md-4">🎬 <strong>Franchise:</strong> ' + item.franchise + '</div>';
+        if (item.role) metaHtml += '<div class="col-6 col-md-4">⚔️ <strong>Role:</strong> ' + item.role + '</div>';
         if (item.date) metaHtml += '<div class="col-6 col-md-4">📅 <strong>Date:</strong> ' + item.date + '</div>';
         if (item.location) metaHtml += '<div class="col-6 col-md-4">📍 <strong>Location:</strong> ' + item.location + '</div>';
         if (item.popularity) metaHtml += '<div class="col-6 col-md-4">⭐ <strong>Popularity:</strong> ' + item.popularity + '</div>';
-        if (item.rating) metaHtml += '<div class="col-6 col-md-4">★ <strong>Rating:</strong> ' + item.rating + '/5</div>';
-        if (item.price) metaHtml += '<div class="col-6 col-md-4">💲 <strong>Price:</strong> $' + item.price.toFixed(2) + '</div>';
+        if (item.rating) metaHtml += '<div class="col-6 col-md-4">★ <strong>Rating:</strong> ' + Number(item.rating).toFixed(1) + '/5</div>';
+        if (item.price) metaHtml += '<div class="col-6 col-md-4">💲 <strong>Price:</strong> $' + Number(item.price).toFixed(2) + '</div>';
         if (item.duration) metaHtml += '<div class="col-6 col-md-4">⏱ <strong>Duration:</strong> ' + item.duration + '</div>';
-        if (item.origin) metaHtml += '<div class="col-6 col-md-4">🌍 <strong>Origin:</strong> ' + item.origin + '</div>';
-        if (item.firstAppearance) metaHtml += '<div class="col-6 col-md-4">📖 <strong>First Seen:</strong> ' + item.firstAppearance + '</div>';
+        if (item.year) metaHtml += '<div class="col-6 col-md-4">📅 <strong>Release Year:</strong> ' + item.year + '</div>';
+        if (item.releaseStatus) metaHtml += '<div class="col-6 col-md-4">🚀 <strong>Status:</strong> ' + item.releaseStatus + '</div>';
         if (!metaHtml) metaHtml = '<div class="col-12">Universal Fandom Archive Record Verified</div>';
         metaGrid.innerHTML = metaHtml;
       }
@@ -388,7 +441,7 @@
       // Tags / Abilities
       var tagsList = document.getElementById("detailTagsList");
       var tagsSection = document.getElementById("detailTagsSection");
-      var tags = item.tags || item.abilities || [];
+      var tags = item.tags || item.abilities || item.traits || [];
       if (tagsList && tags.length > 0) {
         var tagHtml = "";
         tags.forEach(function (t) {
@@ -444,7 +497,7 @@
       var relGrid = document.getElementById("relatedGrid");
       if (relGrid && allItems) {
         var related = allItems.filter(function (it) {
-          return it.category === category && it.id !== item.id;
+          return it.category === category && String(it.id) !== String(item.id);
         }).slice(0, 4);
 
         if (related.length === 0) {
@@ -458,7 +511,7 @@
             relHtml += '<div class="col">' +
               '<article class="card fv-card h-100" style="cursor: pointer;" onclick="window.location.href=\'detail.html?id=' + rel.id + '&type=' + encodeURIComponent(rType) + '\'">' +
                 '<div class="card-img-wrap">' +
-                  '<img src="' + rImg + '" alt="' + rTitle + '" loading="lazy">' +
+                  '<img src="' + rImg + '" alt="' + rTitle + '" loading="lazy" onerror="this.onerror=null;this.src=\'assets/images/banner.jpg\'">' +
                 '</div>' +
                 '<div class="card-body">' +
                   '<div class="d-flex justify-content-between align-items-center mb-2">' +
@@ -478,7 +531,7 @@
 
     document.addEventListener("DOMContentLoaded", function () {
       var urlParams = new URLSearchParams(window.location.search);
-      var targetId = parseInt(urlParams.get("id"), 10);
+      var targetId = urlParams.get("id");
       var targetType = urlParams.get("type");
 
       // Fetch datasets in parallel to locate item
@@ -498,16 +551,15 @@
         var allItems = [].concat(content, characters, events, merch, trailers);
 
         var found = null;
-        if (!isNaN(targetId)) {
-          // Find by ID and matching type if possible
+        if (targetId !== null && targetId !== undefined && targetId !== "") {
           if (targetType) {
             found = allItems.find(function (it) {
-              var itType = it.type || it.role || (it.releaseStatus ? "trailer" : "");
-              return it.id === targetId && itType.toLowerCase().includes(targetType.toLowerCase());
+              var itType = String(it.type || it.role || (it.releaseStatus ? "trailer" : ""));
+              return String(it.id) === String(targetId) && itType.toLowerCase().includes(targetType.toLowerCase());
             });
           }
           if (!found) {
-            found = allItems.find(function (it) { return it.id === targetId; });
+            found = allItems.find(function (it) { return String(it.id) === String(targetId); });
           }
         }
 

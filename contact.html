@@ -172,7 +172,7 @@
             </div>
 
             <!-- Responsive Google Map Embed -->
-            <div class="fv-card overflow-hidden">
+            <div class="fv-card overflow-hidden mb-3">
               <div class="ratio ratio-16x9">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115808.27457497235!2d67.02806085532551!3d24.89766946654045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f445e5691da!2sKarachi%2C%20Karachi%20City%2C%20Sindh!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
@@ -183,6 +183,26 @@
                   title="FandomVerse Location Map">
                 </iframe>
               </div>
+            </div>
+
+            <!-- GPS Location & Directions Section -->
+            <div class="fv-card p-3">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="h6 mb-0 text-white"><span>📍</span> GPS Location Services</h4>
+                <span class="badge bg-dark border border-secondary text-info small">HTML5 GPS</span>
+              </div>
+              <p class="small text-muted mb-3">Detect your live GPS coordinates to calculate the direct distance to FandomVerse Headquarters and get turn-by-turn directions.</p>
+              
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <button type="button" class="btn btn-outline-fv btn-sm" id="detectGpsBtn" onclick="detectUserGps()">
+                  🎯 Detect My GPS Location
+                </button>
+                <a href="https://maps.google.com/?q=University+Road+Karachi" target="_blank" rel="noopener" class="btn btn-primary-fv btn-sm" id="directionsGpsBtn">
+                  🗺 Open Directions
+                </a>
+              </div>
+              
+              <div id="gpsStatusOutput" class="small text-muted mt-2" style="display: none;"></div>
             </div>
           </div>
         </div>
@@ -266,6 +286,52 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>
   <script>
+    function detectUserGps() {
+      var output = document.getElementById("gpsStatusOutput");
+      if (!output) return;
+      output.style.display = "block";
+      output.innerHTML = '<span class="text-info">📡 Accessing device GPS sensors...</span>';
+
+      if (!navigator.geolocation) {
+        output.innerHTML = '<span class="text-danger">Geolocation is not supported by your browser.</span>';
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        function (pos) {
+          var lat = pos.coords.latitude.toFixed(4);
+          var lng = pos.coords.longitude.toFixed(4);
+
+          // Calculate approximate distance to Karachi HQ (24.8977, 67.0281)
+          var hqLat = 24.8977;
+          var hqLng = 67.0281;
+          var R = 6371; // Earth radius in km
+          var dLat = (hqLat - pos.coords.latitude) * Math.PI / 180;
+          var dLng = (hqLng - pos.coords.longitude) * Math.PI / 180;
+          var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                  Math.cos(pos.coords.latitude * Math.PI / 180) * Math.cos(hqLat * Math.PI / 180) *
+                  Math.sin(dLng / 2) * Math.sin(dLng / 2);
+          var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+          var distance = (R * c).toFixed(1);
+
+          output.innerHTML = '<div class="p-2 rounded bg-dark border border-secondary border-opacity-25 mt-2 text-start">' +
+            '<strong class="text-success">✓ GPS Location Detected:</strong><br>' +
+            '<span>Latitude: ' + lat + '°, Longitude: ' + lng + '°</span><br>' +
+            '<span>Direct Distance to HQ: <strong class="text-warning">' + distance + ' km</strong></span>' +
+            '</div>';
+
+          var dirBtn = document.getElementById("directionsGpsBtn");
+          if (dirBtn) {
+            dirBtn.href = "https://www.google.com/maps/dir/?api=1&origin=" + lat + "," + lng + "&destination=University+Road+Karachi";
+          }
+        },
+        function (err) {
+          output.innerHTML = '<span class="text-warning">GPS signal unavailable or permission denied (' + err.message + '). Showing default HQ map.</span>';
+        },
+        { timeout: 10000 }
+      );
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
       var form = document.getElementById("contactForm");
       var alertBox = document.getElementById("contactAlertPlaceholder");
@@ -283,7 +349,7 @@
             alertBox.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert">' +
               'Please complete all required fields before submitting.' +
               '<button type="button" class="btn-close" data-bs-dismiss="alert"></button>' +
-            '</div>';
+              '</div>';
             return;
           }
 
@@ -291,7 +357,7 @@
           alertBox.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
             '<strong>Thank you, ' + name + '!</strong> Your message regarding "' + subject + '" has been received. Our team will contact you shortly at ' + email + '.' +
             '<button type="button" class="btn-close" data-bs-dismiss="alert"></button>' +
-          '</div>';
+            '</div>';
 
           form.reset();
         });
