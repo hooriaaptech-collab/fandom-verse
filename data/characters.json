@@ -68,7 +68,6 @@
         "image":  "assets/images/anime/naruto/Kakashi_Hatake.jpg"
     },
     {
-<<<<<<< HEAD
         "id": 105,
         "name": "Itachi Uchiha",
         "category": "Anime",
@@ -186,22 +185,6 @@
         ],
         "popularity": "94%",
         "image": "assets/images/anime/one-piece/Tony_Tony_Chopper.jpg"
-=======
-        "id":  105,
-        "name":  "Itachi Uchiha",
-        "category":  "Anime",
-        "role":  "Uchiha Shinobi / Former Anbu",
-        "franchise":  "Naruto",
-        "description":  "A brilliant Uchiha shinobi whose difficult choices are central to the history of Sasuke and the Hidden Leaf Village.",
-        "fullBio":  "Itachi Uchiha was a prodigy of the Uchiha clan who became an Anbu operative at a remarkably young age. After a devastating conflict involving his clan and the village, he accepted an extremely difficult mission that shaped Sasuke\u0027s life. Later, the truth behind his actions becomes an important part of Sasuke\u0027s journey.",
-        "abilities":  [
-                          "Mangekyo Sharingan",
-                          "Amaterasu",
-                          "Tsukuyomi",
-                          "Susanoo"
-                      ],
-        "popularity":  "99%",
-        "image":  "assets/images/anime/naruto/Itachi_Uchiha.jpg"
     },
     {
         "id":  106,
@@ -729,6 +712,5 @@
                       ],
         "popularity":  "92%",
         "image":  "assets/images/banner.jpg"
->>>>>>> c76caf35fb198463fdb2e11019fcb4de0fbe1c65
     }
 ]
