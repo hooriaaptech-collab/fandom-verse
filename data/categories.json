@@ -1,11 +1,81 @@
 [
   {
     "id": "anime",
-    "name": "Anime",
+    "name": "Naruto",
     "slug": "Anime",
     "description": "Epic series, films, and legendary heroes from Japanese animation.",
     "itemCount": 48,
-    "image": "assets/images/demonslayer.jpeg",
+    "image": "assets/images/anime/naruto/naruto_coverpage.jpg",
+    "accentColor": "#38bdf8",
+    "featuredTitle": ""
+  },
+  {
+    "id": "anime",
+    "name": "One Piece",
+    "slug": "Anime",
+    "description": "Epic series, films, and legendary heroes from Japanese animation.",
+    "itemCount": 48,
+    "image": "assets/images/anime/one_piece/One Piece.jpg",
+    "accentColor": "#38bdf8",
+    "featuredTitle": "Crimson Blade Chronicles"
+  },
+  {
+    "id": "anime",
+    "name": "Dragon Ball",
+    "slug": "Anime",
+    "description": "Epic series, films, and legendary heroes from Japanese animation.",
+    "itemCount": 48,
+    "image": "assets/images/anime/dragon_ball/Dragon_Ball.jpg",
+    "accentColor": "#38bdf8",
+    "featuredTitle": "Crimson Blade Chronicles"
+  },
+  {
+    "id": "anime",
+    "name": "Bleach",
+    "slug": "Anime",
+    "description": "Epic series, films, and legendary heroes from Japanese animation.",
+    "itemCount": 48,
+    "image": "assets/images/anime/bleach/Bleach_cover_photo.jpg",
+    "accentColor": "#38bdf8",
+    "featuredTitle": "Crimson Blade Chronicles"
+  },
+  {
+    "id": "anime",
+    "name": "Demon Slayer",
+    "slug": "Anime",
+    "description": "Epic series, films, and legendary heroes from Japanese animation.",
+    "itemCount": 48,
+    "image": "assets/images/anime/demon_slayer/Demon_Slayer.jpg",
+    "accentColor": "#38bdf8",
+    "featuredTitle": "Crimson Blade Chronicles"
+  },
+  {
+    "id": "anime",
+    "name": "Attack on Titan",
+    "slug": "Anime",
+    "description": "Epic series, films, and legendary heroes from Japanese animation.",
+    "itemCount": 48,
+    "image": "assets/images/anime/Attack_on_Titan/ATTACK_ON_TITAN.jpg",
+    "accentColor": "#38bdf8",
+    "featuredTitle": "Crimson Blade Chronicles"
+  },
+  {
+    "id": "anime",
+    "name": "My Hero Academia",
+    "slug": "Anime",
+    "description": "Epic series, films, and legendary heroes from Japanese animation.",
+    "itemCount": 48,
+    "image": "assets/images/anime/My_Hero_Academia/my_hero_academia.jpg",
+    "accentColor": "#38bdf8",
+    "featuredTitle": "Crimson Blade Chronicles"
+  },
+  {
+    "id": "anime",
+    "name": "Jujutsu Kaisen",
+    "slug": "Anime",
+    "description": "Epic series, films, and legendary heroes from Japanese animation.",
+    "itemCount": 48,
+    "image": "assets/images/anime/Jujutsu_Kaisen/Jujutsu_Kaisen.jpg",
     "accentColor": "#38bdf8",
     "featuredTitle": "Crimson Blade Chronicles"
   },
