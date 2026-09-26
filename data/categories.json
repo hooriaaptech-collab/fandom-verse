@@ -45,8 +45,12 @@
           "Vegeta",
           "Gohan",
           "Piccolo",
+<<<<<<< HEAD
           "Frieza",
           "Trunks"
+=======
+          "Frieza"
+>>>>>>> c76caf35fb198463fdb2e11019fcb4de0fbe1c65
         ]
       },
       {
@@ -59,8 +63,12 @@
           "Rukia Kuchiki",
           "Orihime Inoue",
           "Uryu Ishida",
+<<<<<<< HEAD
           "Byakuya Kuchiki",
           "Kenpachi Zaraki"
+=======
+          "Byakuya Kuchiki"
+>>>>>>> c76caf35fb198463fdb2e11019fcb4de0fbe1c65
         ]
       },
       {
@@ -73,8 +81,12 @@
           "Nezuko Kamado",
           "Zenitsu Agatsuma",
           "Inosuke Hashibira",
+<<<<<<< HEAD
           "Giyu Tomioka",
           "Kyojuro Rengoku"
+=======
+          "Giyu Tomioka"
+>>>>>>> c76caf35fb198463fdb2e11019fcb4de0fbe1c65
         ]
       },
       {
@@ -87,8 +99,12 @@
           "Mikasa Ackerman",
           "Armin Arlert",
           "Levi Ackerman",
+<<<<<<< HEAD
           "Erwin Smith",
           "Reiner Braun"
+=======
+          "Erwin Smith"
+>>>>>>> c76caf35fb198463fdb2e11019fcb4de0fbe1c65
         ]
       },
       {
@@ -101,8 +117,12 @@
           "Katsuki Bakugo",
           "Shoto Todoroki",
           "Ochaco Uraraka",
+<<<<<<< HEAD
           "All Might",
           "Tomura Shigaraki"
+=======
+          "All Might"
+>>>>>>> c76caf35fb198463fdb2e11019fcb4de0fbe1c65
         ]
       },
       {
@@ -115,6 +135,7 @@
           "Megumi Fushiguro",
           "Nobara Kugisaki",
           "Satoru Gojo",
+<<<<<<< HEAD
           "Sukuna",
           "Yuta Okkotsu"
         ]
@@ -131,16 +152,24 @@
           "Ryuk",
           "Near",
           "Mello"
+=======
+          "Sukuna"
+>>>>>>> c76caf35fb198463fdb2e11019fcb4de0fbe1c65
         ]
       }
     ]
   },
+
   {
     "id": "gaming",
     "name": "Games",
     "slug": "Gaming",
     "description": "Explore games, gaming worlds, heroes, villains, esports, adventures, and legendary playable characters.",
+<<<<<<< HEAD
     "image": "",
+=======
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1000&auto=format&fit=crop&q=80",
+>>>>>>> c76caf35fb198463fdb2e11019fcb4de0fbe1c65
     "accentColor": "#818cf8",
     "fandoms": [
       {
@@ -210,6 +239,7 @@
       }
     ]
   },
+
   {
     "id": "tv-shows",
     "name": "TV Shows",
@@ -258,6 +288,7 @@
         ]
       }
     ]
+<<<<<<< HEAD
   },
   {
     "id": "movies",
@@ -333,7 +364,86 @@
         ]
       }
     ]
+=======
+>>>>>>> c76caf35fb198463fdb2e11019fcb4de0fbe1c65
   },
+
+  {
+    "id": "movies",
+    "name": "Movies",
+    "slug": "Movies",
+    "description": "Explore cinematic adventures, science fiction, mysteries, action stories, and memorable movie characters.",
+    "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1000&auto=format&fit=crop&q=80",
+    "accentColor": "#f59e0b",
+    "fandoms": [
+      {
+        "name": "The Lighthouse Protocol",
+        "slug": "the-lighthouse-protocol",
+        "description": "A science-fiction mystery involving a lighthouse signal and impossible transmissions.",
+        "image": "images/movies/lighthouse-protocol.jpg",
+        "characters": [
+          "Captain Ines Vale",
+          "Dr. Elijah Vance",
+          "Maya Chen",
+          "Jonas Reed",
+          "Commander Hale"
+        ]
+      },
+      {
+        "name": "Skyline",
+        "slug": "skyline",
+        "description": "A cinematic space saga of starships, distant colonies, political intrigue, and exploration.",
+        "image": "images/movies/ines-vale.jpg",
+        "characters": [
+          "Captain Ines Vale",
+          "Ari Sol",
+          "Tessa Ward",
+          "Ronan Pike",
+          "Director Cass"
+        ]
+      },
+      {
+        "name": "Midnight Reel Noir",
+        "slug": "midnight-reel-noir",
+        "description": "Neo-noir mysteries, missing targets, shadowy ports, and detectives working after dark.",
+        "image": "images/movies/behind-the-frame.jpg",
+        "characters": [
+          "Seraphina Cross",
+          "Victor Kane",
+          "Lena Hart",
+          "Miles Crowe",
+          "Iris Black"
+        ]
+      },
+      {
+        "name": "Abyssal Rift",
+        "slug": "abyssal-rift",
+        "description": "Deep-sea expeditions uncover an ancient mystery beneath the ocean floor.",
+        "image": "images/movies/midnight-reel.jpg",
+        "characters": [
+          "Marcus Stone",
+          "Dr. Lena Shore",
+          "Evan Cole",
+          "Rafael Cruz",
+          "Nora Wells"
+        ]
+      },
+      {
+        "name": "Starfall Dynasty",
+        "slug": "starfall-dynasty",
+        "description": "A sweeping space-fantasy story about dynasties, pilots, rebels, and a fallen empire.",
+        "image": "images/movies/lighthouse-protocol.jpg",
+        "characters": [
+          "Selene Ray",
+          "Prince Orion",
+          "Commander Lyra",
+          "Cassian Vale",
+          "Empress Nyra"
+        ]
+      }
+    ]
+  },
+
   {
     "id": "k-pop",
     "name": "K-Pop",
@@ -370,6 +480,7 @@
       }
     ]
   },
+
   {
     "id": "comics",
     "name": "Comics",
@@ -445,6 +556,7 @@
       }
     ]
   },
+
   {
     "id": "manga",
     "name": "Manga",

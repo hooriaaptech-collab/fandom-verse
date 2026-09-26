@@ -224,8 +224,9 @@ function exportBookmarks() {
 // Routes to the standalone detail.html page instead of a modal popup
 function openDetailsModal(item) {
   if (!item) return;
-  var type = item.type || item.role || item.releaseStatus || "featured";
-  var url = "detail.html?id=" + item.id + "&type=" + encodeURIComponent(type);
+  var type = item.type || item.role || (item.price ? "merchandise" : (item.releaseStatus ? "trailer" : "featured"));
+  var id = item.id;
+  var url = "detail.html?id=" + encodeURIComponent(id) + "&type=" + encodeURIComponent(type);
   window.location.href = url;
 }
 
